@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 
 const SignUpForm = () => {
 
+    console.log('ssdasda')
+
     const navigate = useNavigate()
     return (
         <div className={styles.section}>
