@@ -25,6 +25,12 @@
             font-size: 24px;
             margin: 0 0 20px;
         }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
         .form {
             display: flex;
             flex-direction: column;
@@ -47,15 +53,20 @@
             }
 
             .btn_submit {
-                background-color: $background;
                 height: 30px;
                 color: white;
                 border: none;
                 font-family: 'Poppins', sans-serif;
                 border-radius: 4px;
                 font-weight: 600;
+            }
+            .btn_submit_active {
+                background-color: $background;
                 cursor: pointer;
-                
+            }
+            .btn_submit_disabled {
+                background-color: $btnDisabled;
+                cursor:default;
             }
         }
     }
@@ -78,6 +89,7 @@
             cursor: pointer;
 
         }
+
     }
     
 }
