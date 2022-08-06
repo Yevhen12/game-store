@@ -1,0 +1,83 @@
+@import "../../../../styles/variables/variables";
+
+.section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 89px);
+    align-items: center;
+    flex-direction: column;
+
+    .inner_container {
+        max-width: 340px;
+        width: 100%;
+        box-sizing: content-box;
+    }
+    .container {
+        background-color: white;
+        padding: 25px 20px; 
+        border-radius: 5px;
+      
+        .log_in {
+            color: black;
+            text-align: center;
+            font-weight: 600;
+            font-size: 24px;
+            margin: 0 0 20px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                font-family: 'Poppins', sans-serif;
+                padding: 12px 15px;
+                margin-bottom: 10px;
+                outline: none;
+                border: 1px solid $borderColor;
+                border-radius: 4px;
+            }
+            input::placeholder {
+                font-family: 'Poppins', sans-serif;
+                color: $placeholderColor;
+                font-size: 12px;
+            }
+            input:last-of-type {
+                margin-bottom: 20px;
+            }
+
+            .btn_submit {
+                background-color: $background;
+                height: 30px;
+                color: white;
+                border: none;
+                font-family: 'Poppins', sans-serif;
+                border-radius: 4px;
+                font-weight: 600;
+                cursor: pointer;
+                
+            }
+        }
+    }
+
+    .bottom_block {
+        box-sizing: content-box;
+        padding: 20px;
+        display: flex;
+        color: black;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 10px;
+        justify-content: center;
+
+        .bottom_block_btn {
+            border: none;
+            background-color: transparent;
+            font-weight: 800;
+            margin-left: 5px;
+            cursor: pointer;
+
+        }
+    }
+    
+}

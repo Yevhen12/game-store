@@ -1,0 +1,41 @@
+@import "../../styles/variables/variables";
+
+.header  {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    position: relative;
+
+    .container {
+        padding: 20px 30px;
+        max-width: $container;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 42px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        .sony_block {
+            position: absolute;
+            padding: 8px 25px;
+            background-color: black;
+            top: 0;
+            left: calc(50% - 57px);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+
+        .text {
+            color: white;
+            cursor: pointer;
+
+        }
+    }
+
+}
