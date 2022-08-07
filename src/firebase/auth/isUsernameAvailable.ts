@@ -10,7 +10,6 @@ const isUsernameAvailable: (username: string) => void = async (username) => {
             throw new Error('Such username already exist')
         }
     });
-
 }
 
 export default isUsernameAvailable

@@ -1,12 +1,11 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import { auth } from '../../firebase/firebaseConfig'
 
-const Home = () => {
+const Home:React.FC = () => {
+
     return (
         <>
             <Header />
-            {auth.currentUser ? 'hello' + auth.currentUser.email : 'U r not logged' }
         </>
     )
 }

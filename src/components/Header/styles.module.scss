@@ -25,16 +25,32 @@
             padding: 8px 25px;
             background-color: black;
             top: 0;
-            left: calc(50% - 57px);
+            left: calc(50% - 60px);
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
+        }
+        .profile_block {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .profile_block_image {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        .underline {
+            border-bottom: 0.5px solid white;
         }
         
 
         .text {
             color: white;
             cursor: pointer;
-
         }
     }
 

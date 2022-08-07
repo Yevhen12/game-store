@@ -3,18 +3,24 @@ import styles from './styles.module.scss'
 import { useNavigate } from 'react-router-dom'
 import ROUTES from '../../../../constants/pagesRoutes'
 import {signIn as logIn} from '../../../../firebase/auth/signIn'
+import { useAppDispatch } from '../../../../redux/hooks'
+import { fetchUser } from '../../../../redux/slices/userSlice/thunks/fetchUser'
 
 export const Login: React.FC = () => {
 
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [error, setError] = useState<string>("")
 
+
+
     const signIn:(e:React.MouseEvent<HTMLButtonElement>) => void = async (e) => {
         e.preventDefault()
         try{
-            await logIn(email, password)
+            const userUID = await logIn(email, password)
+            dispatch(await fetchUser(userUID))
             navigate(ROUTES.HOME)
         } catch (err:any) {
             setError(err.message)

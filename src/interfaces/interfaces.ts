@@ -14,6 +14,7 @@ export interface ISignUp {
 }
 export interface IUser extends ISignUp {
     recentSearch: any[],
-    createdAt: string
+    createdAt: string,
     purchasesList: any[],
+    uid: string,
 }

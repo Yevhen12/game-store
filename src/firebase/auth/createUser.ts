@@ -6,7 +6,8 @@ import { setDoc, doc } from 'firebase/firestore'
 import createDate from '../../helpers/createDate'
 
 
-const createUser = async (user: ISignUp) => {
+
+const createUser:(user: ISignUp) => Promise<string> = async (user) => {
     const currentUser = await createUserWithEmailAndPassword(auth, user.email, user.password)
     const docUser = doc(db, 'users', currentUser.user.uid)
 
@@ -15,9 +16,12 @@ const createUser = async (user: ISignUp) => {
         recentSearch: [],
         createdAt: createDate(),
         purchasesList: [],
+        uid: auth.currentUser?.uid || ''
     }
 
     await setDoc(docUser, userToSet)
+
+    return auth.currentUser?.uid || ''
 
 }
 

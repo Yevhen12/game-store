@@ -5,10 +5,14 @@ import { useNavigate } from 'react-router-dom'
 import { ISignUp } from '../../../interfaces/interfaces'
 import createUser from '../../../firebase/auth/createUser'
 import isUsernameAvailable from '../../../firebase/auth/isUsernameAvailable'
+import isEmailAvailable from '../../../firebase/auth/isEmailExist'
+import { fetchUser } from '../../../redux/slices/userSlice/thunks/fetchUser'
+import { useAppDispatch } from '../../../redux/hooks'
 
-const SignUpForm = () => {
+const SignUpForm:React.FC = () => {
 
     const navigate = useNavigate()
+    const dispatch = useAppDispatch()
     const [textForm, setTextForm] = useState<ISignUp>(
         {
             username: '',
@@ -34,7 +38,9 @@ const SignUpForm = () => {
         e.preventDefault()
         try {
             await isUsernameAvailable(textForm.username)
-            await createUser(textForm)
+            await isEmailAvailable(textForm.email)
+            const userUID = await createUser(textForm)
+            dispatch(await fetchUser(userUID))
             navigate(ROUTES.HOME)
         }
         catch (err: any) {
