@@ -1,0 +1,16 @@
+@import '../../../styles/variables/variables';
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        max-width: $container;
+        background-color: white;
+        border-radius: 18px;
+        height: 500px;
+        width: 100%;
+        color: black;
+    }
+}

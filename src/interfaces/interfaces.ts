@@ -18,3 +18,17 @@ export interface IUser extends ISignUp {
     purchasesList: any[],
     uid: string,
 }
+
+export interface IDropMenu {
+    activeModal: boolean
+    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>
+    children: React.ReactNode
+    topAnimation: string
+    rigthPosition: string
+}
+
+export interface IDropMenuItem  {
+    name: string
+    image: string
+    funcToDo: any
+}

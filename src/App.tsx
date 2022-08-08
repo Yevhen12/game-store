@@ -39,7 +39,6 @@ const App: React.FC = () => {
     })
   }, [dispatch])
 
-  console.log(isLoading)
 
   return (
     <>

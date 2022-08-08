@@ -29,6 +29,9 @@
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
         }
+        .outer_profile_bloсk {
+            position: relative;
+        }
         .profile_block {
             display: flex;
             align-items: center;
@@ -51,6 +54,9 @@
         .text {
             color: white;
             cursor: pointer;
+        }
+        .text_menu {
+            color: black;
         }
     }
 

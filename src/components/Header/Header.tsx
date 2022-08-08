@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
 import { auth } from '../../firebase/firebaseConfig';
 import { useState } from 'react';
-import DropMenu from '../Modals/DropMenu/DropMenu';
+import ProfileDropMenu from './ProfileDropMenu/ProfileDropMenu';
 
 const Header: React.FC = () => {
 
@@ -12,6 +12,8 @@ const Header: React.FC = () => {
   const user = useAppSelector(state => state.user.user)
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const [activeModal, setActiveModal] = useState<boolean>(false)
+
+  console.log(user)
 
   return (
     <div className={styles.header}>
@@ -23,17 +25,20 @@ const Header: React.FC = () => {
         {
           auth.currentUser ?
             (
-              <div
-                className={styles.profile_block}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <img alt='user' src='/images/profile.png' className={styles.profile_block_image} />
-                <p className={styles.text + ' ' + (isHovered && styles.underline)}>{user.username}</p>
-                {/* <DropMenu 
-                activeModal = {activeModal}
-                setActiveModal = {setActiveModal}
-                /> */}
+              <div className={styles.outer_profile_bloсk}>
+                <div
+                  className={styles.profile_block}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onClick={() => setActiveModal(true)}
+                >
+                  <img alt='user' src='/images/profile.png' className={styles.profile_block_image} />
+                  <p className={`${styles.text} ${isHovered && styles.underline}`}>{user.username}</p>
+                </div>
+                <ProfileDropMenu
+                  activeModal={activeModal}
+                  setActiveModal={setActiveModal}
+                />
               </div>
             )
             :
@@ -43,6 +48,7 @@ const Header: React.FC = () => {
         }
 
       </div>
+
     </div>
   )
 }

@@ -1,0 +1,24 @@
+@import '../../../../styles/variables/variables';
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+
+    .text {
+        color: black;
+        width: 180px;
+        font-size: 13px;
+    }
+    .img {
+        width: 16px;
+        height: 16px;
+        margin: 0 15px;
+    }
+}
+.block:hover {
+    background-color:rgba(0, 0, 0, 0.068);
+}
+

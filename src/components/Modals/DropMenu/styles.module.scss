@@ -1,0 +1,37 @@
+.active {
+    display: block;
+    pointer-events: all;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+.windowBlock {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: default;
+    z-index: 10;
+}
+.containerBlock {
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+    transition: 0.2s;
+    background-color: white;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25)
+}
+.toActive{
+    opacity: 100;
+    pointer-events: all;
+}
+
+.toHide {
+    opacity: 0;
+    pointer-events: none;
+}

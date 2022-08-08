@@ -1,0 +1,46 @@
+@import '../../../../../styles/variables/variables';
+
+.header {
+    padding: 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        li {
+            margin-right: 30px;
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+    }
+    .input {
+        outline: none;
+        height: 35px;
+        background-color: #F4F7FA;
+        border: none;
+        border-radius: 7px;
+        padding-right: 15px;
+        padding-left: 30px;
+        font-size: 13px;
+        position: relative;
+        &::before{
+            content: 'dfdsfsdf';
+            z-index: 30;
+            width: 16px;
+            height: 16px;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+    }
+    .input::placeholder {
+        color: $placeholderColor;
+        font-size: 13px;
+    }
+
+
+}
