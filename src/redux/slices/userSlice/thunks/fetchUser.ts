@@ -10,8 +10,8 @@ export const fetchUser = createAsyncThunk('user/fetchUser', async (uid: string, 
     const dataUser = await getDoc(docUser)
 
     const userToFetch = dataUser.data()
-    console.log(userToFetch)
-    if (userToFetch !== undefined) {
+
+    if (userToFetch) {
         dispatch(setUser(userToFetch as IUser))
     }
 

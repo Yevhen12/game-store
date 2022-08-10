@@ -27,8 +27,23 @@ export interface IDropMenu {
     rigthPosition: string
 }
 
-export interface IDropMenuItem  {
+export interface IDropMenuItem {
     name: string
     image: string
     funcToDo: any
+}
+
+export interface IGameItem {
+    developer: string
+    freetogame_profile_url: string
+    game_url: string
+    genre: string
+    id: string
+    platform: string
+    price: string
+    publisher: string
+    release_date: string
+    short_description: string
+    thumbnail: string
+    title: string
 }

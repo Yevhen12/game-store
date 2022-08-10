@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.module.scss'
+import Search from './Search/Search'
 
 const Header: React.FC = () => {
 
@@ -22,7 +23,7 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-            <input type='text' placeholder="Search" className={styles.input}/>
+            <Search />
         </header>
     )
 }

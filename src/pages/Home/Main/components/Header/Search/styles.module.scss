@@ -1,0 +1,26 @@
+@import "../../../../../../styles/variables/variables";
+
+.input {
+    outline: none;
+    height: 35px;
+    background-color: #F4F7FA;
+    border: none;
+    border-radius: 7px;
+    padding-right: 15px;
+    padding-left: 30px;
+    font-size: 13px;
+    position: relative;
+    &::before{
+        content: 'dfdsfsdf';
+        z-index: 30;
+        width: 16px;
+        height: 16px;
+        top: 0;
+        right: 0;
+        position: absolute;
+    }
+}
+.input::placeholder {
+    color: $placeholderColor;
+    font-size: 13px;
+}

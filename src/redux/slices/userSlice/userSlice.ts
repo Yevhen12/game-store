@@ -2,11 +2,11 @@ import { fetchUser } from './thunks/fetchUser';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IUser } from "../../../interfaces/interfaces";
 
-type userStatus = 'loading'| 'success' | 'rejected' | null
+export type StatusType = 'loading'| 'success' | 'rejected' | null
 
 type StateType = {
     user:IUser,
-    status:userStatus
+    status:StatusType
 
 }
 

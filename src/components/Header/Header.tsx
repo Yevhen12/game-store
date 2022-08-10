@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   console.log(user)
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.container}>
         <img alt="logo" src="/images/logo.png" className={styles.logo} onClick={() => navigate(ROUTES.HOME)} />
         <div className={styles.sony_block}>
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 
       </div>
 
-    </div>
+    </header>
   )
 }
 

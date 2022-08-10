@@ -16,6 +16,7 @@ const LogIn = lazy(() => import('./pages/LogIn/LogIn'))
 const NotFound = lazy(() => import('./pages/Not-Found/Not-Found'))
 const SignUp = lazy(() => import('./pages/SignUp/SignUp'))
 const Home = lazy(() => import('./pages/Home/Home'))
+const GamePage = lazy(() => import('./pages/Game/GamePage')) 
 
 
 const App: React.FC = () => {
@@ -52,6 +53,7 @@ const App: React.FC = () => {
                   <Route path={ROUTES.LOG_IN} element={<LogIn />} />
                   <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
                   <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
+                  <Route path={ROUTES.GAME} element={<GamePage />} />
                 </Routes>
               </Router>
             </Suspense>
