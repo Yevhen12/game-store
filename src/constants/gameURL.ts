@@ -1,1 +1,0 @@
-export const url = 'https://62ebd6ad705264f263e19b92.mockapi.io/items'

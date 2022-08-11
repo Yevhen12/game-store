@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import GameItem from '../GameItem/GameItem'
 import { fetchGames } from '../../../../../redux/slices/gameSlice/thunks/fetchGames'
@@ -10,18 +10,17 @@ const List: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const games: IGameItem[] = useAppSelector(state => state.games.games)
+    const currentPage: number = useAppSelector(state => state.games.page)
 
-    console.log(games)
 
     useEffect(() => {
-        if (!games.length) {
-            const getGames: () => Promise<void> = async () => {
-                dispatch(await fetchGames())
-            }
-            getGames()
+        const getGames: () => Promise<void> = async () => {
+            console.log('dfdsfdsfs')
+            dispatch(await fetchGames(currentPage))
         }
-        
-    }, [dispatch])
+        getGames()
+
+    }, [dispatch, currentPage])
 
     const mapGamesArray: JSX.Element[] = games.map(elem => <GameItem key={elem.id} {...elem} />)
     return (
