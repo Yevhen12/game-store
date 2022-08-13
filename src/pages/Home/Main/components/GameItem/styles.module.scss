@@ -3,10 +3,10 @@
 
 .item_block {
     grid-column: span 1 / span 1;
-    grid-row: span 2 / span 2;
     padding: 10px;
     border-radius: 10px;
     position: relative;
+
 
     &:hover {
         background-color: #E7ECF1;
@@ -27,25 +27,30 @@
         opacity: 0.5;
     }
 
-    .price {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 20px;
-        color: black;   
+    .text_block {
+
+        .price {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            color: black;   
+        }
+    
+        .title {
+            font-weight: 500;
+            font-size: 16px;
+            padding: 0;
+            margin: 5px 0 0 0;
+            line-height: 20px;
+        }
+    
+        .platform {
+            margin-top: 5px;
+            color: $placeholderColor;
+            font-size: 12px;
+        }
     }
 
-    .title {
-        font-weight: 500;
-        font-size: 16px;
-        padding: 0;
-        margin: 5px 0 0 0;
-        line-height: 20px;
-    }
-
-    .platform {
-        margin-top: 5px;
-        color: $placeholderColor;
-        font-size: 12px;
-    }
+   
 }
 
