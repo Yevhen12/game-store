@@ -6,13 +6,19 @@ import List from './components/List/List'
 import Pagination from '../../../components/Pagination/Pagination'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 import { fetchGames } from '../../../redux/slices/gameSlice/thunks/fetchGames'
-import qs from 'qs'
+import { useNavigate } from 'react-router-dom'
+import qs, { ParsedQs } from 'qs'
+import { setParamsUrl } from '../../../redux/slices/gameSlice/gameSlice'
+import Filtration from './components/Filtration/Filtration'
 
 const Main: React.FC = () => {
 
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
     const currentPage: number = useAppSelector(state => state.games.page)
     const scroll = useRef<HTMLDivElement>(null)
+
+    console.log(window.location.search)
 
 
     useEffect(() => {
@@ -23,6 +29,15 @@ const Main: React.FC = () => {
         getGames()
 
     }, [dispatch, currentPage])
+
+    useEffect(() => {
+        if(window.location.search) {
+            const params:ParsedQs = qs.parse(window.location.search.substring(1))
+            dispatch(setParamsUrl(params))
+           console.log(params)
+        }
+        
+    }, [dispatch])
 
     useEffect(() => {
         if(scroll.current) {
@@ -38,15 +53,15 @@ const Main: React.FC = () => {
             }
         )
 
-        console.log(params)
-    }, [currentPage])
+       navigate(`?${params}`)
+    }, [currentPage, navigate])
 
 
     return (
         <main className={styles.section}>
             <div ref={scroll} className={styles.container}>
                 <Header />
-                <div className={styles.block}></div>
+                <Filtration />
                 <List />
                 <Pagination />
             </div>

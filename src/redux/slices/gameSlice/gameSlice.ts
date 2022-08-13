@@ -1,3 +1,4 @@
+import { ParsedQs } from 'qs';
 import { fetchGames } from './thunks/fetchGames';
 import { StatusType } from './../userSlice/userSlice';
 import { IGameItem } from './../../../interfaces/interfaces';
@@ -7,6 +8,10 @@ type GamesSlice = {
     games: IGameItem[]
     page: number
     status: StatusType
+}
+
+export type ParamsType = {
+    p: number
 }
 
 
@@ -25,6 +30,9 @@ export const gameSlice = createSlice({
         },
         setPage: (state:GamesSlice, action:PayloadAction<number>) => {
             state.page = action.payload
+        },
+        setParamsUrl: (state: GamesSlice, action:PayloadAction<ParsedQs>) => {
+            state.page = Number(action.payload.p)
         }
     },
     extraReducers(builder) {
@@ -40,6 +48,6 @@ export const gameSlice = createSlice({
     }
 })
 
-export const { setGames, setPage } = gameSlice.actions
+export const { setGames, setPage, setParamsUrl } = gameSlice.actions
 
 export default gameSlice.reducer
