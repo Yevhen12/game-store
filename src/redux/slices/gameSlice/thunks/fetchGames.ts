@@ -4,12 +4,18 @@ import axios from "axios"
 import { setDoc, doc } from 'firebase/firestore';
 import { db } from '../../../../firebase/firebaseConfig';
 import { setGames } from '../gameSlice';
+import { ParamsType } from '../../../../pages/Home/Main/Main';
 
 
-export const fetchGames = createAsyncThunk('games/fetchGames', async (currentPage:number, { dispatch }) => {
+export const fetchGames = createAsyncThunk('games/fetchGames', async (params:ParamsType, { dispatch }) => {
 
-    const url = `https://62ebd6ad705264f263e19b92.mockapi.io/items?p=${currentPage}&l=18`
-    console.log(currentPage)
+    const {sort, currentPage} = params
+    const isDesc:boolean = sort.property.includes('-')
+    const sortPropery:string = isDesc ? sort.property.substring(1) : sort.property
+
+    const order:string = isDesc ? 'desc' : 'asc'
+
+    const url = `http://localhost:3000/games?_sort=${sortPropery}&_order=${order}&_page=${currentPage}&_limit=18`
 
     const { data } = await axios.get<IGameItem[]>(url)
     data.forEach(async (elem) => {

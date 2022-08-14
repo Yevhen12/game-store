@@ -13,8 +13,6 @@ const Header: React.FC = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false)
   const [activeModal, setActiveModal] = useState<boolean>(false)
 
-  console.log(user)
-
   return (
     <header className={styles.header}>
       <div className={styles.container}>

@@ -4,16 +4,11 @@ import { StatusType } from './../userSlice/userSlice';
 import { IGameItem } from './../../../interfaces/interfaces';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type GamesSlice = {
+export type GamesSlice = {
     games: IGameItem[]
     page: number
     status: StatusType
-}
-
-export type ParamsType = {
-    p: number
-}
-
+} 
 
 const initialState:GamesSlice = {
     games:[],
@@ -31,9 +26,6 @@ export const gameSlice = createSlice({
         setPage: (state:GamesSlice, action:PayloadAction<number>) => {
             state.page = action.payload
         },
-        setParamsUrl: (state: GamesSlice, action:PayloadAction<ParsedQs>) => {
-            state.page = Number(action.payload.p)
-        }
     },
     extraReducers(builder) {
         builder.addCase(fetchGames.pending, (state:GamesSlice) => {
@@ -48,6 +40,6 @@ export const gameSlice = createSlice({
     }
 })
 
-export const { setGames, setPage, setParamsUrl } = gameSlice.actions
+export const { setGames, setPage } = gameSlice.actions
 
 export default gameSlice.reducer

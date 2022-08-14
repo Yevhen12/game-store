@@ -8,14 +8,23 @@ import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 import { fetchGames } from '../../../redux/slices/gameSlice/thunks/fetchGames'
 import { useNavigate } from 'react-router-dom'
 import qs, { ParsedQs } from 'qs'
-import { setParamsUrl } from '../../../redux/slices/gameSlice/gameSlice'
+import { setParamsUrl } from '../../../redux/slices/filterSlice/filterSlice'
 import Filtration from './components/Filtration/Filtration'
+import { SortType } from './components/Filtration/Sort/Sort'
+
+
+export type ParamsType = {
+    currentPage: number,
+    sort: SortType
+
+}
 
 const Main: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const currentPage: number = useAppSelector(state => state.games.page)
+    const sort: SortType = useAppSelector(state => state.filter.sort)
     const scroll = useRef<HTMLDivElement>(null)
 
     console.log(window.location.search)
@@ -23,12 +32,16 @@ const Main: React.FC = () => {
 
     useEffect(() => {
         const getGames: () => Promise<void> = async () => {
-            dispatch(await fetchGames(currentPage))
+            const paramsToGive:ParamsType = {
+                currentPage,
+                sort
+            }
+            dispatch(await fetchGames(paramsToGive))
         }
 
         getGames()
 
-    }, [dispatch, currentPage])
+    }, [dispatch, currentPage, sort.name])
 
     useEffect(() => {
         if(window.location.search) {
@@ -49,12 +62,16 @@ const Main: React.FC = () => {
     useEffect(() => {
         const params = qs.stringify(
             {
-                p:currentPage
+                _sort: sort.property.includes('-') ? sort.property.substring(1) : sort.property,
+                _order: sort.property.includes('-') ? 'desc' : 'asc',
+                _page: currentPage,
             }
         )
 
+        console.log(sort.property)
+
        navigate(`?${params}`)
-    }, [currentPage, navigate])
+    }, [currentPage, sort.name, navigate])
 
 
     return (

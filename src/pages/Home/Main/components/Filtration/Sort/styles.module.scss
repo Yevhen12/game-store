@@ -1,0 +1,49 @@
+@import '../../../../../../styles/mixins/mixins';
+@import '../../../../../../styles/variables/variables';
+
+.container {
+    position: relative;
+
+    .sort_block {
+        display: flex;
+        cursor: pointer;
+
+        &:active {
+            color: $activeColor;
+        }
+    
+        p {
+            margin-right: 5px;
+        }
+        .arrow_btn {
+            @include arrow-btn;
+            transition: 0.3s;
+            margin-top: 4px;
+        }
+        .arrow_btn_rotated {
+            @include arrow-btn;
+
+            margin-top: 4px;
+            transform:rotateZ(-180deg);
+            transition: 0.3s;
+        }
+    }
+    .dropMenu_items {
+        display: flex;
+        flex-direction: column;
+
+        .dropMenu_item {
+            width: 120px;
+            padding: 10px 20px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $dropMenuItem;
+            }
+            &:active {
+                background-color: rgba(0, 0, 0, 0.048);
+            }
+        }
+    }
+    
+}
