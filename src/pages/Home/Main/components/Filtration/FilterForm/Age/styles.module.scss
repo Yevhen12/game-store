@@ -1,0 +1,65 @@
+@import '../../../../../../../styles/variables/variables';
+@import '../../../../../../../styles/mixins/mixins';
+
+.container {
+    position: relative;
+    cursor: pointer;
+
+     height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    .age_block {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        border-right: 1px solid $borderColor;
+
+
+        &:active {
+            color: $activeColor;
+        }
+    
+        p {
+            margin-right: 5px;
+        }
+
+        .common_btn {
+            border: none;
+            margin-right: 5px;
+        }
+
+        .arrow_btn {
+            @include arrow-btn;
+            transition: 0.3s;
+            width: 14px;
+        }
+        .arrow_btn_rotated {
+            @include arrow-btn;
+
+            transform:rotateZ(-180deg);
+            transition: 0.3s;
+        }
+    }
+
+    .dropMenu_items {
+        display: flex;
+        flex-direction: column;
+    
+        .dropMenu_item {
+            width: 140px;
+            padding: 10px 20px;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: $dropMenuItem;
+            }
+            &:active {
+                background-color: rgba(0, 0, 0, 0.048);
+            }
+        }
+    }
+}

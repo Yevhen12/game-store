@@ -15,7 +15,7 @@ export const fetchGames = createAsyncThunk('games/fetchGames', async (params:Par
 
     const order:string = isDesc ? 'desc' : 'asc'
 
-    const url = `http://localhost:3000/games?_sort=${sortPropery}&_order=${order}&_page=${currentPage}&_limit=18`
+    const url = `http://localhost:3001/games?_sort=${sortPropery}&_order=${order}&_page=${currentPage}&_limit=18`
 
     const { data } = await axios.get<IGameItem[]>(url)
     data.forEach(async (elem) => {
