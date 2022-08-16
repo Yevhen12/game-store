@@ -10,12 +10,12 @@
         justify-content: center;
         align-items: center;
 
-    .age_block {
+    .filter_block {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 25px;
+        width: 150px;
         border-right: 1px solid $borderColor;
 
 
@@ -50,7 +50,7 @@
         flex-direction: column;
     
         .dropMenu_item {
-            width: 140px;
+            width: 150px;
             padding: 10px 20px;
             cursor: pointer;
     

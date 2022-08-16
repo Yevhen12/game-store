@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+}
+
+.filter_block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+    .clearAllFilters {
+        background-color: transparent;
+        text-transform: uppercase;
+        border: none;
+        font-size: 12px;
+        color: #91969B;
+        cursor: pointer;
+
+        &:active {
+            color: #91969b85;
+        }
+
+    }
+}

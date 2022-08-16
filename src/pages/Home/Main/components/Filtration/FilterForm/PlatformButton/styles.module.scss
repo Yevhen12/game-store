@@ -1,0 +1,29 @@
+@import '../../../../../../../styles/variables/variables';
+
+.button{
+    border-radius: 8px;
+    height: 32px;
+    border: 1px solid $borderColor;
+    padding: 0 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.buttonActive {
+    background-color: black;
+    color: white;
+}
+
+.buttonDisabled {
+    background-color: white;
+    color: black;
+    &:hover {
+        background-color: #F4F7FA;
+    }
+}
+.border {
+    height: 20px;
+    width: 1px;
+    background-color: $borderColor;
+    margin-left: 15px;
+}

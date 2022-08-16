@@ -35,6 +35,11 @@
             line-height: 20px;
             color: black;   
         }
+
+        .age_platform_block {
+            display: flex;
+            justify-content: space-between;
+        }
     
         .title {
             font-weight: 500;
@@ -44,7 +49,7 @@
             line-height: 20px;
         }
     
-        .platform {
+        .text_age_platform {
             margin-top: 5px;
             color: $placeholderColor;
             font-size: 12px;

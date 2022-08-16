@@ -46,4 +46,5 @@ export interface IGameItem {
     short_description: string
     thumbnail: string
     title: string
+    age: number
 }

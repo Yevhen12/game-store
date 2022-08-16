@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React, { useRef, useEffect } from 'react'
 
 import styles from './styles.module.scss'
 import Header from './components/Header/Header'
@@ -14,17 +14,20 @@ import { SortType } from './components/Filtration/Sort/Sort'
 
 
 export type ParamsType = {
-    currentPage: number,
+    page: number
     sort: SortType
-
+    genre: number | null
+    price: number | null
+    age: number | null
+    platform: number | null
 }
 
 const Main: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
-    const currentPage: number = useAppSelector(state => state.games.page)
-    const sort: SortType = useAppSelector(state => state.filter.sort)
+    const filteState = useAppSelector(state => state.filter)
+    const { page, sort, genre, price, age, platform } = filteState
     const scroll = useRef<HTMLDivElement>(null)
 
     console.log(window.location.search)
@@ -32,31 +35,36 @@ const Main: React.FC = () => {
 
     useEffect(() => {
         const getGames: () => Promise<void> = async () => {
-            const paramsToGive:ParamsType = {
-                currentPage,
-                sort
+            const paramsToGive: ParamsType = {
+                page,
+                sort,
+                genre,
+                price,
+                age,
+                platform,
+
             }
             dispatch(await fetchGames(paramsToGive))
         }
 
         getGames()
 
-    }, [dispatch, currentPage, sort.name])
+    }, [dispatch, page, sort, genre, price, age, platform])
 
     useEffect(() => {
-        if(window.location.search) {
-            const params:ParsedQs = qs.parse(window.location.search.substring(1))
+        if (window.location.search) {
+            const params: ParsedQs = qs.parse(window.location.search.substring(1))
             dispatch(setParamsUrl(params))
-           console.log(params)
+            console.log(params)
         }
-        
+
     }, [dispatch])
 
     useEffect(() => {
-        if(scroll.current) {
-            scroll.current.scrollIntoView({block: 'start'})
+        if (scroll.current) {
+            scroll.current.scrollIntoView({ block: 'start' })
         }
-    }, [currentPage])
+    }, [page])
 
 
     useEffect(() => {
@@ -64,14 +72,14 @@ const Main: React.FC = () => {
             {
                 _sort: sort.property.includes('-') ? sort.property.substring(1) : sort.property,
                 _order: sort.property.includes('-') ? 'desc' : 'asc',
-                _page: currentPage,
+                _page: page,
             }
         )
 
         console.log(sort.property)
 
-       navigate(`?${params}`)
-    }, [currentPage, sort.name, navigate])
+        navigate(`?${params}`)
+    }, [page, sort, navigate, genre, price, age, platform])
 
 
     return (

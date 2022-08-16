@@ -20,6 +20,7 @@ const GamePage: React.FC = () => {
             short_description: '',
             thumbnail: '',
             title: '',
+            age: 0,
         }
     )
     const { gameId } = useParams()

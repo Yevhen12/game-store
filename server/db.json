@@ -7,12 +7,13 @@
             "short_description": "Built for mobile and also released on PC, Diablo Immortal fills in the gaps between Diablo II and III in an MMOARPG environment.",
             "game_url": "https://www.freetogame.com/open/diablo-immortal",
             "genre": "MMOARPG",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Blizzard Entertainment",
             "developer": "Blizzard Entertainment",
             "release_date": "2022-06-02",
             "freetogame_profile_url": "https://www.freetogame.com/diablo-immortal",
-            "price": "31.49"
+            "price": "55.99",
+            "age": 18
         },
         {
             "id": "517",
@@ -26,7 +27,8 @@
             "developer": "Smilegate RPG",
             "release_date": "2022-02-11",
             "freetogame_profile_url": "https://www.freetogame.com/lost-ark",
-            "price": "42.99"
+            "price": "58.99",
+            "age": 6
         },
         {
             "id": "516",
@@ -35,12 +37,13 @@
             "short_description": "Get into the action in one of the longest running battle royale games PUBG Battlegrounds.",
             "game_url": "https://www.freetogame.com/open/pubg",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "KRAFTON, Inc.",
             "developer": "KRAFTON, Inc.",
             "release_date": "2022-01-12",
             "freetogame_profile_url": "https://www.freetogame.com/pubg",
-            "price": "46.49"
+            "price": "50.49",
+            "age": 16
         },
         {
             "id": "508",
@@ -49,12 +52,13 @@
             "short_description": "Get ready to command your own World War II military squad in Gaijin and Darkflow Software’s MMO squad-based shooter Enlisted. ",
             "game_url": "https://www.freetogame.com/open/enlisted",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Gaijin Entertainment",
             "developer": "Darkflow Software",
             "release_date": "2021-04-08",
             "freetogame_profile_url": "https://www.freetogame.com/enlisted",
-            "price": "36.99"
+            "price": "42.99",
+            "age": 16
         },
         {
             "id": "345",
@@ -63,12 +67,13 @@
             "short_description": "A free to play 2D browser-based online strategy game, become the leader and raise your city.",
             "game_url": "https://www.freetogame.com/open/forge-of-empires",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "InnoGames",
             "developer": "InnoGames",
             "release_date": "2012-04-17",
             "freetogame_profile_url": "https://www.freetogame.com/forge-of-empires",
-            "price": "38.99"
+            "price": "54.99",
+            "age": 6
         },
         {
             "id": "427",
@@ -77,12 +82,13 @@
             "short_description": "A free to play browser-based top-down hack-and-slash 3D MMORPG similar to games in the Diablo series.",
             "game_url": "https://www.freetogame.com/open/drakensang-online",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "Bigpoint",
             "developer": "Bigpoint",
             "release_date": "2011-08-08",
             "freetogame_profile_url": "https://www.freetogame.com/drakensang-online",
-            "price": "57.00"
+            "price": "59.00",
+            "age": 12
         },
         {
             "id": "525",
@@ -96,7 +102,8 @@
             "developer": "Player First Games",
             "release_date": "2022-07-19",
             "freetogame_profile_url": "https://www.freetogame.com/multiversus",
-            "price": "55.99"
+            "price": "36.49",
+            "age": 9
         },
         {
             "id": "475",
@@ -105,12 +112,13 @@
             "short_description": "If you’ve been looking for a game to scratch that open-world action RPG itch, one with perhaps a bit of Asian flair, then you’re going to want to check out miHoYo’s Genshin Impact.",
             "game_url": "https://www.freetogame.com/open/genshin-impact",
             "genre": "Action RPG",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "miHoYo",
             "developer": "miHoYo",
             "release_date": "2020-09-28",
             "freetogame_profile_url": "https://www.freetogame.com/genshin-impact",
-            "price": "57.99"
+            "price": "48.00",
+            "age": 9
         },
         {
             "id": "523",
@@ -119,12 +127,13 @@
             "short_description": "Play the most competitive massively multiplayer party royale game featuring beans ever for free on a variety of platforms. ",
             "game_url": "https://www.freetogame.com/open/fall-guys",
             "genre": "Battle Royale",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Mediatonic",
             "developer": "Mediatonic",
             "release_date": "2020-08-04",
             "freetogame_profile_url": "https://www.freetogame.com/fall-guys",
-            "price": "43.99"
+            "price": "37.00",
+            "age": 18
         },
         {
             "id": "340",
@@ -133,12 +142,13 @@
             "short_description": "A free-to-play browser-based RTS based on the George R.R. Martin novels and popular HBO series.",
             "game_url": "https://www.freetogame.com/open/game-of-thrones-winter-is-coming",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "GTArcade",
             "developer": "YOOZOO Games ",
             "release_date": "2019-11-14",
             "freetogame_profile_url": "https://www.freetogame.com/game-of-thrones-winter-is-coming",
-            "price": "30.49"
+            "price": "49.00",
+            "age": 9
         },
         {
             "id": "445",
@@ -147,12 +157,13 @@
             "short_description": "A browser-based fantasy MMOARPG wherein players take on the role of a devil hunter descended from the gods.",
             "game_url": "https://www.freetogame.com/open/dark-knight",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "Opogame",
             "developer": "Opogame",
             "release_date": "2019-08-06",
             "freetogame_profile_url": "https://www.freetogame.com/dark-knight",
-            "price": "36.00"
+            "price": "54.00",
+            "age": 6
         },
         {
             "id": "347",
@@ -161,12 +172,13 @@
             "short_description": "A browser based city-building strategy MMO set in the fantasy world of Elvenar.",
             "game_url": "https://www.freetogame.com/open/elvenar",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS5",
             "publisher": "InnoGames",
             "developer": "InnoGames",
             "release_date": "2015-04-08",
             "freetogame_profile_url": "https://www.freetogame.com/elvenar",
-            "price": "35.49"
+            "price": "37.00",
+            "age": 16
         },
         {
             "id": "11",
@@ -175,12 +187,13 @@
             "short_description": "A free-to-play 3D action MMORPG based on the acclaimed Dungeons & Dragons fantasy roleplaying game. ",
             "game_url": "https://www.freetogame.com/open/neverwinter",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Perfect World Entertainment",
             "developer": "Cryptic Studios",
             "release_date": "2013-12-06",
             "freetogame_profile_url": "https://www.freetogame.com/neverwinter",
-            "price": "42.00"
+            "price": "42.00",
+            "age": 12
         },
         {
             "id": "380",
@@ -189,12 +202,13 @@
             "short_description": "A browser-based 3D space-combat MMO with a massive playerbase!",
             "game_url": "https://www.freetogame.com/open/darkorbit",
             "genre": "Shooter",
-            "platform": "Web Browser",
+            "platform": "PS5",
             "publisher": "Bigpoint",
             "developer": "Bigpoint",
             "release_date": "2006-12-11",
             "freetogame_profile_url": "https://www.freetogame.com/darkorbit",
-            "price": "44.00"
+            "price": "38.00",
+            "age": 6
         },
         {
             "id": "515",
@@ -208,7 +222,8 @@
             "developer": "343 Industries",
             "release_date": "2021-11-15",
             "freetogame_profile_url": "https://www.freetogame.com/halo-infinite",
-            "price": "46.49"
+            "price": "53.00",
+            "age": 6
         },
         {
             "id": "458",
@@ -217,12 +232,13 @@
             "short_description": "A free-to-play, browser-based fantasy online action RPG based loosely on Western mythology!",
             "game_url": "https://www.freetogame.com/open/league-of-angels-heavens-fury",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "Gtarcade",
             "developer": "Yoozoo Games",
             "release_date": "2020-01-09",
             "freetogame_profile_url": "https://www.freetogame.com/league-of-angels-heavens-fury",
-            "price": "45.49"
+            "price": "46.00",
+            "age": 6
         },
         {
             "id": "455",
@@ -231,12 +247,13 @@
             "short_description": "A free-to-play ARPG from R2 Games!",
             "game_url": "https://www.freetogame.com/open/eternal-fury",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "R2 Games",
             "developer": "R2 Games",
             "release_date": "2019-05-21",
             "freetogame_profile_url": "https://www.freetogame.com/eternal-fury",
-            "price": "33.99"
+            "price": "42.49",
+            "age": 12
         },
         {
             "id": "522",
@@ -245,12 +262,13 @@
             "short_description": "Get the full Flyff experience on any platform with the free-to-play browser-based MMORPG Flyff Universe.",
             "game_url": "https://www.freetogame.com/open/flyff-universe",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "Gala Lab",
             "developer": "Gala Lab",
             "release_date": "2022-06-14",
             "freetogame_profile_url": "https://www.freetogame.com/flyff-universe",
-            "price": "50.00"
+            "price": "42.00",
+            "age": 9
         },
         {
             "id": "511",
@@ -264,7 +282,8 @@
             "developer": "Sega",
             "release_date": "2021-06-09",
             "freetogame_profile_url": "https://www.freetogame.com/pso2-new-genesis",
-            "price": "42.49"
+            "price": "42.00",
+            "age": 9
         },
         {
             "id": "5",
@@ -273,12 +292,13 @@
             "short_description": "A post-apocalyptic MMO vehicle combat game! ",
             "game_url": "https://www.freetogame.com/open/crossout",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Targem",
             "developer": "Gaijin",
             "release_date": "2017-05-30",
             "freetogame_profile_url": "https://www.freetogame.com/crossout",
-            "price": "53.49"
+            "price": "35.49",
+            "age": 9
         },
         {
             "id": "9",
@@ -292,7 +312,8 @@
             "developer": "Wargaming",
             "release_date": "2015-07-02",
             "freetogame_profile_url": "https://www.freetogame.com/world-of-warships",
-            "price": "56.99"
+            "price": "53.00",
+            "age": 18
         },
         {
             "id": "12",
@@ -306,7 +327,8 @@
             "developer": "Gaijin Entertainment",
             "release_date": "2013-08-15",
             "freetogame_profile_url": "https://www.freetogame.com/war-thunder",
-            "price": "59.00"
+            "price": "40.00",
+            "age": 9
         },
         {
             "id": "2",
@@ -315,12 +337,13 @@
             "short_description": "If you like blowing up tanks, with a quick and intense game style you will love this game!",
             "game_url": "https://www.freetogame.com/open/world-of-tanks",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Wargaming",
             "developer": "Wargaming",
             "release_date": "2011-04-12",
             "freetogame_profile_url": "https://www.freetogame.com/world-of-tanks",
-            "price": "43.99"
+            "price": "43.99",
+            "age": 6
         },
         {
             "id": "527",
@@ -334,7 +357,8 @@
             "developer": "Anisage Games",
             "release_date": "2022-08-01",
             "freetogame_profile_url": "https://www.freetogame.com/aero-tales-online",
-            "price": "47.99"
+            "price": "52.00",
+            "age": 18
         },
         {
             "id": "524",
@@ -343,12 +367,13 @@
             "short_description": "Fans of collectible card games, are you looking for something a bit different from the normal fare? Then a peek at Moonwolf Entertainment and A2 Softworks’ Temperia: Soul of Majestic might be in order.",
             "game_url": "https://www.freetogame.com/open/temperia",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Leonardo Interactive",
             "developer": "MoonWolf Entertainment, A2 Softworks",
             "release_date": "2022-07-26",
             "freetogame_profile_url": "https://www.freetogame.com/temperia",
-            "price": "58.99"
+            "price": "55.49",
+            "age": 16
         },
         {
             "id": "526",
@@ -362,7 +387,8 @@
             "developer": "Pixel soft",
             "release_date": "2022-07-14",
             "freetogame_profile_url": "https://www.freetogame.com/chimeraland",
-            "price": "43.00"
+            "price": "56.00",
+            "age": 6
         },
         {
             "id": "520",
@@ -376,7 +402,8 @@
             "developer": "Ubisoft",
             "release_date": "2022-05-25",
             "freetogame_profile_url": "https://www.freetogame.com/roller-champions",
-            "price": "55.49"
+            "price": "57.00",
+            "age": 12
         },
         {
             "id": "519",
@@ -390,7 +417,8 @@
             "developer": "Flying Wild Hog",
             "release_date": "2022-04-20",
             "freetogame_profile_url": "https://www.freetogame.com/space-punks",
-            "price": "52.00"
+            "price": "32.49",
+            "age": 18
         },
         {
             "id": "518",
@@ -404,7 +432,8 @@
             "developer": "Wangyuan Shengtang Entertainment",
             "release_date": "2021-07-09",
             "freetogame_profile_url": "https://www.freetogame.com/swords-of-legends-online",
-            "price": "54.99"
+            "price": "32.00",
+            "age": 9
         },
         {
             "id": "513",
@@ -413,12 +442,13 @@
             "short_description": "Prepare yourself. It’s time for Mayhem. Super Squad is a multi-player online shoot-’em-up (or MOSH)!",
             "game_url": "https://www.freetogame.com/open/super-squad",
             "genre": "Moba",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Bad Fox Studios",
             "developer": "Bad Fox Studios",
             "release_date": "2021-06-25",
             "freetogame_profile_url": "https://www.freetogame.com/super-squad",
-            "price": "45.99"
+            "price": "59.00",
+            "age": 12
         },
         {
             "id": "512",
@@ -432,7 +462,8 @@
             "developer": "CAGE Studios",
             "release_date": "2021-05-12",
             "freetogame_profile_url": "https://www.freetogame.com/sherwood-extreme",
-            "price": "57.49"
+            "price": "54.00",
+            "age": 16
         },
         {
             "id": "509",
@@ -446,7 +477,8 @@
             "developer": "5minlab",
             "release_date": "2021-04-13",
             "freetogame_profile_url": "https://www.freetogame.com/smash-legends",
-            "price": "40.00"
+            "price": "41.99",
+            "age": 9
         },
         {
             "id": "510",
@@ -455,12 +487,13 @@
             "short_description": "Grab your Driftpacs and grappling hooks, it’s time to loot. Pick a character and dive into Blind Squirrel’s team-based shooter, Drifters Loot the Galaxy.",
             "game_url": "https://www.freetogame.com/open/drifters-loot-the-galaxy",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Blind Squirrel Entertainment",
             "developer": "Blind Squirrel Entertainment",
             "release_date": "2021-04-15",
             "freetogame_profile_url": "https://www.freetogame.com/drifters-loot-the-galaxy",
-            "price": "59.00"
+            "price": "57.00",
+            "age": 18
         },
         {
             "id": "502",
@@ -474,7 +507,8 @@
             "developer": "Global Dodo Entertainment",
             "release_date": "2021-03-04",
             "freetogame_profile_url": "https://www.freetogame.com/primordials-battle-of-gods",
-            "price": "32.00"
+            "price": "56.00",
+            "age": 9
         },
         {
             "id": "507",
@@ -483,12 +517,13 @@
             "short_description": "Super Mecha Champions is a PC port of the mobile anime PvP game from NetEease, featuring a variety of modes but focusing on battle royale.",
             "game_url": "https://www.freetogame.com/open/super-mecha-champions",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "NetEase Games",
             "developer": "NetEase Games",
             "release_date": "2021-03-25",
             "freetogame_profile_url": "https://www.freetogame.com/super-mecha-champions",
-            "price": "40.99"
+            "price": "49.99",
+            "age": 6
         },
         {
             "id": "500",
@@ -502,7 +537,8 @@
             "developer": "Clarity Games",
             "release_date": "2021-01-28",
             "freetogame_profile_url": "https://www.freetogame.com/chroma-bloom-and-blight",
-            "price": "57.49"
+            "price": "32.49",
+            "age": 9
         },
         {
             "id": "497",
@@ -516,7 +552,8 @@
             "developer": "Studio 8",
             "release_date": "2020-12-12",
             "freetogame_profile_url": "https://www.freetogame.com/astellia-royal",
-            "price": "58.00"
+            "price": "54.49",
+            "age": 18
         },
         {
             "id": "498",
@@ -525,12 +562,13 @@
             "short_description": "What happens when you take the vinyl collectible toy experience and combine it with an open-world multiplayer game? You get Blankos Block Party!\r\n",
             "game_url": "https://www.freetogame.com/open/blankos",
             "genre": "MMO",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Third Kind Games",
             "developer": "Mythical Games Inc",
             "release_date": "2020-12-11",
             "freetogame_profile_url": "https://www.freetogame.com/blankos",
-            "price": "31.00"
+            "price": "37.49",
+            "age": 18
         },
         {
             "id": "499",
@@ -544,7 +582,8 @@
             "developer": "Oddshot Games",
             "release_date": "2020-12-07",
             "freetogame_profile_url": "https://www.freetogame.com/slapshot-rebound",
-            "price": "53.49"
+            "price": "44.00",
+            "age": 9
         },
         {
             "id": "476",
@@ -553,12 +592,13 @@
             "short_description": "From Hi-Rez Studios, the team that brought you Smite and Paladins, comes Rogue Company, a cross-platform, competitive team-based third person shooter.",
             "game_url": "https://www.freetogame.com/open/rogue-company",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Nexon",
             "developer": "Valofe",
             "release_date": "2020-10-01",
             "freetogame_profile_url": "https://www.freetogame.com/rogue-company",
-            "price": "49.99"
+            "price": "34.99",
+            "age": 6
         },
         {
             "id": "477",
@@ -567,12 +607,13 @@
             "short_description": "Combining elements from battle royale, MOBA, and the survival genres, Eternal Return: Black Survival is a game designed with a broad audience in mind. ",
             "game_url": "https://www.freetogame.com/open/eternal-return",
             "genre": "MOBA",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Nimble Neuron",
             "developer": "Nimble Neuron",
             "release_date": "2020-10-14",
             "freetogame_profile_url": "https://www.freetogame.com/eternal-return",
-            "price": "52.00"
+            "price": "46.99",
+            "age": 9
         },
         {
             "id": "479",
@@ -581,12 +622,13 @@
             "short_description": "Blood of Steel is an online competitive strategy game featuring some of the most well-known figures throughout medieval history. Choose your general – a Crusader, Viking, Ninja or one of those from the Three Kingdoms. Build your kingdom and command armies in epic PvP battles using classic medieval warfare tactics.",
             "game_url": "https://www.freetogame.com/open/blood-of-steel",
             "genre": "Strategy",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "YC Games",
             "developer": "YC Games",
             "release_date": "2020-10-20",
             "freetogame_profile_url": "https://www.freetogame.com/blood-of-steel",
-            "price": "31.99"
+            "price": "50.49",
+            "age": 9
         },
         {
             "id": "473",
@@ -600,7 +642,8 @@
             "developer": "Proletariat",
             "release_date": "2020-09-04",
             "freetogame_profile_url": "https://www.freetogame.com/spellbreak",
-            "price": "48.99"
+            "price": "42.99",
+            "age": 16
         },
         {
             "id": "474",
@@ -609,12 +652,13 @@
             "short_description": "Get your car-soccer gaming on for free with Psyonix’s Rocket League. The popular competitive multi-player game is a popular offering with over 57 million players.",
             "game_url": "https://www.freetogame.com/open/rocket-league",
             "genre": "Sports",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Psyonix LLC",
             "developer": "Psyonix LLC",
             "release_date": "2020-09-24",
             "freetogame_profile_url": "https://www.freetogame.com/rocket-league",
-            "price": "39.00"
+            "price": "57.00",
+            "age": 9
         },
         {
             "id": "471",
@@ -623,12 +667,13 @@
             "short_description": "Build your empire with the help of mythical heroes and well thought out strategy in R2 Games’ strategy RPG Armor Valor.",
             "game_url": "https://www.freetogame.com/open/armor-valor",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "R2 Games",
             "developer": "R2 Games",
             "release_date": "2020-07-20",
             "freetogame_profile_url": "https://www.freetogame.com/armor-valor",
-            "price": "40.00"
+            "price": "55.00",
+            "age": 12
         },
         {
             "id": "466",
@@ -642,7 +687,8 @@
             "developer": "Riot Games",
             "release_date": "2020-06-02",
             "freetogame_profile_url": "https://www.freetogame.com/valorant",
-            "price": "42.49"
+            "price": "47.99",
+            "age": 9
         },
         {
             "id": "469",
@@ -651,12 +697,13 @@
             "short_description": "Unfortunate Spacemen is a co-op multiplayer game about Shapeshifting with a Co-op Story Mode, lots of objectives and more!",
             "game_url": "https://www.freetogame.com/open/unfortunate-spacemen",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "New Blood Interactive",
             "developer": "Geoff 'Zag' Keene",
             "release_date": "2020-06-12",
             "freetogame_profile_url": "https://www.freetogame.com/unfortunate-spacemen",
-            "price": "46.49"
+            "price": "33.99",
+            "age": 18
         },
         {
             "id": "472",
@@ -665,12 +712,13 @@
             "short_description": "Jade Goddess is a free-to-play, browser based MMO inspired by Eastern mythology.",
             "game_url": "https://www.freetogame.com/open/jade-goddess",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "101XP",
             "developer": "101XP",
             "release_date": "2020-06-15",
             "freetogame_profile_url": "https://www.freetogame.com/jade-goddess",
-            "price": "44.00"
+            "price": "48.49",
+            "age": 9
         },
         {
             "id": "461",
@@ -684,7 +732,8 @@
             "developer": "Kabam Games, Inc.",
             "release_date": "2020-05-05",
             "freetogame_profile_url": "https://www.freetogame.com/shop-titans",
-            "price": "51.49"
+            "price": "49.00",
+            "age": 9
         },
         {
             "id": "467",
@@ -698,7 +747,8 @@
             "developer": "SEGA",
             "release_date": "2020-05-27",
             "freetogame_profile_url": "https://www.freetogame.com/pso2",
-            "price": "40.49"
+            "price": "55.00",
+            "age": 12
         },
         {
             "id": "463",
@@ -707,12 +757,13 @@
             "short_description": "Survivor Legacy is a free-to-play zombie-themed strategy game from R2 Games.",
             "game_url": "https://www.freetogame.com/open/survivor-legacy",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "R2 Games",
             "developer": "GameHollywood",
             "release_date": "2020-04-07",
             "freetogame_profile_url": "https://www.freetogame.com/survivor-legacy",
-            "price": "48.00"
+            "price": "57.00",
+            "age": 12
         },
         {
             "id": "452",
@@ -721,12 +772,13 @@
             "short_description": "A standalone free-to-play battle royale and modes accessible via Call of Duty: Modern Warfare.",
             "game_url": "https://www.freetogame.com/open/call-of-duty-warzone",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Activision",
             "developer": "Infinity Ward",
             "release_date": "2020-03-10",
             "freetogame_profile_url": "https://www.freetogame.com/call-of-duty-warzone",
-            "price": "52.49"
+            "price": "40.49",
+            "age": 9
         },
         {
             "id": "459",
@@ -735,12 +787,13 @@
             "short_description": "A free-to-play massively multiplayer battle Royale game inspired by the old-shool Bomberman games!",
             "game_url": "https://www.freetogame.com/open/bombergrounds-battle-royale",
             "genre": "Battle Royale",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Giant Duck Games",
             "developer": "Giant Duck Games",
             "release_date": "2020-03-07",
             "freetogame_profile_url": "https://www.freetogame.com/bombergrounds-battle-royale",
-            "price": "30.49"
+            "price": "43.49",
+            "age": 6
         },
         {
             "id": "39",
@@ -754,7 +807,8 @@
             "developer": "Scavengers Studio",
             "release_date": "2020-01-14",
             "freetogame_profile_url": "https://www.freetogame.com/darwin-project",
-            "price": "35.00"
+            "price": "48.99",
+            "age": 6
         },
         {
             "id": "441",
@@ -763,12 +817,13 @@
             "short_description": "A free-to-play CCG based on Riot Games' MOBA League of Legends.",
             "game_url": "https://www.freetogame.com/open/runeterra",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Riot Games",
             "developer": "Riot Games",
             "release_date": "2020-01-24",
             "freetogame_profile_url": "https://www.freetogame.com/runeterra",
-            "price": "52.00"
+            "price": "46.49",
+            "age": 16
         },
         {
             "id": "4",
@@ -777,12 +832,13 @@
             "short_description": "Take the battle royale genre and add  mystical powers and you have CRSED: F.O.A.D. (Aka Cuisine Royale: Second Edition)",
             "game_url": "https://www.freetogame.com/open/crsed",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Gaijin Distribution KFT",
             "developer": "Darkflow Software",
             "release_date": "2019-12-12",
             "freetogame_profile_url": "https://www.freetogame.com/crsed",
-            "price": "33.99"
+            "price": "40.49",
+            "age": 12
         },
         {
             "id": "436",
@@ -796,7 +852,8 @@
             "developer": "INFERNA LIMITED",
             "release_date": "2019-12-21",
             "freetogame_profile_url": "https://www.freetogame.com/inferna",
-            "price": "44.00"
+            "price": "45.99",
+            "age": 16
         },
         {
             "id": "443",
@@ -805,12 +862,13 @@
             "short_description": "A browser-based strategy MMO published for both desktop and mobile browsers by Gameforge.  ",
             "game_url": "https://www.freetogame.com/open/ultimate-pirates",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "Gameforge",
             "developer": "Moonmana",
             "release_date": "2019-12-02",
             "freetogame_profile_url": "https://www.freetogame.com/ultimate-pirates",
-            "price": "46.49"
+            "price": "43.49",
+            "age": 16
         },
         {
             "id": "501",
@@ -819,12 +877,13 @@
             "short_description": "If you’ve ever wanted to be a creature of myth and hang out with other mytical creatures, Wildworks’ Fer.al can help you live the dream.",
             "game_url": "https://www.freetogame.com/open/Feral",
             "genre": "MMO",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Wildworks",
             "developer": "Wildworks",
             "release_date": "2019-12-13",
             "freetogame_profile_url": "https://www.freetogame.com/Feral",
-            "price": "42.00"
+            "price": "30.49",
+            "age": 12
         },
         {
             "id": "435",
@@ -833,12 +892,13 @@
             "short_description": "A multi-platform free-to-play RPG developed and published by Epic Games for PC and Android devices.  ",
             "game_url": "https://www.freetogame.com/open/battlebreakers",
             "genre": "Strategy",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Epic Games",
             "developer": "Epic Games",
             "release_date": "2019-11-13",
             "freetogame_profile_url": "https://www.freetogame.com/battlebreakers",
-            "price": "40.00"
+            "price": "51.99",
+            "age": 16
         },
         {
             "id": "437",
@@ -847,12 +907,13 @@
             "short_description": "An MMORPG featuring urban exploration and shooter elements.",
             "game_url": "https://www.freetogame.com/open/stay-out",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Mobile Technologies LLC",
             "developer": "Mobile Technologies LLC",
             "release_date": "2019-11-27",
             "freetogame_profile_url": "https://www.freetogame.com/stay-out",
-            "price": "50.49"
+            "price": "43.49",
+            "age": 9
         },
         {
             "id": "439",
@@ -861,12 +922,13 @@
             "short_description": "An arcade soccer game inspired by cult arcade games from IDC games. ",
             "game_url": "https://www.freetogame.com/open/futbol-legends",
             "genre": "Sports",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "IDG GAmes",
             "developer": "IDG GAmes",
             "release_date": "2019-11-01",
             "freetogame_profile_url": "https://www.freetogame.com/futbol-legends",
-            "price": "55.00"
+            "price": "31.00",
+            "age": 18
         },
         {
             "id": "440",
@@ -875,12 +937,13 @@
             "short_description": "A multiplayer strategy game that focuses on the war between vampires and werewolves. ",
             "game_url": "https://www.freetogame.com/open/vampire-empire",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PC (Windows)",
             "publisher": "R2 Games",
             "developer": "F5 Game Company",
             "release_date": "2019-11-07",
             "freetogame_profile_url": "https://www.freetogame.com/vampire-empire",
-            "price": "46.49"
+            "price": "39.49",
+            "age": 18
         },
         {
             "id": "21",
@@ -894,7 +957,8 @@
             "developer": "Bungie",
             "release_date": "2019-10-01",
             "freetogame_profile_url": "https://www.freetogame.com/destiny-2",
-            "price": "49.99"
+            "price": "34.99",
+            "age": 12
         },
         {
             "id": "468",
@@ -903,12 +967,13 @@
             "short_description": "Set in the fantasy world of Alandria, Firestone is an idle RPG in which players are tasked with building the best possible party of heroes and using them to defeat the undead and orcs that plague the world.",
             "game_url": "https://www.freetogame.com/open/firestone-idle-rpg",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "Holyday Studios",
             "developer": "Holyday Studios",
             "release_date": "2019-09-26",
             "freetogame_profile_url": "https://www.freetogame.com/firestone-idle-rpg",
-            "price": "31.49"
+            "price": "42.49",
+            "age": 12
         },
         {
             "id": "505",
@@ -922,7 +987,8 @@
             "developer": "Rhino Games Inc.",
             "release_date": "2019-09-18",
             "freetogame_profile_url": "https://www.freetogame.com/mythgard",
-            "price": "43.00"
+            "price": "34.00",
+            "age": 12
         },
         {
             "id": "446",
@@ -931,12 +997,13 @@
             "short_description": "A sandbox MMORPG featuring a skill-based system, content that will appeal to both PvE and PvP players, and a robust housing system.",
             "game_url": "https://www.freetogame.com/open/legends-of-aria",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Citadel Studios Inc",
             "developer": "Citadel Studios Inc",
             "release_date": "2019-08-07",
             "freetogame_profile_url": "https://www.freetogame.com/legends-of-aria",
-            "price": "39.99"
+            "price": "58.99",
+            "age": 9
         },
         {
             "id": "451",
@@ -945,12 +1012,13 @@
             "short_description": "A free-to-play fantasy RTS developed by Crunchy Leaf Games. ",
             "game_url": "https://www.freetogame.com/open/crystal-clash",
             "genre": "Strategy",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Crunchy Leaf Games",
             "developer": "Crunchy Leaf Games",
             "release_date": "2019-08-30",
             "freetogame_profile_url": "https://www.freetogame.com/crystal-clash",
-            "price": "49.00"
+            "price": "56.00",
+            "age": 9
         },
         {
             "id": "447",
@@ -964,7 +1032,8 @@
             "developer": "Valve",
             "release_date": "2019-06-21",
             "freetogame_profile_url": "https://www.freetogame.com/dota-underlords",
-            "price": "58.00"
+            "price": "50.49",
+            "age": 12
         },
         {
             "id": "1",
@@ -973,12 +1042,13 @@
             "short_description": "A free-to-play, co-op action RPG with gameplay similar to Monster Hunter.",
             "game_url": "https://www.freetogame.com/open/dauntless",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Phoenix Labs",
             "developer": "Phoenix Labs, Iron Galaxy",
             "release_date": "2019-05-21",
             "freetogame_profile_url": "https://www.freetogame.com/dauntless",
-            "price": "38.49"
+            "price": "40.49",
+            "age": 16
         },
         {
             "id": "19",
@@ -987,12 +1057,13 @@
             "short_description": "A free-to-play strategic minion brawler from Danish developer Betadwarf. ",
             "game_url": "https://www.freetogame.com/open/minion-masters",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Betadwarf",
             "developer": "Betadwarf",
             "release_date": "2019-05-24",
             "freetogame_profile_url": "https://www.freetogame.com/minion-masters",
-            "price": "34.99"
+            "price": "55.49",
+            "age": 9
         },
         {
             "id": "20",
@@ -1001,12 +1072,13 @@
             "short_description": "A free-to-play multiplayer shooter developed and published by 1047 games. ",
             "game_url": "https://www.freetogame.com/open/splitgate-arena-warfare",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "1047 Games",
             "developer": "1047 Games",
             "release_date": "2019-05-22",
             "freetogame_profile_url": "https://www.freetogame.com/splitgate-arena-warfare",
-            "price": "49.99"
+            "price": "52.00",
+            "age": 16
         },
         {
             "id": "456",
@@ -1015,12 +1087,13 @@
             "short_description": "Command your own medieval army in Conqueror's Blade, a war simulator developed by Booming games.",
             "game_url": "https://www.freetogame.com/open/conquerors-blade",
             "genre": "Strategy",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Booming Games",
             "developer": "Booming Games",
             "release_date": "2019-05-30",
             "freetogame_profile_url": "https://www.freetogame.com/conquerors-blade",
-            "price": "50.00"
+            "price": "50.99",
+            "age": 6
         },
         {
             "id": "353",
@@ -1029,12 +1102,13 @@
             "short_description": "A free-to-play, browser-based online fantasy role \r\nplaying game done in an old-school \r\n16-bit style.",
             "game_url": "https://www.freetogame.com/open/steinworld",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "PG5-Studio UG",
             "developer": "PG5-Studio UG",
             "release_date": "2019-04-24",
             "freetogame_profile_url": "https://www.freetogame.com/steinworld",
-            "price": "54.99"
+            "price": "45.99",
+            "age": 12
         },
         {
             "id": "438",
@@ -1043,12 +1117,13 @@
             "short_description": "A free-to-play collectible World War II card game from developer 1939 Games.",
             "game_url": "https://www.freetogame.com/open/kards",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "1939 Games",
             "developer": "1939 Games",
             "release_date": "2019-04-12",
             "freetogame_profile_url": "https://www.freetogame.com/kards",
-            "price": "46.00"
+            "price": "52.99",
+            "age": 9
         },
         {
             "id": "448",
@@ -1062,7 +1137,8 @@
             "developer": "KOG",
             "release_date": "2019-04-30",
             "freetogame_profile_url": "https://www.freetogame.com/kurtzpel",
-            "price": "33.49"
+            "price": "38.00",
+            "age": 18
         },
         {
             "id": "457",
@@ -1071,12 +1147,13 @@
             "short_description": "A free-to-play browser-based Strategy MMO game focused on story-based PvE gameplay!",
             "game_url": "https://www.freetogame.com/open/the-third-age",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS5",
             "publisher": "R2 Games",
             "developer": "R2 Games",
             "release_date": "2019-04-29",
             "freetogame_profile_url": "https://www.freetogame.com/the-third-age",
-            "price": "31.49"
+            "price": "49.99",
+            "age": 16
         },
         {
             "id": "23",
@@ -1085,12 +1162,13 @@
             "short_description": "A free-to-play strategic battle royale game featuring 60-player matches and team-based play. ",
             "game_url": "https://www.freetogame.com/open/apex-legends",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Electronic Arts",
             "developer": "Electronic Arts",
             "release_date": "2019-02-04",
             "freetogame_profile_url": "https://www.freetogame.com/apex-legends",
-            "price": "37.49"
+            "price": "31.00",
+            "age": 12
         },
         {
             "id": "91",
@@ -1099,12 +1177,13 @@
             "short_description": "A strategy card game designed to take the best elements of Magic the Gathering, Hearthstone, and Hex and combine them all into one game.",
             "game_url": "https://www.freetogame.com/open/eternal",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Dire Wolf Digital",
             "developer": "Dire Wolf Digital",
             "release_date": "2018-11-15",
             "freetogame_profile_url": "https://www.freetogame.com/eternal",
-            "price": "43.49"
+            "price": "50.00",
+            "age": 6
         },
         {
             "id": "503",
@@ -1113,12 +1192,13 @@
             "short_description": "Valve’s Artifact is two games in one. Whether you’re looking for the original Dota 2 trading card game created with the help of card game designer Richard Garfield or something a little more streamlined, Artifact has both in one download.",
             "game_url": "https://www.freetogame.com/open/artifact",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Valve",
             "developer": "Valve",
             "release_date": "2018-11-29",
             "freetogame_profile_url": "https://www.freetogame.com/artifact",
-            "price": "48.00"
+            "price": "56.49",
+            "age": 12
         },
         {
             "id": "299",
@@ -1132,7 +1212,8 @@
             "developer": "Doobic Studios",
             "release_date": "2018-10-31",
             "freetogame_profile_url": "https://www.freetogame.com/combat-arms",
-            "price": "36.99"
+            "price": "32.00",
+            "age": 9
         },
         {
             "id": "68",
@@ -1146,7 +1227,8 @@
             "developer": "Yager Development",
             "release_date": "2018-10-14",
             "freetogame_profile_url": "https://www.freetogame.com/dreadnought",
-            "price": "52.49"
+            "price": "37.00",
+            "age": 18
         },
         {
             "id": "28",
@@ -1155,12 +1237,13 @@
             "short_description": "A free-to-play 4v1 sci-fi shooter. ",
             "game_url": "https://www.freetogame.com/open/spacelords",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": " MercurySteam Entertainment",
             "developer": "MercurySteam",
             "release_date": "2018-09-22",
             "freetogame_profile_url": "https://www.freetogame.com/spacelords",
-            "price": "50.00"
+            "price": "42.00",
+            "age": 6
         },
         {
             "id": "29",
@@ -1169,12 +1252,13 @@
             "short_description": "A free-to-play battle royale developed and published by Tencent Games. ",
             "game_url": "https://www.freetogame.com/open/ring-of-elysium",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Tencent Games",
             "developer": "Tencent Games",
             "release_date": "2018-09-19",
             "freetogame_profile_url": "https://www.freetogame.com/ring-of-elysium",
-            "price": "30.49"
+            "price": "57.49",
+            "age": 6
         },
         {
             "id": "450",
@@ -1183,12 +1267,13 @@
             "short_description": "A free to play battle royale set in the Battlerite universe.",
             "game_url": "https://www.freetogame.com/open/battlerite-royale",
             "genre": "MOBA",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Stunlock Studios",
             "developer": "Stunlock Studios",
             "release_date": "2018-09-26",
             "freetogame_profile_url": "https://www.freetogame.com/battlerite-royale",
-            "price": "50.00"
+            "price": "35.99",
+            "age": 12
         },
         {
             "id": "454",
@@ -1197,12 +1282,13 @@
             "short_description": "A free-to-play digital recreation of Wizards of the Coast's popular collectible card game.",
             "game_url": "https://www.freetogame.com/open/mtg-arena",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Wizards of the Coast",
             "developer": "Wizards of the Coast",
             "release_date": "2018-09-27",
             "freetogame_profile_url": "https://www.freetogame.com/mtg-arena",
-            "price": "30.49"
+            "price": "54.00",
+            "age": 9
         },
         {
             "id": "341",
@@ -1211,12 +1297,13 @@
             "short_description": "A free-to-play turn-based strategy browser game developed and published by GTArcade Entertainment, Inc.",
             "game_url": "https://www.freetogame.com/open/league-of-angels-3",
             "genre": "MMORPG",
-            "platform": "Web Browser",
+            "platform": "PS5",
             "publisher": "GTArcade Entertainment",
             "developer": "GTArcade Entertainment",
             "release_date": "2018-08-14",
             "freetogame_profile_url": "https://www.freetogame.com/league-of-angels-3",
-            "price": "48.49"
+            "price": "35.99",
+            "age": 16
         },
         {
             "id": "282",
@@ -1225,12 +1312,13 @@
             "short_description": "Get thrown into the fast-paced action of a virtual war zone and compete against other players.",
             "game_url": "https://www.freetogame.com/open/blackshot",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Papaya Play",
             "developer": "Vertigo Games",
             "release_date": "2018-07-27",
             "freetogame_profile_url": "https://www.freetogame.com/blackshot",
-            "price": "41.00"
+            "price": "50.49",
+            "age": 6
         },
         {
             "id": "31",
@@ -1239,12 +1327,13 @@
             "short_description": "A strategic collectible card game developed and published by Pegnio Ltd. ",
             "game_url": "https://www.freetogame.com/open/cosmos-invictus",
             "genre": "Card Game",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Pegnio Ltd",
             "developer": "Pegnio Ltd",
             "release_date": "2018-06-27",
             "freetogame_profile_url": "https://www.freetogame.com/cosmos-invictus",
-            "price": "40.00"
+            "price": "57.99",
+            "age": 12
         },
         {
             "id": "36",
@@ -1253,12 +1342,13 @@
             "short_description": "A free-to-play fantasy-themed battle royale game based on Hi-Rez Studio's team shooter Paladins. ",
             "game_url": "https://www.freetogame.com/open/realm-royale",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Hi-Rez Studios",
             "developer": "Hi-Rez Studios",
             "release_date": "2018-06-05",
             "freetogame_profile_url": "https://www.freetogame.com/realm-royale",
-            "price": "35.00"
+            "price": "30.49",
+            "age": 6
         },
         {
             "id": "460",
@@ -1267,12 +1357,13 @@
             "short_description": "A free-to-play browser-based action packed strategy game from the developer of Legends of Honor.",
             "game_url": "https://www.freetogame.com/open/empireww3",
             "genre": "Strategy",
-            "platform": "Web Browser",
+            "platform": "PS4",
             "publisher": "Goodgame Studios",
             "developer": "Goodgame Studios",
             "release_date": "2018-06-28",
             "freetogame_profile_url": "https://www.freetogame.com/empireww3",
-            "price": "35.49"
+            "price": "45.00",
+            "age": 12
         },
         {
             "id": "506",
@@ -1281,12 +1372,13 @@
             "short_description": "Take 60 players, throw them on a map together with over 90 weapons, including balloon crossbows, pots and pans, and inflatable hammers, add physics-based parkour and you have Landfall’s Totally Accurate Battlegrounds (TABG).",
             "game_url": "https://www.freetogame.com/open/tabg",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Landfall",
             "developer": "Landfall",
             "release_date": "2018-06-06",
             "freetogame_profile_url": "https://www.freetogame.com/tabg",
-            "price": "57.49"
+            "price": "34.49",
+            "age": 6
         },
         {
             "id": "434",
@@ -1295,12 +1387,13 @@
             "short_description": "A free-to-play MMORPG-shooter developed and published by AlphaSoft LLC.",
             "game_url": "https://www.freetogame.com/open/will-to-live",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "AlphaSoft LLC",
             "developer": "AlphaSoft LLC",
             "release_date": "2018-04-05",
             "freetogame_profile_url": "https://www.freetogame.com/will-to-live",
-            "price": "37.49"
+            "price": "30.49",
+            "age": 6
         },
         {
             "id": "42",
@@ -1309,12 +1402,13 @@
             "short_description": "A free-to-play arena battle game developed and published by Frogsong Studios AB. ",
             "game_url": "https://www.freetogame.com/open/spellsworn",
             "genre": "MOBA",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Frogsong Studios AB",
             "developer": "Frogsong Studios AB",
             "release_date": "2018-03-13",
             "freetogame_profile_url": "https://www.freetogame.com/spellsworn",
-            "price": "40.00"
+            "price": "41.49",
+            "age": 18
         },
         {
             "id": "43",
@@ -1323,12 +1417,13 @@
             "short_description": "A highly competitive free-to-play battle royale shooter.",
             "game_url": "https://www.freetogame.com/open/z1-battle-royale",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Daybreak Game Company",
             "developer": "Daybreak Game Company",
             "release_date": "2018-02-28",
             "freetogame_profile_url": "https://www.freetogame.com/z1-battle-royale",
-            "price": "35.00"
+            "price": "45.00",
+            "age": 16
         },
         {
             "id": "44",
@@ -1337,12 +1432,13 @@
             "short_description": "A free-to-play open world MMO inspired by classic, core MMOs. ",
             "game_url": "https://www.freetogame.com/open/tale-of-toast",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS4",
             "publisher": "Toasty Leaf AB",
             "developer": "Toasty Leaf AB",
             "release_date": "2018-02-23",
             "freetogame_profile_url": "https://www.freetogame.com/tale-of-toast",
-            "price": "52.99"
+            "price": "44.99",
+            "age": 12
         },
         {
             "id": "47",
@@ -1356,7 +1452,8 @@
             "developer": "David Schneider",
             "release_date": "2018-02-12",
             "freetogame_profile_url": "https://www.freetogame.com/bombtag",
-            "price": "38.49"
+            "price": "36.49",
+            "age": 12
         },
         {
             "id": "48",
@@ -1365,12 +1462,13 @@
             "short_description": "A free-to-play futuristic shooter published by Aeria Games. ",
             "game_url": "https://www.freetogame.com/open/ironsight",
             "genre": "Shooter",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "Aeria Games",
             "developer": "Wiple Games",
             "release_date": "2018-02-01",
             "freetogame_profile_url": "https://www.freetogame.com/ironsight",
-            "price": "54.99"
+            "price": "55.49",
+            "age": 6
         },
         {
             "id": "49",
@@ -1379,12 +1477,13 @@
             "short_description": "A free-to-play 2D isometric MMO full of zombies. ",
             "game_url": "https://www.freetogame.com/open/dead-maze",
             "genre": "MMORPG",
-            "platform": "PC (Windows)",
+            "platform": "PS5",
             "publisher": "801",
             "developer": "801",
             "release_date": "2018-02-13",
             "freetogame_profile_url": "https://www.freetogame.com/dead-maze",
-            "price": "56.99"
+            "price": "36.49",
+            "age": 16
         },
         {
             "id": "316",
@@ -1398,7 +1497,8 @@
             "developer": "MGAME Corporation",
             "release_date": "2018-01-30",
             "freetogame_profile_url": "https://www.freetogame.com/scions-of-fate",
-            "price": "37.99"
+            "price": "48.99",
+            "age": 9
         }
     ]
 }

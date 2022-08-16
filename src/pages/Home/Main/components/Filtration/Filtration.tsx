@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import FilterForm from './FilterForm/FilterForm'
 import Sort from './Sort/Sort'
+import ListFilters from './ListFilters/ListFilters'
 
 const Filtration = () => {
   return (
@@ -11,6 +12,7 @@ const Filtration = () => {
             <Sort />
         </div>
         <FilterForm />
+        <ListFilters />
     </div>
   )
 }

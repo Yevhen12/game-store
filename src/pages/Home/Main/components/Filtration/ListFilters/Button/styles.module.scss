@@ -1,0 +1,28 @@
+
+.filter_block {
+    height: 30px;
+    background: #F4F7FA;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    margin-right: 10px;
+
+    .text {
+        margin-right: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #91969B;
+    }
+    .img {
+        margin-top: 1px;
+        width: 8px;
+        height: 8px;
+        cursor: pointer;
+    }
+
+}

@@ -6,13 +6,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type GamesSlice = {
     games: IGameItem[]
-    page: number
     status: StatusType
 } 
 
 const initialState:GamesSlice = {
     games:[],
-    page: 1,
     status: null,
 }
 
@@ -22,9 +20,6 @@ export const gameSlice = createSlice({
     reducers: {
         setGames: (state:GamesSlice, action:PayloadAction<IGameItem[]>) => {
             state.games = action.payload
-        },
-        setPage: (state:GamesSlice, action:PayloadAction<number>) => {
-            state.page = action.payload
         },
     },
     extraReducers(builder) {
@@ -40,6 +35,6 @@ export const gameSlice = createSlice({
     }
 })
 
-export const { setGames, setPage } = gameSlice.actions
+export const { setGames } = gameSlice.actions
 
 export default gameSlice.reducer
