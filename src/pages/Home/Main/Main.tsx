@@ -11,6 +11,7 @@ import qs, { ParsedQs } from 'qs'
 import { setParamsUrl } from '../../../redux/slices/filterSlice/filterSlice'
 import Filtration from './components/Filtration/Filtration'
 import { SortType } from './components/Filtration/Sort/Sort'
+import setAllGames from '../../../firebase/games/setAllGames'
 
 
 export type ParamsType = {
@@ -20,14 +21,15 @@ export type ParamsType = {
     price: number | null
     age: number | null
     platform: number | null
+    search: string | null
 }
 
 const Main: React.FC = () => {
 
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
-    const filteState = useAppSelector(state => state.filter)
-    const { page, sort, genre, price, age, platform } = filteState
+    const filterState = useAppSelector(state => state.filter)
+    const { page, sort, genre, price, age, platform, search } = filterState
     const scroll = useRef<HTMLDivElement>(null)
 
     console.log(window.location.search)
@@ -42,14 +44,14 @@ const Main: React.FC = () => {
                 price,
                 age,
                 platform,
-
+                search,
             }
             dispatch(await fetchGames(paramsToGive))
         }
 
         getGames()
 
-    }, [dispatch, page, sort, genre, price, age, platform])
+    }, [dispatch, page, sort, genre, price, age, platform, search])
 
     useEffect(() => {
         if (window.location.search) {
@@ -58,6 +60,11 @@ const Main: React.FC = () => {
             console.log(params)
         }
 
+        const setGamesFirebase = async () => {
+            await setAllGames()
+        }
+
+        setGamesFirebase()
     }, [dispatch])
 
     useEffect(() => {
@@ -67,19 +74,25 @@ const Main: React.FC = () => {
     }, [page])
 
 
+    console.log(search)
+
     useEffect(() => {
         const params = qs.stringify(
             {
-                _sort: sort.property.includes('-') ? sort.property.substring(1) : sort.property,
-                _order: sort.property.includes('-') ? 'desc' : 'asc',
-                _page: page,
+                sort: sort.property,
+                genre,
+                price,
+                age,
+                platform,
+                search,
+                page,
             }
         )
 
-        console.log(sort.property)
+        console.log(params)
 
         navigate(`?${params}`)
-    }, [page, sort, navigate, genre, price, age, platform])
+    }, [page, sort, navigate, genre, price, age, platform, search])
 
 
     return (

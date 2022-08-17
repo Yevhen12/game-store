@@ -6,11 +6,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type GamesSlice = {
     games: IGameItem[]
+    allGames: IGameItem[]
     status: StatusType
-} 
+}
 
-const initialState:GamesSlice = {
-    games:[],
+const initialState: GamesSlice = {
+    games: [],
+    allGames: [],
     status: null,
 }
 
@@ -18,23 +20,26 @@ export const gameSlice = createSlice({
     name: 'games',
     initialState,
     reducers: {
-        setGames: (state:GamesSlice, action:PayloadAction<IGameItem[]>) => {
+        setGames: (state: GamesSlice, action: PayloadAction<IGameItem[]>) => {
             state.games = action.payload
         },
+        setAllFilteredGames: (state: GamesSlice, action: PayloadAction<IGameItem[]>) => {
+            state.allGames = action.payload
+        }
     },
     extraReducers(builder) {
-        builder.addCase(fetchGames.pending, (state:GamesSlice) => {
+        builder.addCase(fetchGames.pending, (state: GamesSlice) => {
             state.status = 'loading'
         })
-        builder.addCase(fetchGames.fulfilled, (state:GamesSlice) => {
+        builder.addCase(fetchGames.fulfilled, (state: GamesSlice) => {
             state.status = 'success'
         })
-        builder.addCase(fetchGames.rejected, (state:GamesSlice) => {
+        builder.addCase(fetchGames.rejected, (state: GamesSlice) => {
             state.status = 'rejected'
         })
     }
 })
 
-export const { setGames } = gameSlice.actions
+export const { setGames, setAllFilteredGames } = gameSlice.actions
 
 export default gameSlice.reducer

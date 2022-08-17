@@ -10,37 +10,41 @@ export type SortType = {
     property: SortEnum
 }
 
+export const sortArray: SortType[] = [
+    {
+        name: 'New → Old',
+        property: SortEnum.DATE_DESC
+    },
+    {
+        name: 'Old → New',
+        property: SortEnum.DATE_ASC
+    },
+    {
+        name: 'High → Low',
+        property: SortEnum.PRICE_DESC
+    },
+    {
+        name: 'Low → High',
+        property: SortEnum.PRICE_ASC
+    },
+]
+
+
+
 const Sort = () => {
 
     const [activeModal, setActiveModal] = useState(false)
     const filter = useAppSelector(state => state.filter.sort)
     const dispatch = useAppDispatch()
 
-    const sortArray: SortType[] = [
-        {
-            name: 'New → Old',
-            property: SortEnum.DATE_DESC
-        },
-        {
-            name: 'Old → New',
-            property: SortEnum.DATE_ASC
-        },
-        {
-            name: 'High → Low',
-            property: SortEnum.PRICE_DESC
-        },
-        {
-            name: 'Low → High',
-            property: SortEnum.PRICE_ASC
-        },
-    ]
+   
 
     const hendleSort:(sortElem:SortType) => void = (sortElem) => {
         dispatch(setSort(sortElem))
         setActiveModal(false)
     }
 
-    const topAnimation: string = activeModal ? '35px' : '10px'
+    const topAnimation = activeModal ? '35px' : '10px'
     const mappedSortArray = sortArray.map((elem, id) => <p key={id} onClick={() => hendleSort(elem)} className={styles.dropMenu_item}>{elem.name}</p>)
 
     return (

@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styles from './styles.module.scss'
 import Search from './Search/Search'
 
 const Header: React.FC = () => {
 
     // platstationStore | latest | History | Browse
+    const ref = useRef<HTMLInputElement>(null)
+
+    const hendleInput:() => void = () => {
+        if(ref.current) {
+            ref.current.focus()
+        }
+    }
     return (
         <header className={styles.header}>
             <nav>
@@ -18,12 +25,12 @@ const Header: React.FC = () => {
                     <li>
                         History
                     </li>
-                    <li>
+                    <li onClick={hendleInput}>
                         Browse
                     </li>
                 </ul>
             </nav>
-            <Search />
+            <Search refInput={ref} />
         </header>
     )
 }

@@ -1,4 +1,4 @@
-import { SortType } from './../../../pages/Home/Main/components/Filtration/Sort/Sort';
+import { SortType, sortArray } from './../../../pages/Home/Main/components/Filtration/Sort/Sort';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ParsedQs } from 'qs';
 import SortEnum from '../../../constants/sortFilters'
@@ -10,12 +10,13 @@ type FilterSlice = {
     genre: number | null
     price: number | null
     platform: number | null
+    search: string | null
 }
 
 export type ParamsType = {
-    _page: number
-    _sort: string
-    _order: string
+    page: number
+    sort: string
+    order: string
 }
 
 
@@ -29,6 +30,7 @@ const initialState: FilterSlice = {
     genre: null,
     price: null,
     platform: null,
+    search: null,
 }
 
 export const filterSlice = createSlice({
@@ -53,14 +55,21 @@ export const filterSlice = createSlice({
         setPlatform: (state: FilterSlice, action: PayloadAction<number | null>) => {
             state.platform = action.payload
         },
+        setSearch: (state: FilterSlice, action: PayloadAction<string | null>) => {
+            state.search = action.payload
+        },
         setParamsUrl: (state: FilterSlice, action: PayloadAction<ParsedQs>) => {
-            state.page = Number(action.payload._page)
-            state.sort.name = (action.payload._order === 'asc' ? (action.payload._sort === 'price' ? 'Low → High' : 'Old → New') : (action.payload._sort === 'price' ? 'High → Low' : 'New → Old')) as string
-            state.sort.property = (action.payload._order === 'asc' ? action.payload._sort : '-' + action.payload.sort) as SortEnum
+            state.page = Number(action.payload.page)
+            state.sort = sortArray.find(elem => elem.property === action.payload.sort) as SortType
+            state.genre = action.payload.genre !== null && action.payload.genre !== '' ? Number(action.payload.genre) : null
+            state.age = action.payload.age !== null && action.payload.age !== '' ? Number(action.payload.age) : null
+            state.platform = action.payload.platform !== null && action.payload.platform !== '' ? Number(action.payload.platform) : null
+            state.price = action.payload.price !== null && action.payload.price !== '' ? Number(action.payload.price) : null
+            state.search = action.payload.search !== null && action.payload.search !== '' ? String(action.payload.search) : null
         },
     }
 })
 
-export const { setSort, setParamsUrl, setPage, setAge, setGenre, setPrice, setPlatform } = filterSlice.actions
+export const { setSort, setParamsUrl, setPage, setAge, setGenre, setPrice, setPlatform, setSearch } = filterSlice.actions
 
 export default filterSlice.reducer

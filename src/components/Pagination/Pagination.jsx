@@ -7,6 +7,10 @@ const Pagination = () => {
 
     const dispatch = useAppDispatch()
     const currentPage = useAppSelector(state => state.filter.page)
+    const allFilteredGames = useAppSelector(state => state.games.allGames)
+
+    const GAMES_PER_PAGE = 18
+    const pageCount = Math.ceil(allFilteredGames.length / GAMES_PER_PAGE)
 
     return (
         <>
@@ -18,7 +22,7 @@ const Pagination = () => {
                 pageRangeDisplayed={2}
                 marginPagesDisplayed={1}
                 forcePage={currentPage - 1}
-                pageCount={6}
+                pageCount={pageCount}
                 previousLabel="<"
                 renderOnZeroPageCount={null}
             />

@@ -3,6 +3,7 @@ import styles from './button.module.scss'
 import DropMenu from '../../../../../../../components/Modals/DropMenu/DropMenu'
 import { useAppDispatch } from '../../../../../../../redux/hooks'
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
+import { setPage } from '../../../../../../../redux/slices/filterSlice/filterSlice'
 
 type Propstype = {
     dataArray: string[]
@@ -19,6 +20,7 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
 
     const hendleFilter: (elem: string) => void = (elem) => {
         dispatch(setFilters(dataArray.indexOf(elem)))
+        dispatch(setPage(1))
         setActiveModal(false)
     }
 
