@@ -1,9 +1,10 @@
 import DropMenu from "../../Modals/DropMenu/DropMenu";
+import { useNavigate } from "react-router-dom";
 import { IDropMenuItem } from '../../../interfaces/interfaces'
 import styles from './styles.module.scss'
 import Item from './Item/Item'
 import { logOut } from '../../../firebase/auth/signOut'
-import { useAppDispatch } from '../../../redux/hooks'
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 import {removeUser} from '../../../redux/slices/userSlice/userSlice'
 
 type Props = {
@@ -16,6 +17,11 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
 
     //profile | cart | favourite | History | Exit
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+
+    const currentUser = useAppSelector(state => state.user.user)
+
+
     const removeSignedUser = async () => {
         await logOut()
         dispatch(removeUser())
@@ -26,7 +32,7 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         {
             name: 'Profile',
             image: '/images/user-icon.png',
-            funcToDo: () => console.log(1)
+            funcToDo: () => navigate(`/profile/${currentUser.username}`)
         },
         {
             name: 'Favorite',

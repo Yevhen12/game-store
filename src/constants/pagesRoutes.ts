@@ -3,7 +3,8 @@ enum PagesRoutes {
     LOG_IN = 'log-in',
     HOME = '/',
     NOT_FOUND = '*',
-    GAME = '/:gameId'
+    PROFILE = '/profile/:user',
+    GAME = '/games/:gameId'
 }
 
 export default PagesRoutes

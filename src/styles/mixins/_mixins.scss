@@ -3,3 +3,17 @@
     width: 14px;
     margin-top: 2px;
   }
+
+@mixin standart-btn {
+  padding: 8px 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+
+     &:hover {
+        background-color: rgba(0, 0, 0, 0.836);
+    }
+}

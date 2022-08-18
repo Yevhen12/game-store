@@ -1,0 +1,21 @@
+@import '../../../styles/variables/variables';
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .container {
+        max-width: $container;
+        background-color: white;
+        border-radius: 18px;
+        width: 100%;
+        color: black;
+        display: flex;
+
+        .block {
+            height: 200px;
+        }
+    }
+}

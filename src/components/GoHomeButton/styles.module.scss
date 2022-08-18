@@ -1,0 +1,19 @@
+@import '../../styles/mixins/mixins';
+
+
+.button {
+    @include standart-btn;
+
+    &::before {
+        padding-right: 10px;
+        content: '←';
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, 0.616);
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.836);
+    }
+}

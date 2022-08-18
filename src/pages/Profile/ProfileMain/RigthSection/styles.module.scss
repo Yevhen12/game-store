@@ -1,0 +1,65 @@
+@import '../../../../styles/variables/variables';
+
+@mixin default_input {
+    max-width: 280px;
+    width: 100%;
+    outline: none;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 7px 15px;
+}
+
+.rigth_block {
+    padding: 30px 20px 0;
+    width: 100%;
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid $borderColor;
+
+    .change_password_block {
+        width: 100%;
+
+        .change_password {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .block_old_password {
+            display: flex;
+            justify-content: space-between;
+            max-width: 500px;
+            margin-top: 10px;
+            .old_password {
+                margin-left: 50px;
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+        }
+       
+    }
+
+    .default_input {
+        @include default_input
+
+    }
+
+    .change_email_block {
+        margin-top: 20px;
+    }
+
+    .send {
+        cursor: pointer;
+        font-weight: 600;
+        border: none;
+        background-color: transparent;
+
+    }
+
+    .code_input {
+        @include default_input;
+        max-width: 100px;
+        width: 100%;
+    }
+}

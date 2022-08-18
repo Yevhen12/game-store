@@ -13,7 +13,7 @@ const GameItem: React.FC<IGameItem> = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <div className={styles.item_block} onClick={() => navigate(id)}>
+    <div className={styles.item_block} onClick={() => navigate(`/games/${id}`)}>
       <img alt="gamePhoto" src={thumbnail} className={styles.image} />
       <img alt="like" src="/images/favorite.png" className={styles.favorite} />
       <div className={styles.text_block}>

@@ -1,0 +1,53 @@
+@import '../../../../../styles/mixins/mixins';
+@import '../../../../../styles/variables/variables';
+
+.block {
+    width: 100%;
+    padding: 50px 30px;
+    .block_image_btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+        .profile {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            object-fit: cover;
+            border-radius: 100%;
+        }
+        
+        .button {
+            @include standart-btn;
+            padding: 8px 40px;
+            margin-top: 15px;
+        }
+
+        .biography_block {
+            margin-top: 30px;
+            width: 100%;
+            .biography {
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        
+
+        .textarea {
+            height: 100px;
+            margin-top: 10px;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            resize: none;
+            border: 1px solid $borderColor;
+            padding: 10px 20px;
+
+
+        }
+    }
+}
+
+
+

@@ -17,6 +17,8 @@ export interface IUser extends ISignUp {
     createdAt: string,
     purchasesList: any[],
     uid: string,
+    image: string,
+    bio: string,
 }
 
 export interface IDropMenu {

@@ -4,19 +4,22 @@
     position: relative;
     height: 35px;
     width: 280px;
+
+    .z_20 {
+        z-index: 20;
+    }
+
+    .z_10 {
+        z-index: 10;
+    }
+    
     .position_block_input {
 
         position: absolute;
         top: 0;
         left: 0;
 
-        .z_20 {
-            z-index: 20;
-        }
-
-        .z_10 {
-            z-index: 10;
-        }
+       
 
         .input {
             outline: none;

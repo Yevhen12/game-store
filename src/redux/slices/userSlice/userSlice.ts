@@ -20,6 +20,8 @@ const initialState: StateType = {
         createdAt: '',
         purchasesList: [],
         uid: '',
+        bio: '',
+        image: '',
     },
     status: null
 }
