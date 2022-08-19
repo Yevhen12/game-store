@@ -3,7 +3,7 @@
 
 .block {
     width: 100%;
-    padding: 50px 30px;
+    
     .block_image_btn {
         display: flex;
         flex-direction: column;
@@ -32,22 +32,6 @@
                 font-weight: 500;
             }
         }
-        
-
-        .textarea {
-            height: 100px;
-            margin-top: 10px;
-            outline: none;
-            width: 100%;
-            font-size: 14px;
-            resize: none;
-            border: 1px solid $borderColor;
-            padding: 10px 20px;
-
-
-        }
     }
 }
-
-
 

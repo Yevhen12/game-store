@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                   onMouseLeave={() => setIsHovered(false)}
                   onClick={() => setActiveModal(true)}
                 >
-                  <img alt='user' src='/images/profile.png' className={styles.profile_block_image} />
+                  <img alt='user' src={`${user?.image || '/images/profile.png'}`} className={styles.profile_block_image} />
                   <p className={`${styles.text} ${isHovered && styles.underline}`}>{user.username}</p>
                 </div>
                 <ProfileDropMenu

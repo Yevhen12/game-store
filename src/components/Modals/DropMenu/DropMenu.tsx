@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 
 const DropMenu: React.FC<IDropMenu> = ({ children, activeModal, setActiveModal, topAnimation, rigthPosition }) => {
 
-  const toggleModal = () => {
+  const toggleModal:() => void = () => {
     setActiveModal(false)
   }
   return (

@@ -34,7 +34,7 @@ const RigthSection = () => {
                     <p className={styles.old_password}>
                         Current email:
                     </p>
-                    <input value={currentUser.email} type='email' className={styles.default_input} placeholder="email" />
+                    <input defaultValue={currentUser.email} type='email' className={styles.default_input} placeholder="email" />
                     <button className={styles.send}>Send code</button>
                 </div>
                 <div className={styles.block_old_password}>

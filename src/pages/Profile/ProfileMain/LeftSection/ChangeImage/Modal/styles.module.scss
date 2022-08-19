@@ -1,0 +1,49 @@
+@import '../../../../../../styles/variables/variables';
+
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px 10px;
+    font-weight: 500;
+    border-bottom: 1px solid $borderColor;
+ }
+ .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $borderColor;
+        cursor: pointer;
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+    .remove {
+        color: rgb(241, 14, 14);
+        font-weight: 600;
+    }
+    .upload {
+        display: block;
+        color: $background;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .disabledBtn {
+        cursor:not-allowed;
+        opacity: 0.4;
+    }
+ }
