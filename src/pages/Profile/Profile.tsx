@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './styles.module.scss'
 import Header from '../../components/Header/Header'
 import ProfileMain from './ProfileMain/ProfileMain'
 import { useAppSelector } from '../../redux/hooks'
@@ -14,14 +13,14 @@ const Profile = () => {
     const currentUser = useAppSelector(state => state.user.user)
     const statusUser = useAppSelector(state => state.user.status)
 
-    if(statusUser === 'loading') {
+    if (statusUser === 'loading') {
         return <Loading />
     }
 
     return (
         <>
             {
-                currentUser.username === user ?
+                currentUser.uid === user ?
                     <>
                         <Header />
                         <ProfileMain />

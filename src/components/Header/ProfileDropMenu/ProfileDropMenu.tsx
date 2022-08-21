@@ -27,12 +27,18 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         dispatch(removeUser())
         setActiveModal(false)
     }
+    const navigateToProfile = () => {
+        setActiveModal(false)
+        setTimeout(() => {
+            navigate(`/profile/${currentUser.uid}`)
+        }, 300) 
+    }
 
     const dropMenuItems: IDropMenuItem[] = [
         {
             name: 'Profile',
             image: '/images/user-icon.png',
-            funcToDo: () => navigate(`/profile/${currentUser.username}`)
+            funcToDo: navigateToProfile
         },
         {
             name: 'Favorite',

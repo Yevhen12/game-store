@@ -47,7 +47,7 @@ const App: React.FC = () => {
       {
         isLoading ? <Loading /> :
           (
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading />}>
               <Router>
                 <Routes>
                   <Route path={ROUTES.HOME} element={<Home />} />

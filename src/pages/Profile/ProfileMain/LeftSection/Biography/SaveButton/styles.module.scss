@@ -1,0 +1,23 @@
+@import '../../../../../../styles/variables/variables';
+
+.button {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $borderColor;
+    padding: 0 10px;
+    height: 37px;
+    cursor: pointer;   
+}
+
+.activeBtn {
+    color: black;
+
+    &:hover {
+        background-color: $hoverBtn;
+    }
+}
+
+.disabledBtn {
+    color:rgba(0, 0, 0, 0.548);
+    cursor: not-allowed;
+}

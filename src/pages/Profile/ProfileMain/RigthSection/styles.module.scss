@@ -1,7 +1,7 @@
 @import '../../../../styles/variables/variables';
 
 @mixin default_input {
-    max-width: 280px;
+    max-width: 250px;
     width: 100%;
     outline: none;
     border: 1px solid $borderColor;
@@ -37,12 +37,45 @@
                 margin-top: 10px;
             }
         }
+        .current_email_block {
+            display: flex;
+
+        }
+
+        .code_input_block {
+            max-width: 280px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .block_curret_email {
+            padding: 20px 0 0;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            p {
+                margin-left: 50px;
+            }
+            input {
+                margin-right: 18px;
+            }
+
+        }
        
     }
 
     .default_input {
         @include default_input
+    }
 
+    .default_input_block {
+        max-width: 370px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .change_email_block {

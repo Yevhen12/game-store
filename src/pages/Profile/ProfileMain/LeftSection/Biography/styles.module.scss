@@ -10,3 +10,10 @@
     border: 1px solid $borderColor;
     padding: 10px 20px;
 }
+
+.block_button {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
