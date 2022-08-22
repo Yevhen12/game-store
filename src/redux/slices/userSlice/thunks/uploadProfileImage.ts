@@ -22,8 +22,6 @@ export const uploadProfileImage = createAsyncThunk('user/uploadProfileImage', as
     if(userState.image) {
         await deleteObject(ref(storage, userState.image))
     }
-
-    console.log(1)
     
     await uploadBytes(fileReff, file)
 

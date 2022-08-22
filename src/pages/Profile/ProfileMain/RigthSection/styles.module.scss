@@ -67,6 +67,8 @@
        
     }
 
+  
+
     .default_input {
         @include default_input
     }
@@ -76,6 +78,12 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        position: relative;
+
+        .current_email {
+            cursor:not-allowed;
+            color: rgba(0, 0, 0, 0.281);
+        }
     }
 
     .change_email_block {

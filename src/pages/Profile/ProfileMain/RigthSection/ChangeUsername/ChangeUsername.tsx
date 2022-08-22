@@ -3,17 +3,28 @@ import styles from '../styles.module.scss'
 import { useAppSelector, useAppDispatch } from '../../../../../redux/hooks'
 import SaveButton from '../../LeftSection/Biography/SaveButton/SaveButton'
 import { changeUsername } from '../../../../../redux/slices/userSlice/thunks/changeUsername'
+import ErrorData from '../Error/Error'
+import isUsernameAvailable from '../../../../../firebase/auth/isUsernameAvailable'
 
 const ChangeUsername: React.FC = () => {
 
     const currentUser = useAppSelector(state => state.user.user)
     const [text, setText] = useState(currentUser.username)
+    const [error, setError] = useState('')
+
     const dispatch = useAppDispatch()
 
     const isChanged = currentUser.username !== text
 
     const changeUsernameFunc = async () => {
-        dispatch(await changeUsername(text))
+        try {
+            await isUsernameAvailable(text)
+            dispatch(await changeUsername(text))
+            setError('')
+        }catch(err:any) {
+            setError(err.message)
+        }
+       
     }
 
     return (
@@ -34,6 +45,7 @@ const ChangeUsername: React.FC = () => {
                         placeholder="Password"
                         onChange={(e) => setText(e.target.value)}
                     />
+                    {error ? <ErrorData error={error} /> : null}
                     <SaveButton text='Save' isChanged={isChanged} changeUser={changeUsernameFunc} />
                 </div>
             </div>

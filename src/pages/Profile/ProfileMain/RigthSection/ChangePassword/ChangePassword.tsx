@@ -3,11 +3,13 @@ import styles from '../styles.module.scss'
 import SaveButton from '../../LeftSection/Biography/SaveButton/SaveButton'
 import { changePassword } from '../../../../../redux/slices/userSlice/thunks/changePassword'
 import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks'
+import ErrorData from '../Error/Error'
 
 const ChangePassword: React.FC = () => {
 
     const [oldPassord, setOldPasssword] = useState<string>('')
     const [newPassword, setNewPassword] = useState<string>('')
+    const [error, setError] = useState('')
 
     const currentUser = useAppSelector(state => state.user.user)
     const dispatch = useAppDispatch()
@@ -20,15 +22,21 @@ const ChangePassword: React.FC = () => {
             if(oldPassord === newPassword) {
                 throw new Error("Your new password is the same as your previous")
             }
+            
             dispatch(changePassword(newPassword))
+            
             setNewPassword('')
             setOldPasssword('')
+            setError('')
         } catch (err: any) {
             console.log(err.message)
+            setError(err.message)
+            setNewPassword('')
+            setOldPasssword('')
         }
-
-
     }
+
+    console.log(error)
 
     const isChanged = oldPassord.length > 6
 
@@ -63,6 +71,7 @@ const ChangePassword: React.FC = () => {
                         onChange={(e) => setNewPassword(e.target.value)}
                         value={newPassword}
                     />
+                    {error ? <ErrorData error={error} /> : null}
                     <SaveButton text='Update' isChanged={isChanged} changeUser={changeCurrentPassword} />
                 </div>
             </div>

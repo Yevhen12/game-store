@@ -11,7 +11,7 @@ const SaveButton:React.FC<SaveButtonType> = ({text, isChanged, changeUser}) => {
     return (
         <button
             className={`${styles.button} ${isChanged ? styles.activeBtn : styles.disabledBtn}`}
-            type='button'
+            type='submit'
             disabled={!isChanged}
             onClick={changeUser}
         >

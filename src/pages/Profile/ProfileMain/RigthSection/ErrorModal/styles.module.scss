@@ -1,0 +1,15 @@
+@import '../../../../../styles/variables/variables';
+
+.error_block {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
+    font-size: 10px;
+    border-radius: 8px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    top: -25px;
+    right: -110px;
+}

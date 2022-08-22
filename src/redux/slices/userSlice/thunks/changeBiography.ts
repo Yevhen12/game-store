@@ -4,7 +4,7 @@ import { doc, updateDoc } from "firebase/firestore"
 import { db } from "../../../../firebase/firebaseConfig"
 import { setUser } from "../userSlice"
 
-export const changeBiography = createAsyncThunk('user/removeProfileImage', async (text:string, { dispatch, getState }) => {
+export const changeBiography = createAsyncThunk('user/changeBiography', async (text:string, { dispatch, getState }) => {
     const userState = (getState() as RootState).user.user
 
     const userRef = doc(db, 'users', userState.uid)

@@ -4,14 +4,15 @@ import { doc, updateDoc } from "firebase/firestore"
 import { db } from "../../../../firebase/firebaseConfig"
 import { setUser } from "../userSlice"
 
-export const changePassword = createAsyncThunk('user/changePassword', async (text:string, { dispatch, getState }) => {
+export const changeEmail = createAsyncThunk('user/changeEmail', async (text:string, { dispatch, getState }) => {
+
     const userState = (getState() as RootState).user.user
 
     const userRef = doc(db, 'users', userState.uid)
 
     await updateDoc(userRef, {
-        password: text
+        email: text
     })
 
-    dispatch(setUser({...userState, password: text}))
+    dispatch(setUser({...userState, email: text}))
 })
