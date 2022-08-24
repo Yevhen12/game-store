@@ -27,14 +27,11 @@ const ChangeEmail: React.FC = () => {
                 setError('')
             }
         } catch (err: any) {
-            console.log(err.message)
             setError(err.message)
             setNewEmail('')
         }
 
     }
-
-    console.log(error)
 
     const isChanged = newEmail.length > 6
 

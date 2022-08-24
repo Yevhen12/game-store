@@ -1,11 +1,14 @@
 import React, { useRef } from 'react'
 import styles from './styles.module.scss'
 import Search from './Search/Search'
+import PagesRoutes from '../../../../../constants/pagesRoutes'
+import { useNavigate } from 'react-router-dom'
 
 const Header: React.FC = () => {
 
     // platstationStore | latest | History | Browse
     const ref = useRef<HTMLInputElement>(null)
+    const navigate = useNavigate()
 
     const hendleInput:() => void = () => {
         if(ref.current) {
@@ -16,7 +19,7 @@ const Header: React.FC = () => {
         <header className={styles.header}>
             <nav>
                 <ul className={styles.list}>
-                    <li>
+                    <li onClick={() => navigate(PagesRoutes.HOME)}>
                         <img alt='store' src='/images/store_logo.png' />
                     </li>
                     <li>

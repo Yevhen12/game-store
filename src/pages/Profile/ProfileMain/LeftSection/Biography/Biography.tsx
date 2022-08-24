@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from '../../../../../redux/hooks'
 import { changeBiography } from '../../../../../redux/slices/userSlice/thunks/changeBiography'
 import SaveButton from './SaveButton/SaveButton'
 
-const Biography:React.FC = () => {
+const Biography: React.FC = () => {
   const currentUser = useAppSelector(state => state.user.user)
   const [text, setText] = useState(currentUser.bio)
   const dispatch = useAppDispatch()
@@ -17,6 +17,9 @@ const Biography:React.FC = () => {
 
   return (
     <>
+      <div className={styles.biography_block}>
+        <p className={styles.biography}>Biography: </p>
+      </div>
       <textarea
         defaultValue={currentUser.bio}
         className={styles.textarea}
@@ -24,7 +27,7 @@ const Biography:React.FC = () => {
         placeholder='Tell about yourself...'
       />
       <div className={styles.block_button}>
-        <SaveButton text = 'Save changes' isChanged={isChanged} changeUser={changeBio} />
+        <SaveButton text='Save changes' isChanged={isChanged} changeUser={changeBio} />
       </div>
     </>
   )

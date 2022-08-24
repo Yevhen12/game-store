@@ -1,19 +1,21 @@
-import { ParsedQs } from 'qs';
 import { fetchGames } from './thunks/fetchGames';
 import { StatusType } from './../userSlice/userSlice';
 import { IGameItem } from './../../../interfaces/interfaces';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { getCurrentGame } from './thunks/getCurrentGame';
 
 export type GamesSlice = {
     games: IGameItem[]
     allGames: IGameItem[]
-    status: StatusType
+    status: StatusType,
+    currentGame: IGameItem | null
 }
 
 const initialState: GamesSlice = {
     games: [],
     allGames: [],
     status: null,
+    currentGame: null
 }
 
 export const gameSlice = createSlice({
@@ -25,6 +27,9 @@ export const gameSlice = createSlice({
         },
         setAllFilteredGames: (state: GamesSlice, action: PayloadAction<IGameItem[]>) => {
             state.allGames = action.payload
+        },
+        setCurrentGame: (state: GamesSlice, action: PayloadAction<IGameItem>) => {
+            state.currentGame = action.payload
         }
     },
     extraReducers(builder) {
@@ -37,9 +42,15 @@ export const gameSlice = createSlice({
         builder.addCase(fetchGames.rejected, (state: GamesSlice) => {
             state.status = 'rejected'
         })
+        builder.addCase(getCurrentGame.pending, (state: GamesSlice) => {
+            state.status = 'loading'
+        })
+        builder.addCase(getCurrentGame.fulfilled, (state: GamesSlice) => {
+            state.status = 'success'
+        })
     }
 })
 
-export const { setGames, setAllFilteredGames } = gameSlice.actions
+export const { setGames, setAllFilteredGames, setCurrentGame } = gameSlice.actions
 
 export default gameSlice.reducer

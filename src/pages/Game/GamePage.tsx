@@ -1,52 +1,41 @@
-import { getDoc, doc } from 'firebase/firestore'
-import { db } from '../../firebase/firebaseConfig'
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { IGameItem } from '../../interfaces/interfaces'
+import React, { useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { getCurrentGame } from '../../redux/slices/gameSlice/thunks/getCurrentGame'
+import { useAppSelector, useAppDispatch } from '../../redux/hooks'
+import Loading from '../Loading/Loading'
+import styles from './styles.module.scss'
+import GameOrder from './GameOrder/GameOrder'
 
 const GamePage: React.FC = () => {
 
-    const [game, setGame] = useState<IGameItem>(
-        {
-            developer: '',
-            freetogame_profile_url: '',
-            game_url: '',
-            genre: '',
-            id: '',
-            platform: '',
-            price: '',
-            publisher: '',
-            release_date: '',
-            short_description: '',
-            thumbnail: '',
-            title: '',
-            age: 0,
-        }
-    )
+    const currentGame = useAppSelector(state => state.games.currentGame)
+    const gameState = useAppSelector(state => state.games)
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+
     const { gameId } = useParams()
-    console.log(gameId)
+
+    console.log(currentGame)
 
     useEffect(() => {
         if (gameId) {
             const getGame = async () => {
-                const gameDoc = doc(db, 'games', gameId)
-
-                const gameData = await getDoc(gameDoc)
-
-                const gameToGet = gameData.data()
-                if (gameToGet) {
-                    setGame(gameToGet as IGameItem)
-                }
+                dispatch(await getCurrentGame(gameId))
             }
             getGame()
         }
 
-    }, [gameId])
+    }, [gameId, dispatch])
+
+    if (gameState.status === 'loading' || !currentGame) {
+        return <Loading />
+    }
+
 
     return (
-        <h1>
-            {game.title}
-        </h1>
+        <div className={styles.block_game}>
+            <GameOrder />
+        </div>
     )
 }
 

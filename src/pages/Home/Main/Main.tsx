@@ -2,11 +2,10 @@ import React, { useRef, useEffect } from 'react'
 
 import styles from './styles.module.scss'
 import Header from './components/Header/Header'
-import List from './components/List/List'
 import Pagination from '../../../components/Pagination/Pagination'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
 import { fetchGames } from '../../../redux/slices/gameSlice/thunks/fetchGames'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate, useParams } from 'react-router-dom'
 import qs, { ParsedQs } from 'qs'
 import { setParamsUrl } from '../../../redux/slices/filterSlice/filterSlice'
 import Filtration from './components/Filtration/Filtration'
@@ -31,6 +30,8 @@ const Main: React.FC = () => {
     const filterState = useAppSelector(state => state.filter)
     const { page, sort, genre, price, age, platform, search } = filterState
     const scroll = useRef<HTMLDivElement>(null)
+
+    const { gameId } = useParams()
 
     console.log(window.location.search)
 
@@ -57,7 +58,6 @@ const Main: React.FC = () => {
         if (window.location.search) {
             const params: ParsedQs = qs.parse(window.location.search.substring(1))
             dispatch(setParamsUrl(params))
-            console.log(params)
         }
 
         const setGamesFirebase = async () => {
@@ -77,21 +77,22 @@ const Main: React.FC = () => {
     console.log(search)
 
     useEffect(() => {
-        const params = qs.stringify(
-            {
-                sort: sort.property,
-                genre,
-                price,
-                age,
-                platform,
-                search,
-                page,
-            }
-        )
-
-        console.log(params)
-
-        navigate(`?${params}`)
+        if(!gameId) {
+            const params = qs.stringify(
+                {
+                    sort: sort.property,
+                    genre,
+                    price,
+                    age,
+                    platform,
+                    search,
+                    page,
+                }
+            )
+    
+            navigate(`?${params}`)
+        }
+      
     }, [page, sort, navigate, genre, price, age, platform, search])
 
 
@@ -99,9 +100,9 @@ const Main: React.FC = () => {
         <main className={styles.section}>
             <div ref={scroll} className={styles.container}>
                 <Header />
-                <Filtration />
-                <List />
-                <Pagination />
+                {!gameId && <Filtration />}
+                <Outlet />
+                {!gameId && <Pagination />}
             </div>
         </main>
     )

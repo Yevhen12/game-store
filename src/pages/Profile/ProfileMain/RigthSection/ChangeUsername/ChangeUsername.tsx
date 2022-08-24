@@ -21,10 +21,11 @@ const ChangeUsername: React.FC = () => {
             await isUsernameAvailable(text)
             dispatch(await changeUsername(text))
             setError('')
-        }catch(err:any) {
+        } catch (err: any) {
+            setText(currentUser.username)
             setError(err.message)
         }
-       
+
     }
 
     return (

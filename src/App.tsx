@@ -11,6 +11,8 @@ import { useAppSelector } from './redux/hooks';
 import { setLoading } from './redux/slices/loadingSlice/loadingSlice';
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from './firebase/firebaseConfig';
+import homeRoutes from './constants/homeRoutes';
+import List from './pages/Home/Main/components/List/List';
 
 const LogIn = lazy(() => import('./pages/LogIn/LogIn'))
 const NotFound = lazy(() => import('./pages/Not-Found/Not-Found'))
@@ -50,12 +52,14 @@ const App: React.FC = () => {
             <Suspense fallback={<Loading />}>
               <Router>
                 <Routes>
-                  <Route path={ROUTES.HOME} element={<Home />} />
+                  <Route path={ROUTES.HOME} element={<Home />}>
+                    <Route path={homeRoutes.LIST} element={<List />} />
+                    <Route path={homeRoutes.GAME_ID} element={<GamePage />} />
+                  </Route>
                   <Route path={ROUTES.PROFILE} element = {<Profile />} />
                   <Route path={ROUTES.LOG_IN} element={<LogIn />} />
                   <Route path={ROUTES.SIGN_UP} element={<SignUp />} />
                   <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
-                  <Route path={ROUTES.GAME} element={<GamePage />} />
                 </Routes>
               </Router>
             </Suspense>

@@ -29,15 +29,12 @@ const ChangePassword: React.FC = () => {
             setOldPasssword('')
             setError('')
         } catch (err: any) {
-            console.log(err.message)
             setError(err.message)
             setNewPassword('')
             setOldPasssword('')
         }
     }
-
-    console.log(error)
-
+    
     const isChanged = oldPassord.length > 6
 
     return (

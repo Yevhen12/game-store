@@ -7,3 +7,21 @@
     row-gap: 15px;
     cursor: pointer;
 }
+.no_results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    .text {
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    .sad {
+       height: 50px;
+       width: 50px; 
+    }
+}

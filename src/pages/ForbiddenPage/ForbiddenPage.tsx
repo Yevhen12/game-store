@@ -15,7 +15,7 @@ const ForbiddenPage: React.FC = () => {
                     <img alt='forbidden' src='/images/forbidden-icon.png' className={styles.image} />
                     <h1 className={styles.error}>Error, </h1>
                     <h1 className={styles.text}>You don't have access to this page :(</h1>
-                    <GoHomeButton text='Go back' funcNavigateTo={() => navigate(PagesRoutes.HOME)} />
+                    <GoHomeButton text='Go Home' funcNavigateTo={() => navigate(PagesRoutes.HOME)} />
                 </div>
             </section>
         </>
