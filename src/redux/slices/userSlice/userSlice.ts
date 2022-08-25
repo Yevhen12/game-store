@@ -22,6 +22,8 @@ const initialState: StateType = {
         uid: '',
         bio: '',
         image: '',
+        myGames: [],
+        favoriteGames: [],
     },
     status: null
 }

@@ -19,6 +19,8 @@ const createUser:(user: ISignUp) => Promise<string> = async (user) => {
         uid: auth.currentUser?.uid || '',
         bio: '',
         image: '',
+        myGames: [],
+        favoriteGames: [],
     }
 
     await setDoc(docUser, userToSet)

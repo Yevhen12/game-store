@@ -73,9 +73,6 @@ const Main: React.FC = () => {
         }
     }, [page])
 
-
-    console.log(search)
-
     useEffect(() => {
         if(!gameId) {
             const params = qs.stringify(

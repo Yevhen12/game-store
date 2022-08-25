@@ -14,9 +14,7 @@ const GamePage: React.FC = () => {
     const navigate = useNavigate()
 
     const { gameId } = useParams()
-
-    console.log(currentGame)
-
+    
     useEffect(() => {
         if (gameId) {
             const getGame = async () => {

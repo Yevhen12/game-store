@@ -6,11 +6,11 @@
     width: 280px;
 
     .z_20 {
-        z-index: 20;
+        z-index: 2;
     }
 
     .z_10 {
-        z-index: 10;
+        z-index: 1;
     }
     
     .position_block_input {
@@ -53,7 +53,7 @@
         height: 20px;
         top: 8px;
         left: 10px;
-        z-index: 21;
+        z-index: 2;
     }
 
     .delete {
@@ -62,7 +62,7 @@
         height: 10px;
         top: 13px;
         right: 10px;
-        z-index: 21;
+        z-index: 2;
         cursor: pointer;
     }
 

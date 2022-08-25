@@ -4,11 +4,14 @@ import { useAppSelector } from '../../../redux/hooks'
 import GoHomeButton from '../../../components/GoHomeButton/GoHomeButton'
 import OrderButton from '../OrderButton/OrderButton'
 import styles from './styles.module.scss'
+import Favorite from '../../../components/Favorite/Favorite'
 
 const GameOrder = () => {
 
     const currentGame = useAppSelector(state => state.games.currentGame)
     const navigate = useNavigate()
+
+
     if(!currentGame) {
         return <p>Loading...</p>
     }
@@ -18,9 +21,7 @@ const GameOrder = () => {
             <div className={styles.block}>
                 <div className={styles.block_image_header}>
                     <GoHomeButton text='Go back' funcNavigateTo={() => navigate(-1)} />
-                    <div>
-                        <img alt='favorite' src='/images/favorite.png' />
-                    </div>
+                    <Favorite styleObject={{}}  game={currentGame} />
                 </div>
                 <div className={styles.block_buy}>
                     <div className={styles.inner_block}>
@@ -32,7 +33,7 @@ const GameOrder = () => {
                                 {currentGame.title}
                             </p>
                             <p className={styles.short_desc}>
-                                Created by {currentGame.publisher}
+                                Created by {currentGame.developer}
                             </p>
                         </div>
                         <div className={styles.inner_block_rigth}>

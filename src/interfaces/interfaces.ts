@@ -19,6 +19,8 @@ export interface IUser extends ISignUp {
     uid: string,
     image: string,
     bio: string,
+    myGames: IGameItem[],
+    favoriteGames: IGameItem[],
 }
 
 export interface IDropMenu {
