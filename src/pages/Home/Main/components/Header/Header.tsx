@@ -2,16 +2,18 @@ import React, { useRef } from 'react'
 import styles from './styles.module.scss'
 import Search from './Search/Search'
 import PagesRoutes from '../../../../../constants/pagesRoutes'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+
 
 const Header: React.FC = () => {
 
     // platstationStore | latest | History | Browse
     const ref = useRef<HTMLInputElement>(null)
+    const { gameId } = useParams()
     const navigate = useNavigate()
 
-    const hendleInput:() => void = () => {
-        if(ref.current) {
+    const hendleInput: () => void = () => {
+        if (ref.current) {
             ref.current.focus()
         }
     }
@@ -33,7 +35,7 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-            <Search refInput={ref} />
+            {!gameId && <Search refInput={ref} />}
         </header>
     )
 }

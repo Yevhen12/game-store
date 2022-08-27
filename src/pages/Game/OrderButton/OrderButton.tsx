@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import ReusebleModal from '../../../components/Modals/ReusebleModal/ReusebleModal'
+import { useAppSelector } from '../../../redux/hooks'
+import OrderModal from '../OrderModal/OrderModal'
 import styles from './styles.module.scss'
 
 type ObjectStyleType = {
@@ -8,24 +9,43 @@ type ObjectStyleType = {
   width?: string
 }
 
+type TextStyleType = {
+  color?: string,
+  fontWeigth?: string,
+  fontSize?: string
+}
+
 type PropsType = {
   gameId: number,
   objectStyle: ObjectStyleType,
   text: string,
+  textStyle: TextStyleType,
 }
 
-const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text }) => {
+const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle }) => {
 
-  const [activeModdal, setActiveModal] = useState(false)
+  const [activeModal, setActiveModal] = useState(false)
+  const currentUser = useAppSelector(state => state.user.user)
+
+  const isBougth = currentUser.myGames.some(elem => elem.id === String(gameId))
 
   return (
     <>
-      <button style={objectStyle} type='button' className={styles.button} onClick={() => setActiveModal(true)}>
-        {text}
-      </button>
-      <ReusebleModal activeModal={activeModdal} setActiveModal={setActiveModal} width='350px'>
-        fgdfgdfgdfgfdg
-      </ReusebleModal>
+      {isBougth ?
+        (
+          <p style={textStyle}>BOUGTH</p>
+        ) :
+        (
+          <>
+            <button style={objectStyle} type='button' className={styles.button} onClick={() => setActiveModal(true)}>
+              {text}
+            </button>
+
+            <OrderModal activeModal={activeModal} setActiveModal={setActiveModal} gameId={gameId} />
+          </>
+        )
+      }
+
     </>
   )
 }

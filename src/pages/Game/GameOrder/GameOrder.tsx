@@ -12,7 +12,7 @@ const GameOrder = () => {
     const navigate = useNavigate()
 
 
-    if(!currentGame) {
+    if (!currentGame) {
         return <p>Loading...</p>
     }
     return (
@@ -21,7 +21,7 @@ const GameOrder = () => {
             <div className={styles.block}>
                 <div className={styles.block_image_header}>
                     <GoHomeButton text='Go back' funcNavigateTo={() => navigate(-1)} />
-                    <Favorite styleObject={{}}  game={currentGame} />
+                    <Favorite styleObject={{}} game={currentGame} />
                 </div>
                 <div className={styles.block_buy}>
                     <div className={styles.inner_block}>
@@ -37,7 +37,12 @@ const GameOrder = () => {
                             </p>
                         </div>
                         <div className={styles.inner_block_rigth}>
-                            <OrderButton text={`Pre-order € ${currentGame.price}`} gameId={Number(currentGame.id)} objectStyle={{ fontSize: '24px', height: '60px', width: '290px' }} />
+                            <OrderButton
+                                text={`Order € ${currentGame.price}`}
+                                gameId={Number(currentGame.id)}
+                                objectStyle={{ fontSize: '24px', height: '60px', width: '290px' }}
+                                textStyle={{ color: 'white', fontSize: '24px', fontWeigth: '500' }}
+                            />
                             <p className={styles.releaseDate}>Release date: {currentGame.release_date}</p>
                         </div>
                     </div>
