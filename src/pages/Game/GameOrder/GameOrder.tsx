@@ -41,7 +41,7 @@ const GameOrder = () => {
                                 text={`Order € ${currentGame.price}`}
                                 gameId={Number(currentGame.id)}
                                 objectStyle={{ fontSize: '24px', height: '60px', width: '290px' }}
-                                textStyle={{ color: 'white', fontSize: '24px', fontWeigth: '500' }}
+                                textStyle={{ color: 'white', fontSize: '24px', fontWeigth: '500', height: '60px' }}
                             />
                             <p className={styles.releaseDate}>Release date: {currentGame.release_date}</p>
                         </div>

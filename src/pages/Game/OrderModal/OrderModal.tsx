@@ -45,7 +45,7 @@ const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }
 
     return (
         <ReusebleModal activeModal={activeModal} setActiveModal={setActiveModal} width='450px'>
-            {userState.status === 'loading' || !currentGame ?
+            {!currentGame ?
                 (
                     <p>Loading...</p>
                 ) :
@@ -59,7 +59,7 @@ const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }
                         )
                         :
                         (
-                            <div>
+                            <>
                                 <div className={styles.headerBlock}>
                                     <p className={styles.header}>Order Game</p>
                                 </div>
@@ -80,7 +80,7 @@ const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }
                                         Order
                                     </button>
                                 </div>
-                            </div>
+                            </>
                         )
 
                 )

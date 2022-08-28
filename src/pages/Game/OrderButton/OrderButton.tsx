@@ -6,13 +6,15 @@ import styles from './styles.module.scss'
 type ObjectStyleType = {
   fontSize?: string,
   height?: string,
-  width?: string
+  width?: string,
+  borderRadius?:string,
 }
 
 type TextStyleType = {
   color?: string,
   fontWeigth?: string,
-  fontSize?: string
+  fontSize?: string,
+  height?: string
 }
 
 type PropsType = {
@@ -41,10 +43,11 @@ const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle
               {text}
             </button>
 
-            <OrderModal activeModal={activeModal} setActiveModal={setActiveModal} gameId={gameId} />
           </>
         )
       }
+
+      <OrderModal activeModal={activeModal} setActiveModal={setActiveModal} gameId={gameId} />
 
     </>
   )

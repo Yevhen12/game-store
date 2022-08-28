@@ -3,6 +3,7 @@
 
 .button {
     @include standart-btn;
+    transition: 0.3s;
 
     &::before {
         padding-right: 10px;

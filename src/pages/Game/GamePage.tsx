@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from '../../redux/hooks'
 import Loading from '../Loading/Loading'
 import styles from './styles.module.scss'
 import GameOrder from './GameOrder/GameOrder'
+import GameSuggestions from './GameSuggestions/GameSuggestions'
 
 const GamePage: React.FC = () => {
 
@@ -33,6 +34,7 @@ const GamePage: React.FC = () => {
     return (
         <div className={styles.block_game}>
             <GameOrder />
+            <GameSuggestions />
         </div>
     )
 }
