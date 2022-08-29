@@ -3,20 +3,17 @@ import styles from './styles.module.scss'
 import ReusebleModal from '../../../components/Modals/ReusebleModal/ReusebleModal'
 import { IGameItem } from '../../../interfaces/interfaces'
 import getGameToOrder from '../../../firebase/games/getGameToOrder'
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
+import { useAppDispatch } from '../../../redux/hooks'
 import { orderGame } from '../../../redux/slices/userSlice/thunks/orderGame'
 
 type PropsType = {
-    activeModal: boolean,
-    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>
     gameId: number
 }
 
-const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }) => {
+const OrderModal: React.FC<PropsType> = ({ gameId }) => {
     const [currentGame, setCurrentGame] = useState<IGameItem | null>(null)
     const [activeBtn, setActiveBtn] = useState(true)
     const [showSuccess, setShowSuccess] = useState<boolean>(false)
-    const userState = useAppSelector(state => state.user)
 
     const dispatch = useAppDispatch()
 
@@ -30,7 +27,7 @@ const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }
         }
 
         getGame()
-    })
+    }, [gameId])
 
     const buyGame = () => {
         setActiveBtn(false)
@@ -44,7 +41,7 @@ const OrderModal: React.FC<PropsType> = ({ activeModal, setActiveModal, gameId }
 
 
     return (
-        <ReusebleModal activeModal={activeModal} setActiveModal={setActiveModal} width='450px'>
+        <ReusebleModal width='450px'>
             {!currentGame ?
                 (
                     <p>Loading...</p>

@@ -90,7 +90,7 @@ const Main: React.FC = () => {
             navigate(`?${params}`)
         }
       
-    }, [page, sort, navigate, genre, price, age, platform, search])
+    }, [page, sort, navigate, genre, price, age, platform, search, gameId])
 
 
     return (

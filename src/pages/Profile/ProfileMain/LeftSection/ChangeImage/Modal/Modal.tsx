@@ -1,17 +1,16 @@
 import React from 'react'
 import { useAppSelector, useAppDispatch } from '../../../../../../redux/hooks'
+import { setModal } from '../../../../../../redux/slices/modalSlice/modalSlice'
 import { removeProfileImage } from '../../../../../../redux/slices/userSlice/thunks/removeProfileImage'
 import { uploadProfileImage } from '../../../../../../redux/slices/userSlice/thunks/uploadProfileImage'
 import styles from './styles.module.scss'
 import ReusebleModal from '../../../../../../components/Modals/ReusebleModal/ReusebleModal'
 
 type ModalType = {
-    activeModal: boolean,
-    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>
     width: string
 }
 
-const Modal: React.FC<ModalType> = ({ activeModal, setActiveModal, width }) => {
+const Modal: React.FC<ModalType> = ({ width }) => {
 
     const currentUser = useAppSelector(state => state.user.user)
     const dispatch = useAppDispatch()
@@ -25,17 +24,17 @@ const Modal: React.FC<ModalType> = ({ activeModal, setActiveModal, width }) => {
         const path = `profilePhotos/${currentUser.username}/${currentFile.name}`
         dispatch(await uploadProfileImage({ image: path, file: currentFile }))
 
-        setActiveModal(false)
+        dispatch(setModal(false))
     }
 
     const deletePhoto:() => Promise<void> = async () => {
 
         dispatch(await removeProfileImage())
-        setActiveModal(false)
+        dispatch(setModal(false))
     }
 
     return (
-        <ReusebleModal activeModal={activeModal} setActiveModal={setActiveModal} width={width}>
+        <ReusebleModal width={width}>
             <div className={styles.blockModal}>
                 <p className={styles.title}>
                     ChangePhoto
@@ -56,7 +55,7 @@ const Modal: React.FC<ModalType> = ({ activeModal, setActiveModal, width }) => {
                     >
                         Remove current photo
                     </button>
-                    <button className={styles.button} onClick={() => setActiveModal(false)}>
+                    <button className={styles.button} onClick={() => dispatch(setModal(false))}>
                         Cancel
                     </button>
                 </div>

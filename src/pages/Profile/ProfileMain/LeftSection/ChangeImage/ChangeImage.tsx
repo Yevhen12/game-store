@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import styles from './styles.module.scss'
-import { useAppSelector } from '../../../../../redux/hooks'
+import { useAppSelector, useAppDispatch } from '../../../../../redux/hooks'
+import { setModal } from '../../../../../redux/slices/modalSlice/modalSlice'
 import Modal from './Modal/Modal'
 
 const ChangeImage: React.FC = () => {
     const currentUser = useAppSelector(state => state.user.user)
-    const [activeModal, setActiveModal] = useState(false)
     const [hover, setHover] = useState(false)
-
-    console.log(currentUser)
+    const dispatch = useAppDispatch()
 
     const changePhoto: () => void = () => {
-        setActiveModal(true)
+        dispatch(setModal(true))
     }
 
     return (
@@ -28,7 +27,7 @@ const ChangeImage: React.FC = () => {
                 <button type='button' className={styles.button} onClick={changePhoto}>Change Photo</button>
             </div>
 
-            <Modal activeModal={activeModal} setActiveModal={setActiveModal} width='400px' />
+            <Modal width='400px' />
         </div>
     )
 }

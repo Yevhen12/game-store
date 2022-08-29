@@ -16,12 +16,6 @@ const Favorite: React.FC<PropsType> = ({ styleObject, game }) => {
 
     const isFavorite = currentUser.favoriteGames.some(elem => elem.id === game.id)
 
-    console.log(currentUser.favoriteGames)
-    console.log(game)
-
-    console.log(isFavorite)
-
-
     const toggleFavorite = async (e:any) => {
         e.stopPropagation()
         await dispatch(hendleFavorites(game))

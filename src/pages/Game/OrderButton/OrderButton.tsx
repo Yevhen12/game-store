@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { useAppSelector } from '../../../redux/hooks'
+import { useAppSelector, useAppDispatch } from '../../../redux/hooks'
+import { setModal } from '../../../redux/slices/modalSlice/modalSlice'
 import OrderModal from '../OrderModal/OrderModal'
 import styles from './styles.module.scss'
 
@@ -26,8 +27,8 @@ type PropsType = {
 
 const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle }) => {
 
-  const [activeModal, setActiveModal] = useState(false)
   const currentUser = useAppSelector(state => state.user.user)
+  const dispatch = useAppDispatch()
 
   const isBougth = currentUser.myGames.some(elem => elem.id === String(gameId))
 
@@ -39,7 +40,7 @@ const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle
         ) :
         (
           <>
-            <button style={objectStyle} type='button' className={styles.button} onClick={() => setActiveModal(true)}>
+            <button style={objectStyle} type='button' className={styles.button} onClick={() => dispatch(setModal(true))}>
               {text}
             </button>
 
@@ -47,7 +48,7 @@ const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle
         )
       }
 
-      <OrderModal activeModal={activeModal} setActiveModal={setActiveModal} gameId={gameId} />
+      <OrderModal gameId={gameId} />
 
     </>
   )

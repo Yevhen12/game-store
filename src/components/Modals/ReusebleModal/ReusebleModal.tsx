@@ -1,17 +1,20 @@
 import React from 'react'
+import { useAppSelector, useAppDispatch } from '../../../redux/hooks'
+import { setModal } from '../../../redux/slices/modalSlice/modalSlice'
 import styles from './styles.module.scss'
 
 type PropsType = {
-    activeModal: boolean,
-    setActiveModal: React.Dispatch<React.SetStateAction<boolean>>
     width: string
     children: React.ReactNode
 }
 
-const ReusebleModal: React.FC<PropsType> = ({ activeModal, setActiveModal, children, width }) => {
+const ReusebleModal: React.FC<PropsType> = ({ children, width }) => {
+
+    const activeModal = useAppSelector(state => state.modal.activeModal)
+    const dispatch = useAppDispatch()
 
     const toggleModal: () => void = () => {
-        setActiveModal(false)
+        dispatch(setModal(false))
     }
 
     return (

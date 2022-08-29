@@ -19,4 +19,16 @@
         font-weight: 200;
         margin-top: 5px;
     }
+
+    .block_it {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+    }
 }
