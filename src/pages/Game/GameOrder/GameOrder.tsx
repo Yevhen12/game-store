@@ -20,7 +20,7 @@ const GameOrder = () => {
             <div className={styles.blur}></div>
             <div className={styles.block}>
                 <div className={styles.block_image_header}>
-                    <GoHomeButton text='Go back' funcNavigateTo={() => navigate(-1)} />
+                    <GoHomeButton text='Go back' funcNavigateTo={() => navigate('/')} />
                     <Favorite styleObject={{}} game={currentGame} />
                 </div>
                 <div className={styles.block_buy}>

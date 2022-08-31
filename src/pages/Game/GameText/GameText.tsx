@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 const GameText: React.FC = () => {
 
     const mappedText = Array.from({ length: 4 }).fill(0).map((_, id) => <div key={id} className={styles.rigth_text_block}>
+        
         <p className={styles.rigth_block_title}>
             Lorem ipsum dolor sit amet consectetur.
         </p>

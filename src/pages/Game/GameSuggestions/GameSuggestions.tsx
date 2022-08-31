@@ -6,20 +6,22 @@ import SuggestionItem from './SuggestionItem/SuggestionItem'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y } from 'swiper';
 import { IGameItem } from '../../../interfaces/interfaces'
+import { useParams } from 'react-router-dom'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar'
 
 
-const GameSuggestions:React.FC = () => {
+const GameSuggestions: React.FC = () => {
 
   const GAMES_TO_FETCH = 6
+  const { gameId } = useParams()
   const { fetchGames } = useSuggestions()
   const [suggestionsArray, setSuggestionsArray] = useState<IGameItem[]>([])
 
   useEffect(() => {
-    setSuggestionsArray(fetchGames(GAMES_TO_FETCH))
+    setSuggestionsArray(fetchGames(GAMES_TO_FETCH, Number(gameId)))
   }, [])
   const orderModal = useAppSelector(state => state.modal.activeModal)
   console.log(orderModal)
