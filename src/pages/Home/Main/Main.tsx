@@ -9,8 +9,10 @@ import { Outlet, useNavigate, useParams } from 'react-router-dom'
 import qs, { ParsedQs } from 'qs'
 import { setParamsUrl } from '../../../redux/slices/filterSlice/filterSlice'
 import Filtration from './components/Filtration/Filtration'
+import { useLocation } from 'react-router-dom'
 import { SortType } from './components/Filtration/Sort/Sort'
 import setAllGames from '../../../firebase/games/setAllGames'
+import homeRoutes from '../../../constants/homeRoutes'
 
 
 export type ParamsType = {
@@ -28,12 +30,15 @@ const Main: React.FC = () => {
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
     const filterState = useAppSelector(state => state.filter)
+    const user = useAppSelector(state => state.user.user)
     const { page, sort, genre, price, age, platform, search } = filterState
     const scroll = useRef<HTMLDivElement>(null)
 
     const { gameId } = useParams()
+    const pathnameLocation = useLocation().pathname
 
-    console.log(window.location.search)
+    const isHistory = pathnameLocation.substring(1) === homeRoutes.HISTORY
+
 
 
     useEffect(() => {
@@ -74,7 +79,7 @@ const Main: React.FC = () => {
     }, [page])
 
     useEffect(() => {
-        if(!gameId) {
+        if(!gameId && !isHistory) {
             const params = qs.stringify(
                 {
                     sort: sort.property,
@@ -90,16 +95,18 @@ const Main: React.FC = () => {
             navigate(`?${params}`)
         }
       
-    }, [page, sort, navigate, genre, price, age, platform, search, gameId])
+    }, [page, sort, navigate, genre, price, age, platform, search, gameId, isHistory])
+
+    console.log(user)
 
 
     return (
         <main className={styles.section}>
             <div ref={scroll} className={styles.container}>
                 <Header />
-                {!gameId && <Filtration />}
+                {!gameId && !isHistory &&  <Filtration />}
                 <Outlet />
-                {!gameId && <Pagination />}
+                {!gameId && !isHistory && <Pagination />}
             </div>
         </main>
     )

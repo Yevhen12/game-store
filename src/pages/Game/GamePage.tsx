@@ -26,8 +26,6 @@ const GamePage: React.FC = () => {
 
     }, [gameId, dispatch])
 
-    console.log(currentGame)
-
     if (gameState.status === 'loading' || !currentGame) {
         return <Loading />
     }

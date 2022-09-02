@@ -1,4 +1,4 @@
-import { IGameItem } from './../../../../interfaces/interfaces';
+import { IBougthGame, IGameItem } from '../../../../interfaces/interfaces';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { RootState } from '../../../store';
 import { doc, updateDoc } from 'firebase/firestore';
@@ -12,13 +12,13 @@ export const orderGame = createAsyncThunk('user/orderGame', async (game: IGameIt
 
     const userDoc = doc(db, 'users', currentUser.uid)
 
-    let newArray:IGameItem[] = [...currentUser.myGames, game];
+    let newArray:IBougthGame[] = [...currentUser.myGames, {...game, bougthAt: new Date().toLocaleDateString()}];
     
     await updateDoc(userDoc, {
         myGames: newArray
     })
 
+    
     dispatch(setUser({ ...currentUser, myGames: newArray }))
-
 
 })

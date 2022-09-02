@@ -2,7 +2,8 @@ import React, { useRef } from 'react'
 import styles from './styles.module.scss'
 import Search from './Search/Search'
 import PagesRoutes from '../../../../../constants/pagesRoutes'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
+import homeRoutes from '../../../../../constants/homeRoutes'
 
 
 const Header: React.FC = () => {
@@ -12,11 +13,17 @@ const Header: React.FC = () => {
     const { gameId } = useParams()
     const navigate = useNavigate()
 
+    const pathnameLocation = useLocation().pathname
+
+    const isHistory = pathnameLocation.substring(1) === homeRoutes.HISTORY
+
     const hendleInput: () => void = () => {
         if (ref.current) {
             ref.current.focus()
         }
     }
+
+    
     return (
         <header className={styles.header}>
             <nav>
@@ -27,7 +34,7 @@ const Header: React.FC = () => {
                     <li>
                         Latest
                     </li>
-                    <li>
+                    <li onClick={() => navigate(homeRoutes.HISTORY)}>
                         History
                     </li>
                     <li onClick={hendleInput}>
@@ -35,7 +42,7 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-            {!gameId && <Search refInput={ref} />}
+            {!gameId && !isHistory && <Search refInput={ref} />}
         </header>
     )
 }

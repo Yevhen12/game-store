@@ -1,0 +1,23 @@
+@import '../../styles/variables/variables';
+
+.history {
+    padding-bottom: 50px;
+    .history_text {
+        font-size: 40px;
+        font-weight: 500;
+        margin-left: 40px;
+    }
+
+    .history_block {
+        padding: 20px 30px;
+
+        .list {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid $borderColor;
+            border-radius: 7px;
+        }
+    }
+
+
+}

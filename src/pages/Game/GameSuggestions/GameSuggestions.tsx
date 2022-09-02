@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import useSuggestions from '../../../helpers/hooks/useSuggestions'
-import { useAppSelector } from '../../../redux/hooks'
 import SuggestionItem from './SuggestionItem/SuggestionItem'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y } from 'swiper';
@@ -23,8 +22,6 @@ const GameSuggestions: React.FC = () => {
   useEffect(() => {
     setSuggestionsArray(fetchGames(GAMES_TO_FETCH, Number(gameId)))
   }, [])
-  const orderModal = useAppSelector(state => state.modal.activeModal)
-  console.log(orderModal)
 
   const mappedArray = suggestionsArray.map(elem => <SwiperSlide key={elem.id}><SuggestionItem game={elem} /></SwiperSlide>)
 
@@ -38,8 +35,6 @@ const GameSuggestions: React.FC = () => {
           slidesPerView={3}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
           watchSlidesProgress={true}
         >
           {mappedArray}

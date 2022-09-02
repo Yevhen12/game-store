@@ -19,7 +19,6 @@ const GameText: React.FC = () => {
         </p>
     </div>
     )
-    console.log(mappedText)
 
     return (
         <div className={styles.block}>

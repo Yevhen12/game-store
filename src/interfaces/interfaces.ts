@@ -19,7 +19,7 @@ export interface IUser extends ISignUp {
     uid: string,
     image: string,
     bio: string,
-    myGames: IGameItem[],
+    myGames: IBougthGame[],
     favoriteGames: IGameItem[],
 }
 
@@ -51,4 +51,8 @@ export interface IGameItem {
     thumbnail: string
     title: string
     age: number
+}
+
+export interface IBougthGame extends IGameItem {
+    bougthAt: string
 }

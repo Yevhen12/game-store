@@ -1,11 +1,12 @@
 import DropMenu from "../../Modals/DropMenu/DropMenu";
 import { useNavigate } from "react-router-dom";
+import homeRoutes from "../../../constants/homeRoutes";
 import { IDropMenuItem } from '../../../interfaces/interfaces'
 import styles from './styles.module.scss'
 import Item from './Item/Item'
 import { logOut } from '../../../firebase/auth/signOut'
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks'
-import {removeUser} from '../../../redux/slices/userSlice/userSlice'
+import { removeUser } from '../../../redux/slices/userSlice/userSlice'
 
 type Props = {
     activeModal: boolean
@@ -31,7 +32,14 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         setActiveModal(false)
         setTimeout(() => {
             navigate(`/profile/${currentUser.uid}`)
-        }, 300) 
+        }, 300)
+    }
+
+    const navigateToHistory = () => {
+        setActiveModal(false)
+        setTimeout(() => {
+            navigate(`${homeRoutes.HISTORY}`)
+        }, 300)
     }
 
     const dropMenuItems: IDropMenuItem[] = [
@@ -53,7 +61,7 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         {
             name: 'History',
             image: '/images/history-icon.png',
-            funcToDo: () => console.log(4)
+            funcToDo: navigateToHistory
         },
         {
             name: 'Exit',

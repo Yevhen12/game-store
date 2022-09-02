@@ -39,7 +39,6 @@ const OrderModal: React.FC<PropsType> = ({ gameId }) => {
         }, 2000)
     }
 
-
     return (
         <ReusebleModal width='450px'>
             {!currentGame ?
