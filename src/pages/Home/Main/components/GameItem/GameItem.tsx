@@ -4,7 +4,9 @@ import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 import Favorite from "../../../../../components/Favorite/Favorite";
 
+
 const GameItem: React.FC<IGameItem> = (game) => {
+
   const navigate = useNavigate();
   const { thumbnail,
     title,
@@ -23,7 +25,7 @@ const GameItem: React.FC<IGameItem> = (game) => {
 
 
   return (
-    <div className={styles.item_block} onClick={() => navigate(`games/${id}`)}>
+    <div className={styles.item_block} onClick={() => navigate(`/games/${game.id}`)}>
       <img alt="gamePhoto" src={thumbnail} className={styles.image} />
       <Favorite styleObject={styleObject} game={game} />
       <div className={styles.text_block}>

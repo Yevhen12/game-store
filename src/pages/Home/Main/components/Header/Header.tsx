@@ -16,6 +16,9 @@ const Header: React.FC = () => {
     const pathnameLocation = useLocation().pathname
 
     const isHistory = pathnameLocation.substring(1) === homeRoutes.HISTORY
+    const isMyGames = pathnameLocation.substring(1) === homeRoutes.MY_GAMES
+    const isFavorite = pathnameLocation.substring(1) === homeRoutes.FAVORITE
+
 
     const hendleInput: () => void = () => {
         if (ref.current) {
@@ -31,8 +34,8 @@ const Header: React.FC = () => {
                     <li onClick={() => navigate(PagesRoutes.HOME)}>
                         <img alt='store' src='/images/store_logo.png' />
                     </li>
-                    <li>
-                        Latest
+                    <li onClick={() => navigate(homeRoutes.MY_GAMES)}>
+                        My games
                     </li>
                     <li onClick={() => navigate(homeRoutes.HISTORY)}>
                         History
@@ -42,7 +45,7 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-            {!gameId && !isHistory && <Search refInput={ref} />}
+            {!gameId && !isHistory && !isMyGames && !isFavorite && <Search refInput={ref} />}
         </header>
     )
 }

@@ -1,0 +1,75 @@
+@import '../../../../styles/variables/variables';
+
+@mixin btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.title_block {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+
+    .title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .error {
+        margin-left: 10px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom: 1px solid $borderColor;
+    p {
+        font-size: 14px;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+.buttons {
+    height: 40px;
+    display: flex;
+
+    .cancel {
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid $borderColor;
+
+        button {
+            @include btn;
+            cursor: pointer;
+            color: #f10e0e;
+        }
+    }
+    .clear {
+        flex: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            @include btn;
+            cursor: pointer;
+            color: $background;
+
+        }
+    }
+}
+

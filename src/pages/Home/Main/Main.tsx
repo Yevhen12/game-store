@@ -38,6 +38,8 @@ const Main: React.FC = () => {
     const pathnameLocation = useLocation().pathname
 
     const isHistory = pathnameLocation.substring(1) === homeRoutes.HISTORY
+    const isMyGames = pathnameLocation.substring(1) === homeRoutes.MY_GAMES
+    const isFavorite = pathnameLocation.substring(1) === homeRoutes.FAVORITE
 
 
 
@@ -79,7 +81,7 @@ const Main: React.FC = () => {
     }, [page])
 
     useEffect(() => {
-        if(!gameId && !isHistory) {
+        if(!gameId && !isHistory && !isMyGames && !isFavorite) {
             const params = qs.stringify(
                 {
                     sort: sort.property,
@@ -95,7 +97,7 @@ const Main: React.FC = () => {
             navigate(`?${params}`)
         }
       
-    }, [page, sort, navigate, genre, price, age, platform, search, gameId, isHistory])
+    }, [page, sort, navigate, genre, price, age, platform, search, gameId, isHistory, isMyGames, isFavorite])
 
     console.log(user)
 
@@ -104,9 +106,9 @@ const Main: React.FC = () => {
         <main className={styles.section}>
             <div ref={scroll} className={styles.container}>
                 <Header />
-                {!gameId && !isHistory &&  <Filtration />}
+                {!gameId && !isHistory && !isMyGames && !isFavorite && <Filtration />}
                 <Outlet />
-                {!gameId && !isHistory && <Pagination />}
+                {!gameId && !isHistory && !isMyGames && !isFavorite && <Pagination />}
             </div>
         </main>
     )

@@ -12,13 +12,15 @@ export const orderGame = createAsyncThunk('user/orderGame', async (game: IGameIt
 
     const userDoc = doc(db, 'users', currentUser.uid)
 
-    let newArray:IBougthGame[] = [...currentUser.myGames, {...game, bougthAt: new Date().toLocaleDateString()}];
-    
+    let newArrayMyGames: IBougthGame[] = [...currentUser.myGames, { ...game, bougthAt: new Date().toLocaleDateString() }];
+    let newArrayPurchaseGames: IBougthGame[] = [...currentUser.purchasesList, { ...game, bougthAt: new Date().toLocaleDateString() }];
+
     await updateDoc(userDoc, {
-        myGames: newArray
+        myGames: newArrayMyGames,
+        purchasesList: newArrayPurchaseGames,
     })
 
-    
-    dispatch(setUser({ ...currentUser, myGames: newArray }))
+
+    dispatch(setUser({ ...currentUser, myGames: newArrayMyGames, purchasesList: newArrayPurchaseGames }))
 
 })

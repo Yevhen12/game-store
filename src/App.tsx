@@ -21,6 +21,8 @@ const Home = lazy(() => import('./pages/Home/Home'))
 const GamePage = lazy(() => import('./pages/Game/GamePage'))
 const Profile = lazy(() => import('./pages/Profile/Profile')) 
 const History = lazy(() => import('./pages/History/History'))
+const MyGames = lazy(() => import('./pages/MyGames/MyGames'))
+const Favorite = lazy(() => import('./pages/Favorite/Favorite'))
 
 
 const App: React.FC = () => {
@@ -57,6 +59,8 @@ const App: React.FC = () => {
                     <Route path={homeRoutes.LIST} element={<List />} />
                     <Route path={homeRoutes.GAME_ID} element={<GamePage />} />
                     <Route path={homeRoutes.HISTORY} element={<History />} />
+                    <Route path={homeRoutes.MY_GAMES} element = {<MyGames />} />
+                    <Route path={homeRoutes.FAVORITE} element = {<Favorite />} />
                   </Route>
                   <Route path={ROUTES.PROFILE} element = {<Profile />} />
                   <Route path={ROUTES.LOG_IN} element={<LogIn />} />

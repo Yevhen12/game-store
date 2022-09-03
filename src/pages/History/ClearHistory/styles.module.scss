@@ -1,0 +1,14 @@
+@import '../../../styles/mixins/mixins';
+
+
+.clear_block {
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      @include standart-btn;
+    }
+
+}

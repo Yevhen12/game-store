@@ -28,40 +28,34 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         dispatch(removeUser())
         setActiveModal(false)
     }
-    const navigateToProfile = () => {
+    const navigateToSomewhere = (link:string) => {
         setActiveModal(false)
         setTimeout(() => {
-            navigate(`/profile/${currentUser.uid}`)
+            navigate(link)
         }, 300)
     }
 
-    const navigateToHistory = () => {
-        setActiveModal(false)
-        setTimeout(() => {
-            navigate(`${homeRoutes.HISTORY}`)
-        }, 300)
-    }
 
     const dropMenuItems: IDropMenuItem[] = [
         {
             name: 'Profile',
             image: '/images/user-icon.png',
-            funcToDo: navigateToProfile
+            funcToDo: () => navigateToSomewhere(`/profile/${currentUser.uid}`)
         },
         {
             name: 'Favorite',
             image: '/images/heart-uncolored.png',
-            funcToDo: () => console.log(2)
+            funcToDo: () => navigateToSomewhere(`/${homeRoutes.FAVORITE}`)
         },
         {
-            name: 'Cart',
+            name: 'My games',
             image: '/images/shopping-cart-icon.png',
-            funcToDo: () => console.log(3)
+            funcToDo: () => navigateToSomewhere(`/${homeRoutes.MY_GAMES}`)
         },
         {
             name: 'History',
             image: '/images/history-icon.png',
-            funcToDo: navigateToHistory
+            funcToDo:  () => navigateToSomewhere(`/${homeRoutes.HISTORY}`)
         },
         {
             name: 'Exit',
