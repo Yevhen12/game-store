@@ -61,4 +61,4 @@ const ListFilters: React.FC = () => {
   );
 };
 
-export default ListFilters;
+export default React.memo(ListFilters);

@@ -77,4 +77,4 @@ const ChangePassword: React.FC = () => {
     )
 }
 
-export default ChangePassword
+export default React.memo(ChangePassword)

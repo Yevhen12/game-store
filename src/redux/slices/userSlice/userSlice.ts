@@ -1,5 +1,7 @@
 import { fetchUser } from './thunks/fetchUser';
 import { orderGame } from './thunks/orderGame';
+import { clearHistory } from './thunks/clearHistory';
+import { removeProfileImage } from './thunks/removeProfileImage';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IUser } from "../../../interfaces/interfaces";
 
@@ -58,6 +60,18 @@ export const userSlice = createSlice({
         })
         builder.addCase(orderGame.rejected, (state) => {
             state.status = 'rejected'
+        })
+        builder.addCase(clearHistory.pending, (state) => {
+            state.status = 'loading'
+        })
+        builder.addCase(clearHistory.fulfilled, (state) => {
+            state.status = 'success'
+        })
+        builder.addCase(removeProfileImage.pending, (state) => {
+            state.status = 'loading'
+        })
+        builder.addCase(removeProfileImage.fulfilled, (state) => {
+            state.status = 'success'
         })
     },
 })

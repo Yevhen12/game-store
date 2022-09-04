@@ -12,4 +12,4 @@ const LeftSection:React.FC = () => {
     )
 }
 
-export default LeftSection
+export default React.memo(LeftSection)

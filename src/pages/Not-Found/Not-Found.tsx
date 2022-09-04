@@ -22,4 +22,4 @@ const ForbiddenPage: React.FC = () => {
     )
 }
 
-export default ForbiddenPage
+export default React.memo(ForbiddenPage)

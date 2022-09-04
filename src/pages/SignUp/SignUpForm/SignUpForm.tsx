@@ -113,4 +113,4 @@ const SignUpForm:React.FC = () => {
     )
 }
 
-export default SignUpForm
+export default React.memo(SignUpForm)

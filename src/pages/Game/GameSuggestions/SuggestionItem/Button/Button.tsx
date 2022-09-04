@@ -14,4 +14,4 @@ const Button:React.FC<PropsType> = ({text, funcNavigateTo}) => {
   )
 }
 
-export default Button
+export default React.memo(Button)

@@ -32,4 +32,4 @@ const PlatfromButton: React.FC<PlatformProps> = ({ text, setPlatform }) => {
     )
 }
 
-export default PlatfromButton
+export default React.memo(PlatfromButton)

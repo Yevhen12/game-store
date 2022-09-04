@@ -1,4 +1,5 @@
 import ReactPaginate from 'react-paginate'
+import React from 'react'
 import styles from './styles.module.scss'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { setPage } from '../../redux/slices/filterSlice/filterSlice'
@@ -30,4 +31,4 @@ const Pagination = () => {
     )
 }
 
-export default Pagination
+export default React.memo(Pagination)

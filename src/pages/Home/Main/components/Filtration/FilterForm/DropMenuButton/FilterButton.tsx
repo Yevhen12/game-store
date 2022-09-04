@@ -45,4 +45,4 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
     )
 }
 
-export default FilterButton
+export default React.memo(FilterButton)

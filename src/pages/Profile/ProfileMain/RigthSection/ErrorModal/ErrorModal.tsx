@@ -13,4 +13,4 @@ const ErrorModal: React.FC<PropsType> = ({ text }) => {
     )
 }
 
-export default ErrorModal
+export default React.memo(ErrorModal)

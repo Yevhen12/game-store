@@ -28,4 +28,4 @@ const Error: React.FC<PropsType> = ({ error }) => {
     )
 }
 
-export default Error
+export default React.memo(Error)

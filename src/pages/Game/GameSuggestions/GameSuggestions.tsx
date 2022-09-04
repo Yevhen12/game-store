@@ -44,4 +44,4 @@ const GameSuggestions: React.FC = () => {
   )
 }
 
-export default GameSuggestions
+export default React.memo(GameSuggestions)

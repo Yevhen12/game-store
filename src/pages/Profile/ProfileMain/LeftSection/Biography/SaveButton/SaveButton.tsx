@@ -20,4 +20,4 @@ const SaveButton:React.FC<SaveButtonType> = ({text, isChanged, changeUser}) => {
     )
 }
 
-export default SaveButton
+export default React.memo(SaveButton)

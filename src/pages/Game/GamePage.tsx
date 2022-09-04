@@ -7,6 +7,7 @@ import styles from './styles.module.scss'
 import GameOrder from './GameOrder/GameOrder'
 import GameSuggestions from './GameSuggestions/GameSuggestions'
 import GameText from './GameText/GameText'
+import Loader from '../../components/Loader/Loader'
 
 const GamePage: React.FC = () => {
 
@@ -27,7 +28,9 @@ const GamePage: React.FC = () => {
     }, [gameId, dispatch])
 
     if (gameState.status === 'loading' || !currentGame) {
-        return <Loading />
+        return<div className={styles.loader_block}>
+        <Loader height='80px' width='80px' />
+    </div>
     }
 
 
@@ -40,4 +43,4 @@ const GamePage: React.FC = () => {
     )
 }
 
-export default GamePage
+export default React.memo(GamePage)

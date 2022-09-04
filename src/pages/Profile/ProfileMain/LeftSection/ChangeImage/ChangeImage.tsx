@@ -3,15 +3,19 @@ import styles from './styles.module.scss'
 import { useAppSelector, useAppDispatch } from '../../../../../redux/hooks'
 import { setModal } from '../../../../../redux/slices/modalSlice/modalSlice'
 import Modal from './Modal/Modal'
+import Loader from '../../../../../components/Loader/Loader'
 
 const ChangeImage: React.FC = () => {
     const currentUser = useAppSelector(state => state.user.user)
+    const userStatus = useAppSelector(state => state.user.status)
     const [hover, setHover] = useState(false)
     const dispatch = useAppDispatch()
 
     const changePhoto: () => void = () => {
         dispatch(setModal(true))
     }
+
+    console.log(userStatus)
 
     return (
         <div className={styles.block}>
@@ -22,6 +26,7 @@ const ChangeImage: React.FC = () => {
                             <img alt='camera' src='/images/photo-icon.png' className={styles.photo_icon} />
                         </div>
                     ) : null}
+                    {userStatus === 'loading' && <div className={styles.loader_block}><Loader height='30px' width='30px' /></div>}
                     <img alt='userPhoto' src={currentUser?.image || '/images/profile.png'} className={styles.profile} />
                 </div>
                 <button type='button' className={styles.button} onClick={changePhoto}>Change Photo</button>
@@ -32,4 +37,4 @@ const ChangeImage: React.FC = () => {
     )
 }
 
-export default ChangeImage
+export default React.memo(ChangeImage)

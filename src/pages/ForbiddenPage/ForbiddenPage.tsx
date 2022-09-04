@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import GoHomeButton from '../../components/GoHomeButton/GoHomeButton'
 import { useNavigate } from 'react-router-dom'
 import PagesRoutes from '../../constants/pagesRoutes'
+import Footer from '../../components/Footer/Footer'
 
 const ForbiddenPage: React.FC = () => {
     const navigate = useNavigate()
@@ -18,8 +19,9 @@ const ForbiddenPage: React.FC = () => {
                     <GoHomeButton text='Go Home' funcNavigateTo={() => navigate(PagesRoutes.HOME)} />
                 </div>
             </section>
+            <Footer />
         </>
     )
 }
 
-export default ForbiddenPage
+export default React.memo(ForbiddenPage)

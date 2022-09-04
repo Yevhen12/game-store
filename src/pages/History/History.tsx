@@ -57,4 +57,4 @@ const History: React.FC = () => {
   )
 }
 
-export default History
+export default React.memo(History)

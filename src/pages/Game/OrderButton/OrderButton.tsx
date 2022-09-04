@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useAppSelector, useAppDispatch } from '../../../redux/hooks'
 import { setModal } from '../../../redux/slices/modalSlice/modalSlice'
 import OrderModal from '../OrderModal/OrderModal'
@@ -54,4 +54,4 @@ const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle
   )
 }
 
-export default OrderButton
+export default React.memo(OrderButton)

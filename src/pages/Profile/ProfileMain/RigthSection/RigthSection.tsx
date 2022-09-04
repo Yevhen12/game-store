@@ -19,4 +19,4 @@ const RigthSection = () => {
     )
 }
 
-export default RigthSection
+export default React.memo(RigthSection)

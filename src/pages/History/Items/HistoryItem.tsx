@@ -36,4 +36,4 @@ const HistoryItem: React.FC<PropsType> = ({ game, number }) => {
     )
 }
 
-export default HistoryItem
+export default React.memo(HistoryItem)

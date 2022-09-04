@@ -19,4 +19,4 @@ const ClearHistory: React.FC = () => {
     )
 }
 
-export default ClearHistory
+export default React.memo(ClearHistory)

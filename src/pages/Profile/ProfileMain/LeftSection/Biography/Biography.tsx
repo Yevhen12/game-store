@@ -33,4 +33,4 @@ const Biography: React.FC = () => {
   )
 }
 
-export default Biography
+export default React.memo(Biography)

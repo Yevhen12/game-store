@@ -5,6 +5,7 @@ import GoHomeButton from '../../../components/GoHomeButton/GoHomeButton'
 import OrderButton from '../OrderButton/OrderButton'
 import styles from './styles.module.scss'
 import Favorite from '../../../components/Favorite/Favorite'
+import Loader from '../../../components/Loader/Loader'
 
 const GameOrder = () => {
 
@@ -13,7 +14,9 @@ const GameOrder = () => {
 
 
     if (!currentGame) {
-        return <p>Loading...</p>
+        return <div className={styles.loader_block}>
+            <Loader height='200px' width='200px' />
+        </div>
     }
     return (
         <div className={styles.image_block} style={{ background: `url(${currentGame.thumbnail}) center`, backgroundSize: 'cover' }}>
@@ -52,4 +55,4 @@ const GameOrder = () => {
     )
 }
 
-export default GameOrder
+export default React.memo(GameOrder)

@@ -11,4 +11,4 @@ const Item:React.FC<IDropMenuItem> = ({name, image, funcToDo}) => {
   )
 }
 
-export default Item
+export default React.memo(Item)

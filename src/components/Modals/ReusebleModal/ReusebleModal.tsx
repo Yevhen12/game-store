@@ -26,4 +26,4 @@ const ReusebleModal: React.FC<PropsType> = ({ children, width }) => {
     )
 }
 
-export default ReusebleModal
+export default React.memo(ReusebleModal)

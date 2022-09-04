@@ -86,4 +86,4 @@ const OrderModal: React.FC<PropsType> = ({ gameId }) => {
     )
 }
 
-export default OrderModal
+export default React.memo(OrderModal)

@@ -17,4 +17,4 @@ const Filtration = () => {
   )
 }
 
-export default Filtration
+export default React.memo(Filtration)

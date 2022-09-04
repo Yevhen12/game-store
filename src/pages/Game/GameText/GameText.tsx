@@ -45,4 +45,4 @@ const GameText: React.FC = () => {
     )
 }
 
-export default GameText
+export default React.memo(GameText)

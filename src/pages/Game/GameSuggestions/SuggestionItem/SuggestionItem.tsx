@@ -29,4 +29,4 @@ const SuggestionItem: React.FC<PropsType> = ({ game }) => {
     )
 }
 
-export default SuggestionItem
+export default React.memo(SuggestionItem)

@@ -14,4 +14,4 @@ const ProfileMain = () => {
   )
 }
 
-export default ProfileMain
+export default React.memo(ProfileMain)

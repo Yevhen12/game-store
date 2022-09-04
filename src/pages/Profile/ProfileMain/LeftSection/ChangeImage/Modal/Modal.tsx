@@ -65,4 +65,4 @@ const Modal: React.FC<ModalType> = ({ width }) => {
     )
 }
 
-export default Modal
+export default React.memo(Modal)

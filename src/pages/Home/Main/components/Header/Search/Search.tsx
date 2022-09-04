@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DropMenu from '../../../../../../components/Modals/DropMenu/DropMenu'
 import { useAppDispatch } from '../../../../../../redux/hooks'
 import { setSearch, setPage } from '../../../../../../redux/slices/filterSlice/filterSlice'
+import { setSearching } from '../../../../../../redux/slices/loadingSlice/loadingSlice'
 import styles from './styles.module.scss'
 
 type PropsType = {
@@ -19,9 +20,11 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
   }, [textForm])
 
   useEffect(() => {
+    dispatch(setSearching(true))
     const subsriber = setTimeout(() => {
       dispatch(setSearch(textForm))
       dispatch(setPage(1))
+      dispatch(setSearching(false))
     }, 300)
 
     return () => clearTimeout(subsriber)
@@ -67,4 +70,4 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
   )
 }
 
-export default Search
+export default React.memo(Search)

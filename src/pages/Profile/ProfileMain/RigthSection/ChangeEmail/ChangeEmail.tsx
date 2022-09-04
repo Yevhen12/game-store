@@ -92,4 +92,4 @@ const ChangeEmail: React.FC = () => {
     )
 }
 
-export default ChangeEmail
+export default React.memo(ChangeEmail)

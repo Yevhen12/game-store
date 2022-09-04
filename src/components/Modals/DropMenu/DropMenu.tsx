@@ -21,4 +21,4 @@ const DropMenu: React.FC<IDropMenu> = ({ children, activeModal, setActiveModal, 
   )
 }
 
-export default DropMenu
+export default React.memo(DropMenu)

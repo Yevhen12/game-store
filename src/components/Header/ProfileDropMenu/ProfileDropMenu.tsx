@@ -1,3 +1,5 @@
+import React from 'react'
+
 import DropMenu from "../../Modals/DropMenu/DropMenu";
 import { useNavigate } from "react-router-dom";
 import homeRoutes from "../../../constants/homeRoutes";
@@ -81,4 +83,4 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
     )
 }
 
-export default ProfileDropMenu
+export default React.memo(ProfileDropMenu)

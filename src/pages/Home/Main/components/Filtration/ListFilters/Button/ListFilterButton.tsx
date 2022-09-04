@@ -23,4 +23,4 @@ const ListFilterButton: React.FC<PropsType> = ({ text, setFilters }) => {
   );
 };
 
-export default ListFilterButton;
+export default React.memo(ListFilterButton);

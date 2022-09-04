@@ -40,4 +40,4 @@ const GameItem: React.FC<IGameItem> = (game) => {
   );
 };
 
-export default GameItem;
+export default React.memo(GameItem);

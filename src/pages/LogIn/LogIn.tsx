@@ -12,4 +12,4 @@ const LogIn: React.FC = () => {
     )
 }
 
-export default LogIn
+export default React.memo(LogIn)

@@ -5,6 +5,7 @@ import { useAppSelector } from '../../redux/hooks'
 import { useParams } from 'react-router-dom'
 import ForbiddenPage from '../ForbiddenPage/ForbiddenPage'
 import Loading from '../Loading/Loading'
+import Footer from '../../components/Footer/Footer'
 
 const Profile = () => {
 
@@ -24,6 +25,7 @@ const Profile = () => {
                     <>
                         <Header />
                         <ProfileMain />
+                        <Footer />
                     </>
                     :
                     <ForbiddenPage />
@@ -32,4 +34,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default React.memo(Profile)

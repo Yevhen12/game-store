@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './styles.module.scss';
 import ROUTES from '../../constants/pagesRoutes'
 import { useNavigate } from 'react-router-dom';
@@ -51,4 +52,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default React.memo(Header)

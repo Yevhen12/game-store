@@ -54,4 +54,4 @@ const ChangeUsername: React.FC = () => {
     )
 }
 
-export default ChangeUsername
+export default React.memo(ChangeUsername)

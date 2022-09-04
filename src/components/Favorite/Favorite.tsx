@@ -32,4 +32,4 @@ const Favorite: React.FC<PropsType> = ({ styleObject, game }) => {
     )
 }
 
-export default Favorite
+export default React.memo(Favorite)
