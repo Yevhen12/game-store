@@ -13,9 +13,16 @@
         width: 100%;
         color: black;
         display: flex;
+        flex-direction: row;
 
         .block {
             height: 200px;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction:column !important;
     }
 }

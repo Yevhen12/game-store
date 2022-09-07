@@ -46,3 +46,25 @@
 
 }
 
+@media (max-width: 600px) {
+    .footer {
+        .logo {
+            width: 42px;
+            height: 32px;
+        }
+        .made_block { 
+            margin-bottom: 20px;
+            .made {
+                font-size: 10px;
+               
+             }
+        }
+        .link {
+            font-size: 12px;
+        }
+      
+    }
+
+    
+}
+

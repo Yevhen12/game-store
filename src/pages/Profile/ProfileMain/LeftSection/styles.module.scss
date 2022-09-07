@@ -9,3 +9,9 @@
     align-items: center;
     border-right: 1px solid $borderColor;
 }
+
+@media (max-width: 600px) {
+    .left_block {
+        padding: 30px;
+    }
+}

@@ -36,6 +36,13 @@
                 font-weight: 400;
                 margin-top: 10px;
             }
+
+        }
+        @media (max-width: 1250px) {
+            .old_password {
+                margin-left: 0 !important;
+                margin-bottom: 10px;
+            }
         }
         .current_email_block {
             display: flex;
@@ -50,11 +57,13 @@
         }
 
         .block_curret_email {
-            padding: 20px 0 0;
+            padding: 20px 0 10px;
             justify-content: space-between;
             display: flex;
             align-items: center;
             width: 100%;
+
+          
 
             p {
                 margin-left: 50px;
@@ -64,8 +73,27 @@
             }
 
         }
-       
+
+
+        @media (max-width: 1250px) {
+            .block_curret_email {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+        }
+        @media (max-width: 800px) {
+            .block_curret_email {
+                padding: 10px 0 5px;
+            }
+        
+        }
+
     }
+
+
+
+    
 
   
 
@@ -86,6 +114,8 @@
         }
     }
 
+   
+
     .change_email_block {
         margin-top: 20px;
     }
@@ -104,3 +134,16 @@
         width: 100%;
     }
 }
+
+@media (max-width: 800px) {
+    .default_input_block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .default_input {
+        margin-bottom: 10px;
+    }
+
+}
+
+

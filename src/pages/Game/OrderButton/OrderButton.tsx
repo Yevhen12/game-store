@@ -43,7 +43,6 @@ const OrderButton: React.FC<PropsType> = ({ objectStyle, gameId, text, textStyle
             <button style={objectStyle} type='button' className={styles.button} onClick={() => dispatch(setModal(true))}>
               {text}
             </button>
-
           </>
         )
       }
