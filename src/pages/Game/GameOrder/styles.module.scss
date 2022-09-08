@@ -28,7 +28,6 @@
     }
     
     .block_buy{
-        
         .inner_block {
             padding: 15px;
             background-color: rgba(0, 0, 0, 0.877);
@@ -77,4 +76,35 @@
 .loader_block {
     height: 500px;
     
+}
+
+@media (max-width:1200px) {
+    .block {
+        .block_buy {
+            .inner_block {
+                .title {
+                    font-size: 20px;
+                }
+                .platform {
+                    font-size: 10px;
+                    top: -26px;
+                }
+                .short_desc {
+                    font-size: 10px;
+                }
+                .releaseDate {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .image_block {
+        height: 450px;
+    }
+    .block {
+        padding: 30px 10px;
+    }
 }

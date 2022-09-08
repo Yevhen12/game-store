@@ -46,8 +46,11 @@ const ChangeUsername: React.FC = () => {
                         placeholder="Password"
                         onChange={(e) => setText(e.target.value)}
                     />
-                    {error ? <ErrorData error={error} /> : null}
-                    <SaveButton text='Save' isChanged={isChanged} changeUser={changeUsernameFunc} />
+
+                    <div className={styles.error_flex}>
+                        {error ? <ErrorData error={error} /> : null}
+                        <SaveButton text='Save' isChanged={isChanged} changeUser={changeUsernameFunc} />
+                    </div>
                 </div>
             </div>
         </div>

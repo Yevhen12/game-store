@@ -19,7 +19,7 @@ const ChangeEmail: React.FC = () => {
         try {
             if (auth.currentUser) {
                 await isEmailAvailable(newEmail)
-                if(!isEmailValid(newEmail))  {
+                if (!isEmailValid(newEmail)) {
                     throw new Error("It's wrong data")
                 }
                 dispatch(await changeEmail(newEmail))
@@ -62,10 +62,10 @@ const ChangeEmail: React.FC = () => {
                         onChange={(e) => setNewEmail(e.target.value)}
                     />
 
-                    {error ? <ErrorData error={error} /> : null}
-
-
-                    <SaveButton text='Update' isChanged={isChanged} changeUser={changeCurrentEmail} />
+                    <div className={styles.error_flex}>
+                        {error ? <ErrorData error={error} /> : null}
+                        <SaveButton text='Update' isChanged={isChanged} changeUser={changeCurrentEmail} />
+                    </div>
 
                 </div>
             </div>

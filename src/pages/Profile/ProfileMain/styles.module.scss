@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    padding: 0 15px;
 
     .container {
         max-width: $container;
@@ -21,7 +22,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .container {
         flex-direction:column !important;
     }

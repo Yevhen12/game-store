@@ -19,12 +19,12 @@ const ChangePassword: React.FC = () => {
             if (oldPassord !== currentUser.password) {
                 throw new Error("it's not your current password")
             }
-            if(oldPassord === newPassword) {
+            if (oldPassord === newPassword) {
                 throw new Error("Your new password is the same as your previous")
             }
-            
+
             dispatch(changePassword(newPassword))
-            
+
             setNewPassword('')
             setOldPasssword('')
             setError('')
@@ -34,7 +34,7 @@ const ChangePassword: React.FC = () => {
             setOldPasssword('')
         }
     }
-    
+
     const isChanged = oldPassord.length > 6
 
     return (
@@ -68,8 +68,10 @@ const ChangePassword: React.FC = () => {
                         onChange={(e) => setNewPassword(e.target.value)}
                         value={newPassword}
                     />
-                    {error ? <ErrorData error={error} /> : null}
-                    <SaveButton text='Update' isChanged={isChanged} changeUser={changeCurrentPassword} />
+                    <div className={styles.error_flex}>
+                        {error ? <ErrorData error={error} /> : null}
+                        <SaveButton text='Update' isChanged={isChanged} changeUser={changeCurrentPassword} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { stylesButton1, stylesButton2, stylesFont1, stylesFont2 } from './stylesDiferentSizes'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../../../redux/hooks'
 import GoHomeButton from '../../../components/GoHomeButton/GoHomeButton'
@@ -6,11 +7,40 @@ import OrderButton from '../OrderButton/OrderButton'
 import styles from './styles.module.scss'
 import Favorite from '../../../components/Favorite/Favorite'
 import Loader from '../../../components/Loader/Loader'
+import useWindowSize from '../../../helpers/hooks/useWindowSize'
+
+
+type ObjectStyle = {
+    fontSize: string,
+    height: string,
+    width: string,
+}
+
+type TextStyle = {
+    height: string,
+    fontWeigth: string,
+    fontSize: string,
+}
 
 const GameOrder = () => {
 
     const currentGame = useAppSelector(state => state.games.currentGame)
     const navigate = useNavigate()
+    const { innerWidth } = useWindowSize()
+
+    let objectStyle:ObjectStyle | {} = {};
+    let textStyle:TextStyle | {} = {};
+
+    if(innerWidth > 1200) {
+        objectStyle = stylesButton1
+        textStyle = stylesFont1
+    } else if (innerWidth < 1200 && innerWidth > 700) {
+        objectStyle = stylesButton2
+        textStyle = stylesFont2
+    }
+
+
+
 
 
     if (!currentGame) {
@@ -43,8 +73,8 @@ const GameOrder = () => {
                             <OrderButton
                                 text={`Order € ${currentGame.price}`}
                                 gameId={Number(currentGame.id)}
-                                objectStyle={{ fontSize: '24px', height: '60px', width: '290px' }}
-                                textStyle={{ color: 'white', fontSize: '24px', fontWeigth: '500', height: '60px' }}
+                                objectStyle={objectStyle}
+                                textStyle={textStyle}
                             />
                             <p className={styles.releaseDate}>Release date: {currentGame.release_date}</p>
                         </div>

@@ -16,7 +16,7 @@ const GamePage: React.FC = () => {
     const dispatch = useAppDispatch()
 
     const { gameId } = useParams()
-    
+
     useEffect(() => {
         if (gameId) {
             const getGame = async () => {
@@ -28,9 +28,9 @@ const GamePage: React.FC = () => {
     }, [gameId, dispatch])
 
     if (gameState.status === 'loading' || !currentGame) {
-        return<div className={styles.loader_block}>
-        <Loader height='80px' width='80px' />
-    </div>
+        return <div className={styles.loader_block}>
+            <Loader height='80px' width='80px' />
+        </div>
     }
 
 
