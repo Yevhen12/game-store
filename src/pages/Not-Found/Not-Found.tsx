@@ -12,7 +12,7 @@ const ForbiddenPage: React.FC = () => {
             <Header />
             <section className={styles.section}>
                 <div className={styles.container}>
-                    <img alt='forbidden' src='/images/404-icon.png' className={styles.image} />
+                    <img alt='forbidden' src={process.env.PUBLIC_URL + '/images/404-icon.png'} className={styles.image} />
                     <h1 className={styles.error}>Error 404 </h1>
                     <h1 className={styles.text}>Not Found</h1>
                     <GoHomeButton text='Go Home' funcNavigateTo={() => navigate(PagesRoutes.HOME)} />

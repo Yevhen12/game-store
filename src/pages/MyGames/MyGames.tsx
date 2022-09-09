@@ -48,7 +48,7 @@ const MyGames: React.FC = () => {
                                 <div className={styles.empty_block}>
                                     <p className={styles.text}>You don't have any games!</p>
                                     <div className={styles.image_block}>
-                                        <img alt='dont-know' src='/images/dont-know.png' className={styles.image} />
+                                        <img alt='dont-know' src={process.env.PUBLIC_URL + '/images/dont-know.png'} className={styles.image} />
                                     </div>
                                     <div className={styles.btn_block}>
                                         <button type='button' onClick={() => navigate('/')} className={styles.btn}>

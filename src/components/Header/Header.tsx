@@ -17,9 +17,9 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <img alt="logo" src="/images/logo.png" className={styles.logo} onClick={() => navigate(ROUTES.HOME)} />
+        <img alt="logo" src={process.env.PUBLIC_URL + "/images/logo.png"} className={styles.logo} onClick={() => navigate(ROUTES.HOME)} />
         <div className={styles.sony_block}>
-          <img alt='sony' src='/images/sony.png' className={styles.sony_black_image}/>
+          <img alt='sony' src={process.env.PUBLIC_URL + '/images/sony.png'} className={styles.sony_black_image}/>
         </div>
         {
           auth.currentUser ?
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                   onMouseLeave={() => setIsHovered(false)}
                   onClick={() => setActiveModal(true)}
                 >
-                  <img alt='user' src={`${user?.image || '/images/profile.png'}`} className={styles.profile_block_image} />
+                  <img alt='user' src={`${user?.image || process.env.PUBLIC_URL + '/images/profile.png'}`} className={styles.profile_block_image} />
                   <p className={`${styles.text} ${isHovered && styles.underline}`}>{user.username}</p>
                 </div>
                 <ProfileDropMenu

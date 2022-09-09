@@ -23,11 +23,11 @@ const ChangeImage: React.FC = () => {
                 <div className={styles.image_block} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                     {hover ? (
                         <div className={styles.hover_background} onClick={changePhoto}>
-                            <img alt='camera' src='/images/photo-icon.png' className={styles.photo_icon} />
+                            <img alt='camera' src={process.env.PUBLIC_URL + '/images/photo-icon.png'} className={styles.photo_icon} />
                         </div>
                     ) : null}
                     {userStatus === 'loading' && <div className={styles.loader_block}><Loader height='30px' width='30px' /></div>}
-                    <img alt='userPhoto' src={currentUser?.image || '/images/profile.png'} className={styles.profile} />
+                    <img alt='userPhoto' src={currentUser?.image || process.env.PUBLIC_URL + '/images/profile.png'} className={styles.profile} />
                 </div>
                 <button type='button' className={styles.button} onClick={changePhoto}>Change Photo</button>
             </div>

@@ -40,7 +40,7 @@ const ClearModal: React.FC = () => {
                     <>
                         <div className={styles.title_block}>
                             <p className={styles.title}>Warning</p>
-                            <img alt='alarm' src={gif} className={styles.error} />
+                            <img alt='alarm' src={process.env.PUBLIC_URL + gif} className={styles.error} />
                         </div>
                         <div className={styles.text}>
                             <p>You can't restore your history list if u submit this action</p>

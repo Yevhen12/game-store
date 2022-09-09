@@ -53,7 +53,7 @@ const Sort = () => {
                 <p>
                     {filter.name}
                 </p>
-                <img className={activeModal ? styles.arrow_btn_rotated : styles.arrow_btn} alt='arrow' src='/images/down-arrow.png' />
+                <img className={activeModal ? styles.arrow_btn_rotated : styles.arrow_btn} alt='arrow' src={process.env.PUBLIC_URL + '/images/down-arrow.png'} />
             </div>
             <DropMenu
                 activeModal={activeModal}

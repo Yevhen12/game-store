@@ -51,7 +51,7 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
           onChange={(e) => setTextForm(e.target.value)}
         />
       </div>
-      {activeModal && textForm.length > 0 && <img alt='delete' src='/images/delete-icon.png' className={styles.delete} onClick={clearTextForm} />}
+      {activeModal && textForm.length > 0 && <img alt='delete' src={process.env.PUBLIC_URL + '/images/delete-icon.png'} className={styles.delete} onClick={clearTextForm} />}
 
       {/* <DropMenu
         activeModal={activeModal}

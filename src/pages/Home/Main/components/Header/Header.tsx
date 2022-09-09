@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <nav>
                 <ul className={styles.list}>
                     <li onClick={() => navigate(PagesRoutes.HOME)}>
-                        <img alt='store' src='/images/store_logo.png' className={styles.img} />
+                        <img alt='store' src={process.env.PUBLIC_URL + '/images/store_logo.png'} className={styles.img} />
                     </li>
                     <li onClick={() => navigate(homeRoutes.MY_GAMES)}>
                         My games

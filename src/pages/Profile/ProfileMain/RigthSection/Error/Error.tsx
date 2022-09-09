@@ -17,7 +17,7 @@ const Error: React.FC<PropsType> = ({ error }) => {
                     alt='error'
                     onMouseEnter={() => setErrorModal(true)}
                     onMouseLeave={() => setErrorModal(false)}
-                    src='/images/error-icon.png'
+                    src={process.env.PUBLIC_URL + '/images/error-icon.png'}
                     className={styles.error}
                 />
 

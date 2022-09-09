@@ -40,7 +40,7 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
         <div className={styles.container}>
             <div className={styles.filter_block} onClick={() => setActiveModal(true)}>
                 <div className={styles.common_btn}><p>{text}</p></div>
-                <img className={activeModal ? styles.arrow_btn_rotated : styles.arrow_btn} alt='arrow' src='/images/down-arrow.png' />
+                <img className={activeModal ? styles.arrow_btn_rotated : styles.arrow_btn} alt='arrow' src={process.env.PUBLIC_URL + '/images/down-arrow.png'} />
             </div>
             <DropMenu
                 activeModal={activeModal}

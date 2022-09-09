@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import styles from './styles.module.scss'
 import ReusebleModal from '../../../components/Modals/ReusebleModal/ReusebleModal'
 import { IGameItem } from '../../../interfaces/interfaces'
+import { auth } from '../../../firebase/firebaseConfig'
+import { useNavigate } from 'react-router-dom'
 import getGameToOrder from '../../../firebase/games/getGameToOrder'
+import { setModal } from '../../../redux/slices/modalSlice/modalSlice'
 import { useAppDispatch } from '../../../redux/hooks'
+import PagesRoutes from '../../../constants/pagesRoutes'
 import { orderGame } from '../../../redux/slices/userSlice/thunks/orderGame'
 
 type PropsType = {
@@ -16,7 +20,7 @@ const OrderModal: React.FC<PropsType> = ({ gameId }) => {
     const [showSuccess, setShowSuccess] = useState<boolean>(false)
 
     const dispatch = useAppDispatch()
-
+    const navigate = useNavigate()
 
     useEffect(() => {
         const getGame = async () => {
@@ -30,7 +34,17 @@ const OrderModal: React.FC<PropsType> = ({ gameId }) => {
     }, [gameId])
 
     const buyGame = () => {
+
         setActiveBtn(false)
+
+        if(!auth.currentUser) {
+            setTimeout(() => {
+                dispatch(setModal(false))
+                navigate(`/${PagesRoutes.LOG_IN}`)
+                return
+            }, 300)
+        }
+
         setTimeout(async () => {
             if (currentGame) {
                 dispatch(await orderGame(currentGame))
@@ -49,7 +63,7 @@ const OrderModal: React.FC<PropsType> = ({ gameId }) => {
                     showSuccess ?
                         (
                             <div className={styles.gif}>
-                                <img alt='success' src='/images/success.gif' />
+                                <img alt='success' src={process.env.PUBLIC_URL + '/images/success.gif'} />
                                 <p>Success order!</p>
                             </div>
                         )

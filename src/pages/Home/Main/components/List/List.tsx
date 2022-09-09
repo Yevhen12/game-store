@@ -35,7 +35,7 @@ const List: React.FC = () => {
                                 (
                                     <div className={styles.no_results}>
                                         <p className={styles.text}>There are no results!</p>
-                                        <img src='/images/sad-face-icon.png' alt='sad' className={styles.sad} />
+                                        <img src={process.env.PUBLIC_URL + '/images/sad-face-icon.png'} alt='sad' className={styles.sad} />
                                     </div>
                                 )
                             }
