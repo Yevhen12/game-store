@@ -1,6 +1,6 @@
 ## Link
 
-App: [https://yevhen12.github.io/instagram-app/#/](https://yevhen12.github.io/instagram-app/#/)
+App: [https://yevhen12.github.io/game-store/#/](https://yevhen12.github.io/game-store/#/)
 
 login: *someone@gmail.com*
 
