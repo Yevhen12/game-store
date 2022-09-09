@@ -40,7 +40,7 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
 
   return (
     <div className={styles.block_input}>
-      <div className={`${styles.position_block_input} ${activeModal ? styles.z_20 : styles.z_10}`}>
+      <div className={`${styles.position_block_input}`}>
         <input
           ref={refInput}
           type='text'

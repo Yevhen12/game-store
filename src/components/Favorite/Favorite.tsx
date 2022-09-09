@@ -21,11 +21,11 @@ const Favorite: React.FC<PropsType> = ({ styleObject, game }) => {
     const isFavorite = currentUser.favoriteGames.some(elem => elem.id === game.id)
 
     const toggleFavorite = async (e:any) => {
+        e.stopPropagation()
         if(!auth.currentUser) {
             navigate(`/${PagesRoutes.LOG_IN}`)
             return
         }
-        e.stopPropagation()
         await dispatch(hendleFavorites(game))
     }
 
