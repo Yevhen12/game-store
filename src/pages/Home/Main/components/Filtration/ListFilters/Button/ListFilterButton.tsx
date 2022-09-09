@@ -15,7 +15,7 @@ const ListFilterButton: React.FC<PropsType> = ({ text, setFilters }) => {
       <p className={styles.text}>{text}</p>
       <img
         alt="deleteFilter"
-        src={process.env.PUBLIC_URL + "/images/delete-icon.png"}
+        src={process.env.PUBLIC_URL + "/images/improved-delete-icon.png"}
         onClick={() => dispatch(setFilters(null))}
         className={styles.img}
       />
