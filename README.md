@@ -1,3 +1,3 @@
-visit - https://yevhen12.github.io/game-store/#/
-email - someone@gmail.com
-password - 123456789
+visit - https://yevhen12.github.io/game-store/#/ \n
+email - someone@gmail.com \n
+password - 123456789 \n
