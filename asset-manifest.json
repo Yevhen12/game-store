@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/game-store/static/css/main.c4b9345d.css",
-    "main.js": "/game-store/static/js/main.e8f45863.js",
+    "main.js": "/game-store/static/js/main.cd2993f4.js",
     "static/css/428.6f70e876.chunk.css": "/game-store/static/css/428.6f70e876.chunk.css",
     "static/js/428.37b19ce8.chunk.js": "/game-store/static/js/428.37b19ce8.chunk.js",
     "static/css/442.6fb09265.chunk.css": "/game-store/static/css/442.6fb09265.chunk.css",
     "static/js/442.e029cc1c.chunk.js": "/game-store/static/js/442.e029cc1c.chunk.js",
     "static/css/862.6f70e876.chunk.css": "/game-store/static/css/862.6f70e876.chunk.css",
     "static/js/862.41f9f844.chunk.js": "/game-store/static/js/862.41f9f844.chunk.js",
-    "static/css/889.f833482b.chunk.css": "/game-store/static/css/889.f833482b.chunk.css",
-    "static/js/889.b589034b.chunk.js": "/game-store/static/js/889.b589034b.chunk.js",
+    "static/css/889.49700aba.chunk.css": "/game-store/static/css/889.49700aba.chunk.css",
+    "static/js/889.5dd48343.chunk.js": "/game-store/static/js/889.5dd48343.chunk.js",
     "static/css/266.db967e0d.chunk.css": "/game-store/static/css/266.db967e0d.chunk.css",
     "static/js/266.f36a8053.chunk.js": "/game-store/static/js/266.f36a8053.chunk.js",
     "static/css/378.4b98b68d.chunk.css": "/game-store/static/css/378.4b98b68d.chunk.css",
@@ -25,15 +25,15 @@
     "static/js/968.43b606c1.chunk.js": "/game-store/static/js/968.43b606c1.chunk.js",
     "index.html": "/game-store/index.html",
     "main.c4b9345d.css.map": "/game-store/static/css/main.c4b9345d.css.map",
-    "main.e8f45863.js.map": "/game-store/static/js/main.e8f45863.js.map",
+    "main.cd2993f4.js.map": "/game-store/static/js/main.cd2993f4.js.map",
     "428.6f70e876.chunk.css.map": "/game-store/static/css/428.6f70e876.chunk.css.map",
     "428.37b19ce8.chunk.js.map": "/game-store/static/js/428.37b19ce8.chunk.js.map",
     "442.6fb09265.chunk.css.map": "/game-store/static/css/442.6fb09265.chunk.css.map",
     "442.e029cc1c.chunk.js.map": "/game-store/static/js/442.e029cc1c.chunk.js.map",
     "862.6f70e876.chunk.css.map": "/game-store/static/css/862.6f70e876.chunk.css.map",
     "862.41f9f844.chunk.js.map": "/game-store/static/js/862.41f9f844.chunk.js.map",
-    "889.f833482b.chunk.css.map": "/game-store/static/css/889.f833482b.chunk.css.map",
-    "889.b589034b.chunk.js.map": "/game-store/static/js/889.b589034b.chunk.js.map",
+    "889.49700aba.chunk.css.map": "/game-store/static/css/889.49700aba.chunk.css.map",
+    "889.5dd48343.chunk.js.map": "/game-store/static/js/889.5dd48343.chunk.js.map",
     "266.db967e0d.chunk.css.map": "/game-store/static/css/266.db967e0d.chunk.css.map",
     "266.f36a8053.chunk.js.map": "/game-store/static/js/266.f36a8053.chunk.js.map",
     "378.4b98b68d.chunk.css.map": "/game-store/static/css/378.4b98b68d.chunk.css.map",
@@ -50,6 +50,6 @@
   },
   "entrypoints": [
     "static/css/main.c4b9345d.css",
-    "static/js/main.e8f45863.js"
+    "static/js/main.cd2993f4.js"
   ]
 }
