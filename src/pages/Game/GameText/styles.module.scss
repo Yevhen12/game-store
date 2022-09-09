@@ -41,3 +41,43 @@
         }
     }
 }
+
+@media (max-width:850px) {
+    .block {
+        padding: 30px 10px;
+
+        .left_section {
+            margin-right: 20px;
+
+            .left_section_title {
+                font-size: 20px;
+            }
+        }
+
+        .rigth_section {
+            .rigth_text_block  {
+                font-size: 11px;
+                .rigth_block_text  {
+                    font-size: 11px;
+                }
+                .rigth_block_title {
+                    font-size: 13px;
+                }
+            }
+
+            .rigth_block_text {
+                font-size: 11px;
+            }
+
+            .rigth_text_bottom {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .block {
+        flex-direction: column;
+    }
+}

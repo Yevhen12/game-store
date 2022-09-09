@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './button.module.scss'
 import DropMenu from '../../../../../../../components/Modals/DropMenu/DropMenu'
 import { useAppDispatch } from '../../../../../../../redux/hooks'
+import useWindowSize from '../../../../../../../helpers/hooks/useWindowSize'
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit'
 import { setPage } from '../../../../../../../redux/slices/filterSlice/filterSlice'
 
@@ -15,8 +16,10 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
 
     const [activeModal, setActiveModal] = useState(false)
     const dispatch = useAppDispatch()
+    const { innerWidth } = useWindowSize()
 
-    const topAnimation: string = activeModal ? '48px' : '10px'
+    let topAnimation = activeModal ? '48px' : '10px'
+    let rigthPosition = '0px'
 
     const hendleFilter: (elem: string) => void = (elem) => {
         dispatch(setFilters(dataArray.indexOf(elem)))
@@ -24,18 +27,26 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
         setActiveModal(false)
     }
 
-    const mappedDataArray:JSX.Element[] = dataArray.map((elem, id) => <p key={id} onClick={() => hendleFilter(elem)} className={styles.dropMenu_item}>{elem}</p>)
+    if(innerWidth < 870 && innerWidth > 640) {
+        topAnimation = activeModal ? '35px' : '0px'
+        rigthPosition = '-13px'
+    } else if (innerWidth < 640) {
+        topAnimation = activeModal ? '25px' : '0px'
+        rigthPosition = '-9px'
+    }
+
+    const mappedDataArray: JSX.Element[] = dataArray.map((elem, id) => <p key={id} onClick={() => hendleFilter(elem)} className={styles.dropMenu_item}>{elem}</p>)
     return (
         <div className={styles.container}>
             <div className={styles.filter_block} onClick={() => setActiveModal(true)}>
-                <div className={styles.common_btn}>{text}</div>
+                <div className={styles.common_btn}><p>{text}</p></div>
                 <img className={activeModal ? styles.arrow_btn_rotated : styles.arrow_btn} alt='arrow' src='/images/down-arrow.png' />
             </div>
             <DropMenu
                 activeModal={activeModal}
                 setActiveModal={setActiveModal}
                 topAnimation={topAnimation}
-                rigthPosition='0px'
+                rigthPosition={rigthPosition}
             >
                 <div className={styles.dropMenu_items}>
                     {mappedDataArray}

@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Scrollbar, A11y } from 'swiper';
 import { IGameItem } from '../../../interfaces/interfaces'
 import { useParams } from 'react-router-dom'
+import useWindowSize from '../../../helpers/hooks/useWindowSize';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,26 +19,40 @@ const GameSuggestions: React.FC = () => {
   const { gameId } = useParams()
   const { fetchGames } = useSuggestions()
   const [suggestionsArray, setSuggestionsArray] = useState<IGameItem[]>([])
+  const { innerWidth } = useWindowSize()
 
   useEffect(() => {
     setSuggestionsArray(fetchGames(GAMES_TO_FETCH, Number(gameId)))
   }, [])
 
-  const mappedArray = suggestionsArray.map(elem => <SwiperSlide key={elem.id}><SuggestionItem game={elem} /></SwiperSlide>)
+  const mappedArray = suggestionsArray.length > 0 && suggestionsArray.map(elem => <SwiperSlide key={elem.id}><SuggestionItem game={elem} /></SwiperSlide>)
+  let countVisibleSuggestions = 3
+
+  if (innerWidth < 1300 && innerWidth > 930) {
+    countVisibleSuggestions = 2
+  } else if (innerWidth < 930) {
+    countVisibleSuggestions = 1
+  }
+
+
+
+  console.log(suggestionsArray)
 
 
   return (
     <div className={styles.wrapper}>
-      <p>Other games</p>
+      <p className={styles.other}>Other games</p>
       <div className={styles.blockSlider}>
         <Swiper
           modules={[Pagination, A11y, Scrollbar]}
-          slidesPerView={3}
+          slidesPerView={countVisibleSuggestions}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           watchSlidesProgress={true}
         >
-          {mappedArray}
+          <div className={styles.suggestions_block_items}>
+            {mappedArray}
+          </div>
         </Swiper>
       </div>
     </div>

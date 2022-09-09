@@ -13,6 +13,7 @@
 
 .favorite {
     padding-bottom: 50px;
+    min-height: 500px;
     .favorite_text {
         font-size: 40px;
         font-weight: 500;
@@ -52,5 +53,40 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 1200px) {
+    .list {
+        grid-template-columns: repeat(5, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 1020px) {
+    .list {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 840px) {
+    .list {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .list {
+        padding: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .favorite {
+        .favorite_text {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        .favorite_block {
+            padding: 20px 0px;
+        }
     }
 }

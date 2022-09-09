@@ -68,3 +68,39 @@
 .block:last-child {
     border-bottom: none;
 }
+
+@media (max-width: 600px) {
+    .block {
+        .number {
+            p {
+                width: 20px;
+                font-size: 12px;
+            }
+        }
+
+        .game_block {
+            .image {
+                height: 50px;
+                width: 50px;
+            }
+
+            .game_info {
+                .name {
+                    font-size: 14px;
+                } 
+                .additional_info  {
+                    font-size: 9px;
+                    .platform {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .game_date {
+            font-size: 11px;
+            max-width: 65px;
+            
+        }
+    }
+}

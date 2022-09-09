@@ -19,7 +19,7 @@ const Header: React.FC = () => {
       <div className={styles.container}>
         <img alt="logo" src="/images/logo.png" className={styles.logo} onClick={() => navigate(ROUTES.HOME)} />
         <div className={styles.sony_block}>
-          <img alt='sony' src='/images/sony.png' />
+          <img alt='sony' src='/images/sony.png' className={styles.sony_black_image}/>
         </div>
         {
           auth.currentUser ?

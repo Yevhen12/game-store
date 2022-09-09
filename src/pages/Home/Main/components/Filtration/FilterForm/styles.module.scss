@@ -9,6 +9,12 @@
     align-items: center;
     margin-top: 20px;
 
+    .buttons_block {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     .block_item {
         height: 100%;
         display: flex;
@@ -29,4 +35,25 @@
             margin-right: 5px;
         }
     }
+}
+
+@media (max-width: 870px) {
+    .form_block {
+        height: 30px;
+        border-radius: 7px;
+
+        .block_item {
+            padding: 0 10px
+        }
+    }
+}
+@media (max-width: 640px) {
+    .form_block {
+        flex-direction: column;
+        height: 60px;
+
+        .buttons_block {
+            padding: 5px 0;
+        }
+     }
 }

@@ -4,6 +4,7 @@ import Search from './Search/Search'
 import PagesRoutes from '../../../../../constants/pagesRoutes'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import homeRoutes from '../../../../../constants/homeRoutes'
+import useWindowSize from '../../../../../helpers/hooks/useWindowSize'
 
 
 const Header: React.FC = () => {
@@ -19,6 +20,8 @@ const Header: React.FC = () => {
     const isMyGames = pathnameLocation.substring(1) === homeRoutes.MY_GAMES
     const isFavorite = pathnameLocation.substring(1) === homeRoutes.FAVORITE
 
+    const { innerWidth } = useWindowSize()
+
 
     const hendleInput: () => void = () => {
         if (ref.current) {
@@ -26,13 +29,13 @@ const Header: React.FC = () => {
         }
     }
 
-    
+
     return (
         <header className={styles.header}>
             <nav>
                 <ul className={styles.list}>
                     <li onClick={() => navigate(PagesRoutes.HOME)}>
-                        <img alt='store' src='/images/store_logo.png' />
+                        <img alt='store' src='/images/store_logo.png' className={styles.img} />
                     </li>
                     <li onClick={() => navigate(homeRoutes.MY_GAMES)}>
                         My games
@@ -45,7 +48,7 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </nav>
-            {!gameId && !isHistory && !isMyGames && !isFavorite && <Search refInput={ref} />}
+            {!gameId && !isHistory && !isMyGames && !isFavorite && innerWidth > 900 && <Search refInput={ref} />}
         </header>
     )
 }

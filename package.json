@@ -1,5 +1,6 @@
 {
   "name": "game-store",
+  "homepage": "https://Yevhen12.github.io/game-store/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,6 +16,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "firebase": "^9.9.2",
+    "gh-pages": "^4.0.0",
     "json-server": "^0.17.0",
     "node-sass": "^7.0.1",
     "qs": "^6.11.0",
@@ -33,6 +35,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server --w server/db.json -p 3001"

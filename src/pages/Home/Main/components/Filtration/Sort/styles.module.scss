@@ -47,3 +47,20 @@
     }
     
 }
+
+@media (max-width: 600px) {
+    .container {
+        .sort_block {
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .dropMenu_items {
+            width: 110px;
+            .dropMenu_item  {
+                font-size: 12px;
+            }
+        }
+     }
+}

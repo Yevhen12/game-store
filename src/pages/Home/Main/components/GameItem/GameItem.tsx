@@ -3,11 +3,14 @@ import { IGameItem } from "../../../../../interfaces/interfaces";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 import Favorite from "../../../../../components/Favorite/Favorite";
+import useWindowSize from "../../../../../helpers/hooks/useWindowSize";
 
 
 const GameItem: React.FC<IGameItem> = (game) => {
 
   const navigate = useNavigate();
+  const {innerWidth} = useWindowSize()
+
   const { thumbnail,
     title,
     price,
@@ -23,11 +26,19 @@ const GameItem: React.FC<IGameItem> = (game) => {
     opacity: '0.9'
   }
 
+  const styleObject1 = {
+    position: 'absolute',
+    top: '15px',
+    right: '15px',
+    height: '20px',
+    opacity: '0.9'
+  }
+
 
   return (
     <div className={styles.item_block} onClick={() => navigate(`/games/${game.id}`)}>
       <img alt="gamePhoto" src={thumbnail} className={styles.image} />
-      <Favorite styleObject={styleObject} game={game} />
+      <Favorite styleObject={innerWidth > 400 ? styleObject : styleObject1} game={game} />
       <div className={styles.text_block}>
         <p className={styles.price}>€ {price}</p>
         <p className={styles.title}>{title}</p>

@@ -19,3 +19,21 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .header {
+        padding: 20px 15px;
+        justify-content: center;
+        .list {
+            li {
+                margin-right: 15px;
+                font-size: 11px;
+            }
+
+            .img {
+                margin-top: 5px;
+                width: 100px;
+            }
+        }
+    }
+}

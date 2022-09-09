@@ -38,11 +38,8 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
     }
   }
 
-  const topAnimation = activeModal ? '45px' : '10px'
-
   return (
     <div className={styles.block_input}>
-      {!activeModal && <img alt='search' src='/images/search-icon.png' className={styles.search} />}
       <div className={`${styles.position_block_input} ${activeModal ? styles.z_20 : styles.z_10}`}>
         <input
           ref={refInput}
@@ -56,7 +53,7 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
       </div>
       {activeModal && textForm.length > 0 && <img alt='delete' src='/images/delete-icon.png' className={styles.delete} onClick={clearTextForm} />}
 
-      <DropMenu
+      {/* <DropMenu
         activeModal={activeModal}
         setActiveModal={setActiveModal}
         topAnimation={topAnimation}
@@ -65,7 +62,7 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
         <div className={styles.dropMenu_items}>
           
         </div>
-      </DropMenu>
+      </DropMenu> */}
     </div>
   )
 }

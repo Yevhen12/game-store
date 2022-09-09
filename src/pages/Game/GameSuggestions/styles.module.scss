@@ -17,6 +17,11 @@
     align-items: center;
     margin-left: 15px;
     margin-top: 25px;
+
+    .suggestions_block_items {
+        display: flex;
+        justify-content: center;
+    }
 }
 :global{
      .swiper-pagination {
@@ -34,4 +39,16 @@
             width: 10px;
         }
      }
+}
+
+@media (max-width: 550px) {
+    .other {
+        font-size: 20px;
+    }
+    .wrapper {
+        padding: 30px 10px;
+    }
+    .blockSlider {
+        margin-left: 0px;
+    }
 }

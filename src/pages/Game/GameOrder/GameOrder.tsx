@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { stylesButton1, stylesButton2, stylesFont1, stylesFont2 } from './stylesDiferentSizes'
+import { stylesButton1, stylesButton2, stylesFont1, stylesFont2, stylesButton3, stylesFont3, favoriteStyle1, favoriteStyle2 } from './stylesDiferentSizes'
 import { useNavigate } from 'react-router-dom'
 import { useAppSelector } from '../../../redux/hooks'
 import GoHomeButton from '../../../components/GoHomeButton/GoHomeButton'
@@ -20,6 +20,11 @@ type TextStyle = {
     height: string,
     fontWeigth: string,
     fontSize: string,
+    color: string,
+    textAlign: string,
+}
+type FavoriteStyle = {
+    height: string,
 }
 
 const GameOrder = () => {
@@ -30,14 +35,22 @@ const GameOrder = () => {
 
     let objectStyle:ObjectStyle | {} = {};
     let textStyle:TextStyle | {} = {};
+    let favotiteStyles:FavoriteStyle | {} = {};
 
     if(innerWidth > 1200) {
         objectStyle = stylesButton1
         textStyle = stylesFont1
+        favotiteStyles = favoriteStyle1
     } else if (innerWidth < 1200 && innerWidth > 700) {
         objectStyle = stylesButton2
         textStyle = stylesFont2
+    } else if (innerWidth < 700) {
+        objectStyle = stylesButton3
+        textStyle = stylesFont3
+        favotiteStyles = favoriteStyle2
     }
+
+    console.log(favotiteStyles)
 
 
 
@@ -54,7 +67,7 @@ const GameOrder = () => {
             <div className={styles.block}>
                 <div className={styles.block_image_header}>
                     <GoHomeButton text='Go back' funcNavigateTo={() => navigate('/')} />
-                    <Favorite styleObject={{}} game={currentGame} />
+                    <Favorite styleObject={favotiteStyles} game={currentGame} />
                 </div>
                 <div className={styles.block_buy}>
                     <div className={styles.inner_block}>

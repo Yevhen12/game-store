@@ -1,23 +1,30 @@
 .block {
-
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
 
     .image {
-        width: 350px;
+        max-width: 350px;
+        width: 100%;
         border-radius: 10px;
+        object-fit: contain;
     }
 
     .title {
         font-size: 16px;
+        max-width: 350px;
     }
     .genre {
         margin-top: 10px;
         font-size: 14px;
         font-weight: 200;
+        max-width: 350px;
     }
     .platform {
         font-size: 14px;
         font-weight: 200;
         margin-top: 5px;
+        max-width: 350px;
     }
 
     .block_it {
@@ -29,6 +36,22 @@
             display: flex;
             align-items: center;
             margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .block {
+        font-size: 12px;
+        .title {
+            font-size: 14px;
+        }
+
+        .genre {
+            font-size: 12px;
+        }
+        .platform {
+            font-size: 12px;
         }
     }
 }

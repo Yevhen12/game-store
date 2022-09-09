@@ -63,3 +63,34 @@
         }
     }
 }
+
+@media (max-width: 870px) {
+    .container {
+        .filter_block {
+            width: 85px;
+
+            p {
+                font-size: 11px;
+                margin-right: 0px;
+            }
+        }
+
+        .dropMenu_items {
+            .dropMenu_item {
+                width: 120px;
+             }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        .filter_block {
+            border-right: none;
+        }
+
+        
+    }
+
+   
+}

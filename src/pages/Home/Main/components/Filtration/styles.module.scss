@@ -15,3 +15,24 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .filtration_block {
+        padding: 0 20px 30px;
+        .sort_block {
+            .title {
+                font-size: 30px;
+            }
+        }
+    }  
+}
+
+@media (max-width: 500px) {
+    .filtration_block {
+        .sort_block {
+            .title {
+                font-size: 22px;
+            }
+        }
+    }  
+}

@@ -1,7 +1,7 @@
 import './App.scss'
 import { lazy, Suspense, useEffect } from 'react';
 import ROUTES from './constants/pagesRoutes'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/firebaseConfig';
 import { useAppDispatch } from './redux/hooks';

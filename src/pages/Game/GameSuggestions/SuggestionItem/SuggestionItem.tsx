@@ -15,15 +15,17 @@ const SuggestionItem: React.FC<PropsType> = ({ game }) => {
 
     return (
         <div className={styles.block}>
-            <img alt='gamePhoto' src={game.thumbnail} className={styles.image} />
-            <p className={styles.title}>{game.title}</p>
-            <p className={styles.genre}>{game.genre}</p>
-            <p className={styles.platform}>{game.platform}</p>
-            <div className={styles.block_it}>
-                <div>
-                    <Button text='More...' funcNavigateTo={() => navigate(`/games/${game.id}`)} />
+            <div className={styles.block_flex}>
+                <img alt='gamePhoto' src={game.thumbnail} className={styles.image} />
+                <p className={styles.title}>{game.title}</p>
+                <p className={styles.genre}>{game.genre}</p>
+                <p className={styles.platform}>{game.platform}</p>
+                <div className={styles.block_it}>
+                    <div>
+                        <Button text='More...' funcNavigateTo={() => navigate(`/games/${game.id}`)} />
+                    </div>
+                    <Favorite game={game} styleObject={{}} />
                 </div>
-                <Favorite game={game} styleObject={{}} />
             </div>
         </div>
     )

@@ -5,7 +5,7 @@
 .list {
     display: grid;
     padding: 0 30px;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(180px, 1fr));
     grid-auto-rows: auto;
     grid-auto-columns: 180px;
     row-gap: 15px;
@@ -14,6 +14,7 @@
 
 .my_games {
     padding-bottom: 50px;
+    min-height: 500px;
     .my_games_text {
         font-size: 40px;
         font-weight: 500;
@@ -52,5 +53,40 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 1200px) {
+    .list {
+        grid-template-columns: repeat(5, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 1020px) {
+    .list {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 840px) {
+    .list {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .list {
+        padding: 0;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .my_games {
+        .my_games_text {
+            font-size: 28px;
+            margin-left: 10px;
+        }
+        .my_games_block {
+            padding: 20px 0px;
+        }
     }
 }

@@ -27,3 +27,17 @@
         background-color: $paginationColor;
     }
 }
+
+@media (max-width: 450px) {
+    .pagination {
+        li {
+            font-size: 12px;
+            margin-right: 10px;
+            a {
+                margin-bottom: 2px;
+                height: 35px;
+                width: 35px;
+            } 
+        }
+    }
+}

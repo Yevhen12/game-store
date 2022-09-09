@@ -1,6 +1,6 @@
 @import '../../../../../../../styles/variables/variables';
 
-.button{
+.button {
     border-radius: 8px;
     height: 32px;
     border: 1px solid $borderColor;
@@ -27,4 +27,11 @@
     width: 1px;
     background-color: $borderColor;
     margin-left: 15px;
+}
+
+@media (max-width: 870px) {
+    .button {
+        height: 20px;
+        font-size: 10px;
+    }
 }

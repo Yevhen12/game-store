@@ -13,13 +13,17 @@ export const platfromArray = ['PS4', 'PS5', 'PC (Windows)']
 
 const FilterForm = () => {
 
-  const mappedPlatfromButtons = platfromArray.map((elem, idx) =>  <PlatfromButton key={idx} text={elem} setPlatform={setPlatform} />)
+  const mappedPlatfromButtons = platfromArray.map((elem, idx) => <PlatfromButton key={idx} text={elem} setPlatform={setPlatform} />)
   return (
     <div className={styles.form_block}>
-      <FilterButton dataArray={genreArray} text='Genre' setFilters={setGenre} />
-      <FilterButton dataArray={priceArray} text='Price' setFilters={setPrice} />
-      <FilterButton dataArray={ageArray} text='Age rating' setFilters={setAge} />
-      {mappedPlatfromButtons}
+      <div className={styles.buttons_block}>
+        <FilterButton dataArray={genreArray} text='Genre' setFilters={setGenre} />
+        <FilterButton dataArray={priceArray} text='Price' setFilters={setPrice} />
+        <FilterButton dataArray={ageArray} text='Age rating' setFilters={setAge} />
+      </div>
+      <div className={styles.buttons_block}>
+        {mappedPlatfromButtons}
+      </div>
     </div>
   )
 }

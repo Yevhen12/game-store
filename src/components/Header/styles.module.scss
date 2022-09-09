@@ -61,3 +61,20 @@
     }
 
 }
+
+@media (max-width: 500px) {
+    .header {
+        .container {
+            padding: 20px 10px;
+
+            .sony_block {
+                padding: 5px 15px;
+                left: calc(50% - 50px);
+
+                img {
+                    width: 65px;
+                }
+            }
+        }
+    }
+}

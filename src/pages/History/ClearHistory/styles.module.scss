@@ -12,3 +12,13 @@
     }
 
 }
+
+@media (max-width: 600px) {
+  .clear_block {
+    padding: 0 15px;
+    button {
+      font-size: 12px;
+      padding: 5px 13px;
+    }
+  }
+}

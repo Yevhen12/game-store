@@ -26,3 +26,15 @@
     }
 
 }
+
+@media (max-width: 640px) {
+    .filter_block {
+        height: 25px;
+        border-radius: 6px;
+        margin-top: 10px;
+
+        .text {
+            font-size: 10px;
+        }
+    }
+}

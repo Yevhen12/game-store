@@ -36,6 +36,8 @@
             display: flex;
             position: relative;
             justify-content: space-between;
+            flex-direction: row;
+
 
             .platform {
                 position: absolute;
@@ -106,5 +108,63 @@
     }
     .block {
         padding: 30px 10px;
+
+        .block_buy {
+            .inner_block {
+                .title {
+                    font-size: 14px;
+                }
+                .platform {
+                    font-size: 9px;
+                    top: -23px;
+                }
+                .short_desc {
+                    margin-top: 3px;
+                }
+                .releaseDate {
+                    font-size: 9px;
+                }
+            }
+        }
     }
+}
+
+@media (max-width: 500px) {
+    .image_block {
+        height: 450px;
+    }
+    .block {
+        padding: 30px 10px;
+
+        .block_buy {
+            .inner_block {
+                flex-direction: column;
+                .title {
+                    font-size: 14px;
+                }
+                .platform {
+                    font-size: 9px;
+                    top: -23px;
+                }
+                .short_desc {
+                    font-size: 9px;
+
+                }
+                .releaseDate {
+                    font-size: 9px;
+                    max-width: 80px;
+                }
+                .inner_block_rigth {
+                    margin-top: 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            
+
+        }
+    }
+
+
 }
