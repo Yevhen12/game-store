@@ -1,3 +1,7 @@
-visit - https://yevhen12.github.io/game-store/#/ \n
-email - someone@gmail.com \n
-password - 123456789 \n
+## Link
+
+App: [https://yevhen12.github.io/instagram-app/#/](https://yevhen12.github.io/instagram-app/#/)
+
+login: *someone@gmail.com*
+
+password: *123456789*
