@@ -33,8 +33,8 @@ export const fetchGames = createAsyncThunk('games/fetchGames', async (params: Pa
     const filterByAge = isAge ? `&age_gte=${parseInt(ageArray[age])}&age_lte=${maxGameAge}` : ''
     const filterBySearch = isSearch ? `&title_like=${search}` : ''
 
-    const urlWithPagination = `http://localhost:3001/games?_sort=${sortPropery}&_order=${order}${filterByGenre}${filterByPrice}${filterByAge}${filterByPlatform}${filterBySearch}&_page=${page}&_limit=18`
-    const urlAllFilteredGames = `http://localhost:3001/games?_sort=${sortPropery}&_order=${order}${filterByGenre}${filterByPrice}${filterByAge}${filterByPlatform}${filterBySearch}`
+    const urlWithPagination = `https://game-store12.herokuapp.com/api?_sort=${sortPropery}&_order=${order}${filterByGenre}${filterByPrice}${filterByAge}${filterByPlatform}${filterBySearch}&_page=${page}&_limit=18`
+    const urlAllFilteredGames = `https://game-store12.herokuapp.com/api?_sort=${sortPropery}&_order=${order}${filterByGenre}${filterByPrice}${filterByAge}${filterByPlatform}${filterBySearch}`
 
     const { data } = await axios.get<IGameItem[]>(urlWithPagination)
 
