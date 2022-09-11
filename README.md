@@ -1,6 +1,6 @@
 # Game store
 
-Game store is like a typical store that includes main functionality: **authentication**, **ability to buy and like games**, **history**, **search bar**, **user settings** and other feature that u can see in demo-version below. All games are getting from server, and then stored in firebase-database.
+Game store is like a typical store, that includes main functionality: **authentication**, **ability to buy and like games**, **history**, **search bar**, **user settings**, **different types of modal** and other features, that u can see in demo-version below. All games are getting from server, and then stored in firebase-database.
  
 
 ## Installation
