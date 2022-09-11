@@ -71,7 +71,7 @@ const Main: React.FC = () => {
             await setAllGames()
         }
 
-        //setGamesFirebase()
+        // setGamesFirebase()
     }, [dispatch])
 
     useEffect(() => {

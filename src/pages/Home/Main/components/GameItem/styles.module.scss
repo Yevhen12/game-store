@@ -59,23 +59,41 @@
     align-items:flex-start;
 
     .imageSkeleton {
-        width:175px;
         aspect-ratio: 1 / 1;
+        width: 100%;
         border-radius: 10px;
+    }
+
+    .skeleton_padding {
+        padding: 10px;
+    }
+
+    :global{
+        span {
+            width: 100%;
+        }
     }
 
     .skeleton_item  {
         display: flex;
         flex-direction: column;
-        margin: 10px 0 0;
+        margin: 10px 0 0 10px;
     }
 
-    .alst_item {
+    .last_item {
         margin-top: 10px;
+    }
+    .last_item {
+        margin-left: 10px;
+        margin-right: 12px;
+    }
+    .align_right {
+        text-align: right;
+
     }
 
     .flex {
-        width: 175px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }

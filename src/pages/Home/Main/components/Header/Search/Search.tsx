@@ -46,7 +46,7 @@ const Search: React.FC<PropsType> = ({ refInput }) => {
           type='text'
           value={textForm}
           placeholder="Search"
-          className={`${styles.input} ${activeModal ? styles.active : styles.disabled}`}
+          className={`${styles.input} ${styles.active}`}
           onFocus={() => setActiveModal(true)}
           onChange={(e) => setTextForm(e.target.value)}
         />

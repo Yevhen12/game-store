@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IGameItem } from "../../../../../interfaces/interfaces";
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ const GameItem: React.FC<IGameItem> = (game) => {
 
   const navigate = useNavigate();
   const {innerWidth} = useWindowSize()
+  const [isHovered, setIsHovered] = useState(false)
 
   const { thumbnail,
     title,
@@ -36,9 +37,9 @@ const GameItem: React.FC<IGameItem> = (game) => {
 
 
   return (
-    <div className={styles.item_block} onClick={() => navigate(`/games/${game.id}`)}>
+    <div className={styles.item_block} onClick={() => navigate(`/games/${game.id}`)} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <img alt="gamePhoto" src={thumbnail} className={styles.image} />
-      <Favorite styleObject={innerWidth > 400 ? styleObject : styleObject1} game={game} />
+      {isHovered && <Favorite styleObject={innerWidth > 400 ? styleObject : styleObject1} game={game} />}
       <div className={styles.text_block}>
         <p className={styles.price}>€ {price}</p>
         <p className={styles.title}>{title}</p>

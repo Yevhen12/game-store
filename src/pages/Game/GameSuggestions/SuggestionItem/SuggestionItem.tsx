@@ -16,8 +16,8 @@ const SuggestionItem: React.FC<PropsType> = ({ game }) => {
     return (
         <div className={styles.block}>
             <div className={styles.block_flex}>
-                <img alt='gamePhoto' src={game.thumbnail} className={styles.image} />
-                <p className={styles.title}>{game.title}</p>
+                <img onClick={() => navigate(`/games/${game.id}`)} alt='gamePhoto' src={game.thumbnail} className={styles.image} />
+                <p onClick={() => navigate(`/games/${game.id}`)} className={styles.title}>{game.title}</p>
                 <p className={styles.genre}>{game.genre}</p>
                 <p className={styles.platform}>{game.platform}</p>
                 <div className={styles.block_it}>

@@ -8,11 +8,13 @@
         width: 100%;
         border-radius: 10px;
         object-fit: contain;
+        cursor: pointer;
     }
 
     .title {
         font-size: 16px;
         max-width: 350px;
+        cursor: pointer;
     }
     .genre {
         margin-top: 10px;

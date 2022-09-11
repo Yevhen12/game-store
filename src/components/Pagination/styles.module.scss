@@ -28,15 +28,16 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     .pagination {
         li {
-            font-size: 12px;
-            margin-right: 10px;
+            font-size: 10px;
+            margin-right: 6px;
             a {
-                margin-bottom: 2px;
-                height: 35px;
-                width: 35px;
+                line-height: 25px;
+                height: 25px;
+                width: 25px;
+                text-align: center;
             } 
         }
     }

@@ -24,6 +24,7 @@ const Header: React.FC = () => {
 
 
     const hendleInput: () => void = () => {
+        navigate('/')
         if (ref.current) {
             ref.current.focus()
         }

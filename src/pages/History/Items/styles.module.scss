@@ -31,6 +31,7 @@
             width: 75px;
             object-fit: cover;
             border-radius: 10px;
+            cursor: pointer;
         }
 
         .game_info {
@@ -42,6 +43,7 @@
 
             .name {
                 font-size: 20px;
+                cursor: pointer;
             }
 
             .additional_info {

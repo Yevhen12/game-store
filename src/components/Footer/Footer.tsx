@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className={styles.footer}>
             <div>
-                <img alt="logo" src={process.env.PUBLIC_URL + "/images/logo.png"} className={styles.logo} onClick={() => navigate(PagesRoutes.HOME)} />
+                <img alt="logo" src={process.env.PUBLIC_URL + "/images/logo-white-new.png"} className={styles.logo} onClick={() => navigate(PagesRoutes.HOME)} />
             </div>
             <div className={styles.rigth_block}>
                 <div className={styles.made_block}>
