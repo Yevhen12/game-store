@@ -9,7 +9,7 @@ You should clone repository and then run project
 
 ```bash
 git clone https://github.com/Yevhen12/game-store.git
-cd instagram
+cd game-store
 ```
 Then use [npm](https://docs.npmjs.com/) package manager and run the project
 
