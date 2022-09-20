@@ -34,11 +34,6 @@ const GameSuggestions: React.FC = () => {
     countVisibleSuggestions = 1
   }
 
-
-
-  console.log(suggestionsArray)
-
-
   return (
     <div className={styles.wrapper}>
       <p className={styles.other}>Other games</p>

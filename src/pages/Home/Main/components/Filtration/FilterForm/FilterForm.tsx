@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import styles from './styles.module.scss'
 import FilterButton from './DropMenuButton/FilterButton'
 import PlatfromButton from './PlatformButton/PlatfromButton'
@@ -13,7 +13,7 @@ export const platfromArray = ['PS4', 'PS5', 'PC (Windows)']
 
 const FilterForm = () => {
 
-  const mappedPlatfromButtons = platfromArray.map((elem, idx) => <PlatfromButton key={idx} text={elem} setPlatform={setPlatform} />)
+  const mappedPlatfromButtons = useMemo(() => platfromArray.map((elem, idx) => <PlatfromButton key={idx} text={elem} setPlatform={setPlatform} />), [platfromArray])
   return (
     <div className={styles.form_block}>
       <div className={styles.buttons_block}>

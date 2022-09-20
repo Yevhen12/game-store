@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import { useNavigate } from 'react-router-dom'
 import PagesRoutes from '../../constants/pagesRoutes'
+import { useMemo } from 'react'
 
 const Footer = () => {
     const navigate = useNavigate()
@@ -9,7 +10,7 @@ const Footer = () => {
     const socialArray = ['Facebook', 'Twitter', 'Instagram', 'YouTube', 'Android App', 'iOS App']
     const linksArray = ['https://uk-ua.facebook.com/', 'https://twitter.com/?lang=ua', 'https://www.instagram.com/', 'https://www.youtube.com/', 'https://play.google.com/store/apps;?hl=uk&gl=US', 'https://www.apple.com/ua/app-store/']
 
-    const mappedArray = socialArray.map((elem, id) => <a key={id} className={styles.link} href={linksArray[id]}>{elem}</a>)
+    const mappedArray = useMemo(() => socialArray.map((elem, id) => <a key={id} className={styles.link} href={linksArray[id]}>{elem}</a>), [socialArray])
 
     return (
         <div className={styles.footer}>

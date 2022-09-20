@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 
 import DropMenu from "../../Modals/DropMenu/DropMenu";
 import { useNavigate } from "react-router-dom";
@@ -66,7 +66,7 @@ const ProfileDropMenu: React.FC<Props> = ({ activeModal, setActiveModal }) => {
         },
     ]
 
-    const allItems = dropMenuItems.map((elem, id) => <Item key={id} {...elem} />)
+    const allItems = useMemo(() => dropMenuItems.map((elem, id) => <Item key={id} {...elem} />), [dropMenuItems])
 
     const topAnimation: string = activeModal ? '35px' : '10px'
     return (

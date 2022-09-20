@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import styles from './button.module.scss'
 import DropMenu from '../../../../../../../components/Modals/DropMenu/DropMenu'
 import { useAppDispatch } from '../../../../../../../redux/hooks'
@@ -35,7 +35,7 @@ const FilterButton: React.FC<Propstype> = ({ dataArray, text, setFilters }) => {
         rigthPosition = '-9px'
     }
 
-    const mappedDataArray: JSX.Element[] = dataArray.map((elem, id) => <p key={id} onClick={() => hendleFilter(elem)} className={styles.dropMenu_item}>{elem}</p>)
+    const mappedDataArray: JSX.Element[] = useMemo(() => dataArray.map((elem, id) => <p key={id} onClick={() => hendleFilter(elem)} className={styles.dropMenu_item}>{elem}</p>), [dataArray])
     return (
         <div className={styles.container}>
             <div className={styles.filter_block} onClick={() => setActiveModal(true)}>

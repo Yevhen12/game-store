@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import styles from './styles.module.scss'
 import GameItem from '../GameItem/GameItem'
 import { useAppSelector } from '../../../../../redux/hooks'
@@ -14,7 +14,7 @@ const List: React.FC = () => {
 
     const skeletonGames = Array.from({ length: 18 }).fill(0).map((_, id) => <SkeletonItem key={id} />)
 
-    const mapGamesArray: JSX.Element[] = games.map(elem => <GameItem key={elem.id} {...elem} />)
+    const mapGamesArray: JSX.Element[] = useMemo(() => games.map(elem => <GameItem key={elem.id} {...elem} />), [games])
 
     return (
         <>

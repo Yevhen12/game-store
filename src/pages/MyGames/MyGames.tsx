@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useAppSelector } from '../../redux/hooks'
 import { Navigate, useNavigate } from 'react-router-dom'
 import GameItem from '../Home/Main/components/GameItem/GameItem'
@@ -13,7 +13,7 @@ const MyGames: React.FC = () => {
     const userStatus = useAppSelector(state => state.user.status)
     const navigate = useNavigate()
 
-    const mappedGames = userState.myGames.map(elem => <GameItem key={elem.id} {...elem} />)
+    const mappedGames = useMemo(() => userState.myGames.map(elem => <GameItem key={elem.id} {...elem} />), [userState.myGames])
     const skeletonGames = Array.from({ length: 6 }).fill(0).map((_, id) => <SkeletonItem key={id} />)
 
 

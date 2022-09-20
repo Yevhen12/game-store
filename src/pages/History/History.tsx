@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useAppSelector } from '../../redux/hooks'
 import ClearHistory from './ClearHistory/ClearHistory'
 import { Navigate, useNavigate } from 'react-router-dom'
@@ -13,9 +13,9 @@ const History: React.FC = () => {
   const navigate = useNavigate()
   console.log(userState.myGames)
 
-  const mappedBougthGames: JSX.Element[] = userState.purchasesList.map((game, id) => <HistoryItem key={game.id} game={game} number={id} />)
+  const mappedBougthGames: JSX.Element[] = useMemo(() => userState.purchasesList.map((game, id) => <HistoryItem key={game.id} game={game} number={id} />), [userState.purchasesList])
 
-  if(!auth.currentUser) {
+  if (!auth.currentUser) {
     return <Navigate to={`/${PagesRoutes.LOG_IN}`} />
   }
 

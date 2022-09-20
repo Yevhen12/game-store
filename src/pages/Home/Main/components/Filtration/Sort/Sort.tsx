@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import SortEnum from '../../../../../../constants/sortFilters'
 import { useAppSelector, useAppDispatch } from '../../../../../../redux/hooks'
 import styles from './styles.module.scss'
@@ -45,7 +45,7 @@ const Sort = () => {
     }
 
     const topAnimation = activeModal ? '35px' : '10px'
-    const mappedSortArray = sortArray.map((elem, id) => <p key={id} onClick={() => hendleSort(elem)} className={styles.dropMenu_item}>{elem.name}</p>)
+    const mappedSortArray = useMemo(() => sortArray.map((elem, id) => <p key={id} onClick={() => hendleSort(elem)} className={styles.dropMenu_item}>{elem.name}</p>), [sortArray])
 
     return (
         <div className={styles.container}>
